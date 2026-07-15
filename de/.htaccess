@@ -1,0 +1,4 @@
+# Localized error document for /de/ (see the root .htaccess for the rationale).
+# Apache reads this file for any request under /de/, so a missing page here
+# returns the DE 404 document with a real 404 status.
+ErrorDocument 404 /de/404.html

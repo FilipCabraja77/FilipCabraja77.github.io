@@ -1,0 +1,4 @@
+# Localized error document for /hr/ (see the root .htaccess for the rationale).
+# Apache reads this file for any request under /hr/, so a missing page here
+# returns the HR 404 document with a real 404 status.
+ErrorDocument 404 /hr/404.html
