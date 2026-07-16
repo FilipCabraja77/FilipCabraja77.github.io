@@ -71,7 +71,7 @@ $lang    = preg_match('/^(en|hr|de)$/', (string) ($data['lang'] ?? '')) ? $data[
 // e-mail also must not contain newlines (header-injection guard for Reply-To)
 $email = str_replace(["\r", "\n"], '', $email);
 
-if ($name === '' || $message === '' || !$consent) out(422, ['ok' => false, 'error' => 'fields']);
+if ($name === '' || $phone === '' || $message === '' || !$consent) out(422, ['ok' => false, 'error' => 'fields']);
 if (!filter_var($email, FILTER_VALIDATE_EMAIL)) out(422, ['ok' => false, 'error' => 'email']);
 
 /* ---- proof-of-work: main.js (WebCrypto) searches for a nonce such that
@@ -194,7 +194,7 @@ out(200, ['ok' => true]);
        (SHA-256(email+elapsed+nonce) starts with "0000") - compute one with:
          node -e 'const c=require("crypto");let n=0;const p="test@example.com"+5000;while(c.createHash("sha256").update(p+n).digest("hex").slice(0,4)!=="0000")n++;console.log(n)'
      curl -i -X POST "$BASE" -H 'Content-Type: application/json' \
-       -d '{"name":"Test","email":"test@example.com","phone":"","message":"Upit","consent":true,"elapsed":5000,"interacted":true,"nonce":"<computed>","company":"","lang":"hr"}'
+       -d '{"name":"Test","email":"test@example.com","phone":"091 234 5678","message":"Upit","consent":true,"elapsed":5000,"interacted":true,"nonce":"<computed>","company":"","lang":"hr"}'
 
    (a2) Missing "interacted" (bot posting straight to the endpoint) -> HTTP 422
         {"ok":false,"error":"bot"}

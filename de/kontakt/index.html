@@ -31,9 +31,9 @@
   <link rel="icon" type="image/png" sizes="48x48" href="/assets/icons/favicon-48x48.png">
   <link rel="apple-touch-icon" sizes="180x180" href="/assets/icons/apple-touch-icon.png">
   <link rel="manifest" href="/site.webmanifest">
-  <link rel="stylesheet" href="/assets/css/main.css?v=3ed22712be">
+  <link rel="stylesheet" href="/assets/css/main.css?v=ce2ab19099">
   <script src="/assets/js/cookie-consent.js?v=0ef7b14120" defer></script>
-  <script src="/assets/js/main.js?v=dcac689099" defer></script>
+  <script src="/assets/js/main.js?v=f81006dfe7" defer></script>
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -371,8 +371,9 @@
             <span class="form-error" data-error-for="name"></span>
           </div>
           <div class="form-field">
-            <label for="cf-phone">Telefon (optional)</label>
-            <input id="cf-phone" name="phone" type="tel" maxlength="40" autocomplete="tel" placeholder="z. B. 091 234 5678">
+            <label for="cf-phone">Telefon <span class="req" aria-hidden="true">*</span></label>
+            <input id="cf-phone" name="phone" type="tel" required maxlength="40" autocomplete="tel" placeholder="z. B. 091 234 5678">
+            <span class="form-error" data-error-for="phone"></span>
           </div>
         </div>
         <div class="form-field">
@@ -397,7 +398,7 @@
           <input id="cf-company" name="company" type="text" tabindex="-1" autocomplete="off">
         </div>
         <div class="form-actions">
-          <button type="submit" class="btn btn-primary btn-lg contact-submit">Anfrage senden <span aria-hidden="true">&rarr;</span></button>
+          <button type="submit" class="btn btn-primary btn-lg contact-submit">Anfrage senden</button>
         </div>
         <p class="form-privacy">Mit dem Absenden stimmen Sie der <a href="/de/datenschutz/">Datenschutzerklärung</a> zu.</p>
         <p class="form-status" role="status" aria-live="polite"></p>
