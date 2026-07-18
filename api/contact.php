@@ -65,13 +65,21 @@ $name    = clean($data['name'] ?? '', 120);
 $email   = clean($data['email'] ?? '', 160);
 $phone   = clean($data['phone'] ?? '', 40);
 $message = clean($data['message'] ?? '', 4000);
+/* ---- lander-only "Service" dropdown (dive-lander.js -> contactForm opts):
+   the contact page never sends this key, so its PRESENCE marks an inquiry from
+   the Google Ads lander. The value is the visible localized option label,
+   cleaned like every other field; empty = placeholder left selected. ---- */
+$hasService = array_key_exists('service', $data);
+$service    = clean($data['service'] ?? '', 120);
 $consent = !empty($data['consent']);
 $lang    = preg_match('/^(en|hr|de)$/', (string) ($data['lang'] ?? '')) ? $data['lang'] : 'en';
 
 // e-mail also must not contain newlines (header-injection guard for Reply-To)
 $email = str_replace(["\r", "\n"], '', $email);
 
-if ($name === '' || $phone === '' || $message === '' || !$consent) out(422, ['ok' => false, 'error' => 'fields']);
+/* the message is optional ONLY for lander inquiries (service key present);
+   the contact page keeps requiring it, exactly as before */
+if ($name === '' || $phone === '' || (!$hasService && $message === '') || !$consent) out(422, ['ok' => false, 'error' => 'fields']);
 if (!filter_var($email, FILTER_VALIDATE_EMAIL)) out(422, ['ok' => false, 'error' => 'email']);
 
 /* ---- proof-of-work: main.js (WebCrypto) searches for a nonce such that
@@ -139,9 +147,13 @@ $lines = [
   'E-mail: ' . $email,
   'Phone: ' . ($phone !== '' ? $phone : '-'),
   'Language: ' . $lang,
-  '',
-  $message,
 ];
+/* only lander inquiries carry this line, so it also tells the reader the
+   inquiry came from the Ads lander; '-' = nothing selected in the dropdown */
+if ($hasService) $lines[] = 'Usluga: ' . ($service !== '' ? $service : '-');
+/* the message may legitimately be empty now (optional on the lander): the
+   block is simply omitted then, nothing fails */
+if ($message !== '') { $lines[] = ''; $lines[] = $message; }
 $text = implode("\n", $lines);
 
 $payload = json_encode([
