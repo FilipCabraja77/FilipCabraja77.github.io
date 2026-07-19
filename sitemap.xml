@@ -1392,4 +1392,28 @@
     <xhtml:link rel="alternate" hreflang="de" href="https://foka.hr/de/instructor-training/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://foka.hr/instructor-training/"/>
   </url>
+  <url>
+    <loc>https://foka.hr/underwater-works/</loc>
+    <lastmod>2026-07-19</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://foka.hr/underwater-works/"/>
+    <xhtml:link rel="alternate" hreflang="hr" href="https://foka.hr/hr/podvodni-radovi/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://foka.hr/de/unterwasserarbeiten/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://foka.hr/underwater-works/"/>
+  </url>
+  <url>
+    <loc>https://foka.hr/hr/podvodni-radovi/</loc>
+    <lastmod>2026-07-19</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://foka.hr/underwater-works/"/>
+    <xhtml:link rel="alternate" hreflang="hr" href="https://foka.hr/hr/podvodni-radovi/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://foka.hr/de/unterwasserarbeiten/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://foka.hr/underwater-works/"/>
+  </url>
+  <url>
+    <loc>https://foka.hr/de/unterwasserarbeiten/</loc>
+    <lastmod>2026-07-19</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://foka.hr/underwater-works/"/>
+    <xhtml:link rel="alternate" hreflang="hr" href="https://foka.hr/hr/podvodni-radovi/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://foka.hr/de/unterwasserarbeiten/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://foka.hr/underwater-works/"/>
+  </url>
 </urlset>
