@@ -35,7 +35,7 @@
   <link rel="preload" as="image" href="/assets/img/hero-diving-800.webp" imagesrcset="/assets/img/hero-diving-480.webp 480w, /assets/img/hero-diving-800.webp 800w" imagesizes="100vw" fetchpriority="high">
   <link rel="stylesheet" href="/assets/css/main.css?v=7e6150a085">
   <script src="/assets/js/cookie-consent.js?v=0ef7b14120" defer></script>
-  <script src="/assets/js/main.js?v=07dbef68e9" defer></script>
+  <script src="/assets/js/main.js?v=0da3fbbe46" defer></script>
 
 </head>
 <body>
@@ -417,17 +417,27 @@
           <input id="cf-email" name="email" type="email" required maxlength="160" autocomplete="email" placeholder="name@email.com">
           <span class="form-error" data-error-for="email"></span>
         </div>
-        <div class="form-field">
-          <label for="cf-service">Service</label>
-          <select id="cf-service" name="service">
-            <option value="">Select a service</option>
-            <option value="Discovery dive">Discovery dive</option>
-            <option value="Shore diving">Shore diving</option>
-            <option value="Boat diving">Boat diving</option>
-            <option value="Course">Course</option>
-            <option value="Kids">Kids</option>
-            <option value="Other">Other</option>
-          </select>
+        <div class="form-grid-2">
+          <div class="form-field">
+            <label for="cf-service">Service</label>
+            <select id="cf-service" name="service">
+              <option value="">Select a service</option>
+              <option value="Discovery dive">Discovery dive</option>
+              <option value="Shore diving">Shore diving</option>
+              <option value="Boat diving">Boat diving</option>
+              <option value="Course">Course</option>
+              <option value="Kids">Kids</option>
+              <option value="Other">Other</option>
+            </select>
+          </div>
+          <div class="form-field">
+            <label for="cf-location">Location</label>
+            <select id="cf-location" name="location">
+              <option value="">Select a location</option>
+              <option value="Šimuni">Šimuni</option>
+              <option value="Straško">Straško</option>
+            </select>
+          </div>
         </div>
         <div class="form-field">
           <label for="cf-message">Inquiry <span class="form-optional">(optional)</span></label>

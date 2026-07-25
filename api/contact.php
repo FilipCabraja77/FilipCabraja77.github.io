@@ -71,6 +71,10 @@ $message = clean($data['message'] ?? '', 4000);
    cleaned like every other field; empty = placeholder left selected. ---- */
 $hasService = array_key_exists('service', $data);
 $service    = clean($data['service'] ?? '', 120);
+/* lander-only "Location" dropdown, sent alongside "service" (dive-lander.js);
+   the contact page never posts this key, cleaned like every other field. */
+$hasLocation = array_key_exists('location', $data);
+$location    = clean($data['location'] ?? '', 60);
 $consent = !empty($data['consent']);
 $lang    = preg_match('/^(en|hr|de)$/', (string) ($data['lang'] ?? '')) ? $data['lang'] : 'en';
 
@@ -151,6 +155,7 @@ $lines = [
 /* only lander inquiries carry this line, so it also tells the reader the
    inquiry came from the Ads lander; '-' = nothing selected in the dropdown */
 if ($hasService) $lines[] = 'Usluga: ' . ($service !== '' ? $service : '-');
+if ($hasLocation) $lines[] = 'Lokacija: ' . ($location !== '' ? $location : '-');
 /* the message may legitimately be empty now (optional on the lander): the
    block is simply omitted then, nothing fails */
 if ($message !== '') { $lines[] = ''; $lines[] = $message; }
@@ -206,7 +211,7 @@ out(200, ['ok' => true]);
        (SHA-256(email+elapsed+nonce) starts with "0000") - compute one with:
          node -e 'const c=require("crypto");let n=0;const p="test@example.com"+5000;while(c.createHash("sha256").update(p+n).digest("hex").slice(0,4)!=="0000")n++;console.log(n)'
      curl -i -X POST "$BASE" -H 'Content-Type: application/json' \
-       -d '{"name":"Test","email":"test@example.com","phone":"091 234 5678","message":"Upit","consent":true,"elapsed":5000,"interacted":true,"nonce":"<computed>","company":"","lang":"hr"}'
+       -d '{"name":"Test","email":"test@example.com","phone":"091 234 5678","message":"Upit","service":"Probno ronjenje","location":"Šimuni","consent":true,"elapsed":5000,"interacted":true,"nonce":"<computed>","company":"","lang":"hr"}'
 
    (a2) Missing "interacted" (bot posting straight to the endpoint) -> HTTP 422
         {"ok":false,"error":"bot"}
