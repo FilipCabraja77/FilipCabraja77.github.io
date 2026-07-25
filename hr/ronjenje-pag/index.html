@@ -35,7 +35,7 @@
   <link rel="preload" as="image" href="/assets/img/hero-diving-800.webp" imagesrcset="/assets/img/hero-diving-480.webp 480w, /assets/img/hero-diving-800.webp 800w" imagesizes="100vw" fetchpriority="high">
   <link rel="stylesheet" href="/assets/css/main.css?v=7e6150a085">
   <script src="/assets/js/cookie-consent.js?v=0ef7b14120" defer></script>
-  <script src="/assets/js/main.js?v=0da3fbbe46" defer></script>
+  <script src="/assets/js/main.js?v=5233bdb683" defer></script>
 
 </head>
 <body>
@@ -419,23 +419,23 @@
         </div>
         <div class="form-grid-2">
           <div class="form-field">
-            <label for="cf-service">Usluga</label>
-            <select id="cf-service" name="service">
-              <option value="">Odaberite uslugu</option>
-              <option value="Probno ronjenje">Probno ronjenje</option>
-              <option value="Ronjenje s obale">Ronjenje s obale</option>
-              <option value="Brodsko ronjenje">Brodsko ronjenje</option>
-              <option value="Tečaj">Tečaj</option>
-              <option value="Djeca">Djeca</option>
-              <option value="Ostalo">Ostalo</option>
-            </select>
-          </div>
-          <div class="form-field">
             <label for="cf-location">Lokacija</label>
             <select id="cf-location" name="location">
               <option value="">Odaberite lokaciju</option>
               <option value="Šimuni">Šimuni</option>
               <option value="Straško">Straško</option>
+            </select>
+          </div>
+          <div class="form-field">
+            <label for="cf-service">Usluga</label>
+            <select id="cf-service" name="service">
+              <option value="">Odaberite uslugu</option>
+              <option value="Probno ronjenje" data-strasko="1">Probno ronjenje</option>
+              <option value="Ronjenje s obale" data-strasko="1">Ronjenje s obale</option>
+              <option value="Brodsko ronjenje" data-strasko="0">Brodsko ronjenje</option>
+              <option value="Tečaj" data-strasko="0">Tečaj</option>
+              <option value="Djeca" data-strasko="0">Djeca</option>
+              <option value="Ostalo" data-strasko="1">Ostalo</option>
             </select>
           </div>
         </div>

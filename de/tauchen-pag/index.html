@@ -35,7 +35,7 @@
   <link rel="preload" as="image" href="/assets/img/hero-diving-800.webp" imagesrcset="/assets/img/hero-diving-480.webp 480w, /assets/img/hero-diving-800.webp 800w" imagesizes="100vw" fetchpriority="high">
   <link rel="stylesheet" href="/assets/css/main.css?v=7e6150a085">
   <script src="/assets/js/cookie-consent.js?v=0ef7b14120" defer></script>
-  <script src="/assets/js/main.js?v=0da3fbbe46" defer></script>
+  <script src="/assets/js/main.js?v=5233bdb683" defer></script>
 
 </head>
 <body>
@@ -419,23 +419,23 @@
         </div>
         <div class="form-grid-2">
           <div class="form-field">
-            <label for="cf-service">Leistung</label>
-            <select id="cf-service" name="service">
-              <option value="">Leistung wählen</option>
-              <option value="Schnuppertauchen">Schnuppertauchen</option>
-              <option value="Küstentauchen">Küstentauchen</option>
-              <option value="Bootstauchen">Bootstauchen</option>
-              <option value="Kurs">Kurs</option>
-              <option value="Kinder">Kinder</option>
-              <option value="Sonstiges">Sonstiges</option>
-            </select>
-          </div>
-          <div class="form-field">
             <label for="cf-location">Standort</label>
             <select id="cf-location" name="location">
               <option value="">Standort wählen</option>
               <option value="Šimuni">Šimuni</option>
               <option value="Straško">Straško</option>
+            </select>
+          </div>
+          <div class="form-field">
+            <label for="cf-service">Leistung</label>
+            <select id="cf-service" name="service">
+              <option value="">Leistung wählen</option>
+              <option value="Schnuppertauchen" data-strasko="1">Schnuppertauchen</option>
+              <option value="Küstentauchen" data-strasko="1">Küstentauchen</option>
+              <option value="Bootstauchen" data-strasko="0">Bootstauchen</option>
+              <option value="Kurs" data-strasko="0">Kurs</option>
+              <option value="Kinder" data-strasko="0">Kinder</option>
+              <option value="Sonstiges" data-strasko="1">Sonstiges</option>
             </select>
           </div>
         </div>
