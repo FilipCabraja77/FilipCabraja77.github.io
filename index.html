@@ -553,8 +553,14 @@
         <p class="bio-text">This booklet was printed as part of the &quot;Foka - Marine Biologist&quot; project funded by the Croatian Ministry of Tourism. Its purpose is to provide answers to everyday questions about the diverse and numerous marine organisms inhabiting the Adriatic Sea.</p>
         <a class="btn btn-primary btn-lg bio-btn" href="/assets/docs/marine-biodiversity.pdf" download><svg class="ico" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="square" stroke-linejoin="miter" aria-hidden="true" focusable="false"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg><span>Download PDF</span></a>
       </div>
-      <a class="bio-cover" href="/assets/docs/marine-biodiversity.pdf" aria-label="Foka Marine Biologist booklet cover">
-        <img class="bio-cover-img" src="/assets/img/marine-cover-1836.webp" srcset="/assets/img/marine-cover-480.webp 480w, /assets/img/marine-cover-800.webp 800w, /assets/img/marine-cover-1200.webp 1200w, /assets/img/marine-cover-1600.webp 1600w, /assets/img/marine-cover-1836.webp 1836w" sizes="(min-width:880px) 40vw, 90vw" width="1836" height="1309" alt="Foka Marine Biologist booklet cover" loading="lazy" decoding="async">
+      <!-- Cover = read it, button above = download it. target="_blank" keeps the
+           visitor's place on the home page instead of replacing it with the PDF;
+           rel="noopener noreferrer" is the standard pair for any _blank link. The
+           image alt is empty on purpose: the link already carries the name via
+           aria-label, and a repeated alt would announce the same thing twice. -->
+      <a class="bio-cover" href="/assets/docs/marine-biodiversity.pdf" target="_blank" rel="noopener noreferrer"
+         aria-label="Open the Marine Biologist booklet (PDF, opens in a new tab)" title="Open the Marine Biologist booklet (PDF, opens in a new tab)">
+        <img class="bio-cover-img" src="/assets/img/marine-cover-1836.webp" srcset="/assets/img/marine-cover-480.webp 480w, /assets/img/marine-cover-800.webp 800w, /assets/img/marine-cover-1200.webp 1200w, /assets/img/marine-cover-1600.webp 1600w, /assets/img/marine-cover-1836.webp 1836w" sizes="(min-width:880px) 40vw, 90vw" width="1836" height="1309" alt="" loading="lazy" decoding="async">
       </a>
     </div>
   </div>
