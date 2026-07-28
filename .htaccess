@@ -132,5 +132,5 @@ ErrorDocument 404 /404.html
   Header set Strict-Transport-Security "max-age=31536000; includeSubDomains"
   Header set X-Frame-Options "SAMEORIGIN"
   Header set Permissions-Policy "geolocation=(), camera=(), microphone=(), payment=(), usb=()"
-  Header set Content-Security-Policy "default-src 'self'; script-src 'self' 'sha256-ALSij2VcelQUiS4sF/3byC7llshuKfunY2DBYtlJSgY='; style-src 'self' 'unsafe-inline'; img-src 'self' data:; font-src 'self'; frame-src https://www.google.com; connect-src 'self'; object-src 'none'; base-uri 'self'; form-action 'self'; frame-ancestors 'self'; upgrade-insecure-requests"
+  Header set Content-Security-Policy "default-src 'self'; script-src 'self' 'sha256-ALSij2VcelQUiS4sF/3byC7llshuKfunY2DBYtlJSgY=' 'sha256-//d4iOENr+YlVHy4Bo/cj7+yDV/Ks6o1bhTZlU2WyPI='; style-src 'self' 'unsafe-inline'; img-src 'self' data:; font-src 'self'; frame-src https://www.google.com; connect-src 'self'; object-src 'none'; base-uri 'self'; form-action 'self'; frame-ancestors 'self'; upgrade-insecure-requests"
 </IfModule>
