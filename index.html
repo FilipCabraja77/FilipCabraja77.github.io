@@ -2,19 +2,20 @@
 <html lang="hr">
 <head>
 <meta charset="UTF-8">
+<meta name="robots" content="noindex">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Veterinarska ambulanta Novo Brestje - Vaša veterinarka u Sesvetama</title>
 <meta name="description" content="Pregledi, cijepljenja, kirurgija i mikročipiranje pasa i mačaka. Ulica Orhideja 89, Sesvete. Nazovite 01 2012 068.">
 <meta name="theme-color" content="#1E3A6E">
-<link rel="canonical" href="https://veterina-brestje.hr/" data-todo="canonical-domain">
+<link rel="canonical" href="https://filipcabraja77.github.io/" data-todo="canonical-domain">
 
 <meta property="og:type" content="website">
 <meta property="og:locale" content="hr_HR">
 <meta property="og:site_name" content="Veterinarska ambulanta Novo Brestje">
 <meta property="og:title" content="Veterinarska ambulanta Novo Brestje - Vaša veterinarka u Sesvetama">
 <meta property="og:description" content="Pregledi, cijepljenja, kirurgija i mikročipiranje pasa i mačaka. Ulica Orhideja 89, Sesvete. Nazovite 01 2012 068.">
-<meta property="og:url" content="https://veterina-brestje.hr/" data-todo="canonical-domain">
-<meta property="og:image" content="https://veterina-brestje.hr/img/stranica/og-image.jpg" data-todo="canonical-domain">
+<meta property="og:url" content="https://filipcabraja77.github.io/" data-todo="canonical-domain">
+<meta property="og:image" content="https://filipcabraja77.github.io/img/stranica/og-image.jpg" data-todo="canonical-domain">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta property="og:image:alt" content="Veterinarska ambulanta Novo Brestje, Ulica Orhideja 89, Sesvete">
@@ -32,14 +33,7 @@
 <noscript><style>
   /* Bez JavaScripta svi paneli akordeona ostaju otvoreni i čitljivi. */
   .service__panel[hidden], .acc__panel[hidden] { display: block !important; }
-  /* Cjenik: bez JS-a ni tabovi ni akordeon ne rade, pa se traka gumba skriva,
-     a sve usluge stoje jedna ispod druge kao običan popis. Zaglavlje panela
-     (naziv + cijena) mora ostati vidljivo - inače bi ga na mobitelu sakrilo
-     pravilo za akordeon, koje računa da je cijena preseljena u gumb. */
-  .ptabs__panel[hidden] { display: block !important; }
-  .ptabs__list { display: none !important; }
-  .ptabs__head { display: flex !important; margin-bottom: 14px !important; }
-  .ptabs__name { display: block !important; }
+  /* Novosti ne trebaju JS - sekcija je čist HTML i radi i bez skripte. */
   .scard__btn, .acc__plus, .hamburger,
   .services__arrow, .panel__close { display: none !important; }
   .scard__toggle, .acc__toggle { cursor: default; }
@@ -177,12 +171,12 @@
 
       <div class="nav__inner">
         <!-- Redoslijed prati sekcije u DOM-u:
-             #top - #usluge - #onama - #cjenik - #galerija - #recenzije - #faq - #kontakt -->
+             #top - #usluge - #onama - #novosti - #galerija - #recenzije - #faq - #kontakt -->
         <ul class="nav__list">
           <li><a href="#top">Naslovnica</a></li>
           <li><a href="#usluge">Usluge</a></li>
           <li><a href="#onama">O nama</a></li>
-          <li><a href="#cjenik">Cjenik</a></li>
+          <li><a href="#novosti">Novosti</a></li>
           <li><a href="#galerija">Galerija</a></li>
           <li><a href="#recenzije">Recenzije</a></li>
           <li><a href="#faq">FAQ</a></li>
@@ -620,82 +614,62 @@
   </div>
 </section>
 
-<!-- ===== 4.8 Cjenik ===== -->
-<!-- Široki container (ne container--narrow): traka od šest tabova stane u
-     jedan red na desktopu. Sam panel je uži i centriran (vidi .ptabs__panel). -->
-<section class="pricing section" id="cjenik">
+<!-- ===== 4.8 Novosti =====
+     Na ovom mjestu bio je cjenik. Dva stupca: lijevo istaknuta novost
+     (navy blok), desno lista kratkih obavijesti. Oba su mjesta zamišljena za
+     često mijenjanje - vidi komentare niže.
+
+     OZNAKE (.badge) - boja nosi značenje, držite se ovih četiriju:
+       .badge--promo   accent   Promocija / Ponuda
+       .badge--info    navy     Obavijest
+       .badge--remind  zlatna   Podsjetnik
+       .badge--tip     ice      Savjet
+     Tekst oznake je slobodan („Za nove pacijente", „Podsjetnik"…), ali klasa
+     mora odgovarati vrsti - inače boje prestaju nešto značiti. -->
+<section class="news section" id="novosti" aria-labelledby="news-title">
   <div class="container">
     <header class="section__head reveal">
-      <p class="overline">Cjenik</p>
-      <h2 class="section__title">Cjenik najtraženijih usluga</h2>
+      <p class="overline">Novosti</p>
+      <h2 class="section__title" id="news-title">Novosti i obavijesti</h2>
     </header>
 
-    <!-- Jedna usluga = jedan gumb + jedan panel. Na desktopu su gumbi traka
-         tabova, a ispod 768px main.js ih pretvara u akordeon (uloge se
-         mijenjaju, a CSS ih rasporedom složi u parove naslov → opis).
-         Roving tabindex (aktivan 0, ostali -1) upisan je već u HTML pa je
-         redoslijed tabulatora ispravan i prije nego se JS izvrši.
-         Znak +/− vidi se samo u akordeonu. -->
-    <div class="ptabs reveal" id="cjenik-tabs">
-      <div class="ptabs__list" role="tablist" aria-label="Usluge iz cjenika">
-        <button type="button" class="ptabs__tab" role="tab" id="cj-tab-1" aria-controls="cj-panel-1" aria-selected="true" tabindex="0"><span class="ptabs__label">Pregled</span><span class="ptabs__plus" aria-hidden="true"><svg class="ptabs__ico--plus"><use href="#i-plus"></use></svg><svg class="ptabs__ico--minus"><use href="#i-minus"></use></svg></span></button>
-        <button type="button" class="ptabs__tab" role="tab" id="cj-tab-2" aria-controls="cj-panel-2" aria-selected="false" tabindex="-1"><span class="ptabs__label">Cijepljenje psa</span><span class="ptabs__plus" aria-hidden="true"><svg class="ptabs__ico--plus"><use href="#i-plus"></use></svg><svg class="ptabs__ico--minus"><use href="#i-minus"></use></svg></span></button>
-        <button type="button" class="ptabs__tab" role="tab" id="cj-tab-3" aria-controls="cj-panel-3" aria-selected="false" tabindex="-1"><span class="ptabs__label">Cijepljenje mačke</span><span class="ptabs__plus" aria-hidden="true"><svg class="ptabs__ico--plus"><use href="#i-plus"></use></svg><svg class="ptabs__ico--minus"><use href="#i-minus"></use></svg></span></button>
-        <button type="button" class="ptabs__tab" role="tab" id="cj-tab-4" aria-controls="cj-panel-4" aria-selected="false" tabindex="-1"><span class="ptabs__label">Mikročipiranje</span><span class="ptabs__plus" aria-hidden="true"><svg class="ptabs__ico--plus"><use href="#i-plus"></use></svg><svg class="ptabs__ico--minus"><use href="#i-minus"></use></svg></span></button>
-        <button type="button" class="ptabs__tab" role="tab" id="cj-tab-5" aria-controls="cj-panel-5" aria-selected="false" tabindex="-1"><span class="ptabs__label">Sterilizacija / kastracija</span><span class="ptabs__plus" aria-hidden="true"><svg class="ptabs__ico--plus"><use href="#i-plus"></use></svg><svg class="ptabs__ico--minus"><use href="#i-minus"></use></svg></span></button>
-        <button type="button" class="ptabs__tab" role="tab" id="cj-tab-6" aria-controls="cj-panel-6" aria-selected="false" tabindex="-1"><span class="ptabs__label">Čišćenje zubnog kamenca</span><span class="ptabs__plus" aria-hidden="true"><svg class="ptabs__ico--plus"><use href="#i-plus"></use></svg><svg class="ptabs__ico--minus"><use href="#i-minus"></use></svg></span></button>
-      </div>
+    <div class="news__grid">
 
-      <div class="ptabs__panel" role="tabpanel" id="cj-panel-1" aria-labelledby="cj-tab-1" tabindex="0">
-        <div class="ptabs__head">
-          <h3 class="ptabs__name">Pregled</h3>
-          <span class="chip chip--price" data-todo="cijena-pregled">[TBD] €</span>
-        </div>
-        <p class="ptabs__desc">Klinički pregled ljubimca, razgovor o simptomima i preporuka daljnjih pretraga ili terapije.</p>
-      </div>
+      <!-- ===== ISTAKNUTA NOVOST / PROMOCIJA =====
+           Uvijek točno JEDAN blok. Kad stigne prava novost, promijenite
+           oznaku (i njezinu klasu), naslov, tekst i gumb - raspored se ne
+           dira. Ako trenutačno nema što istaknuti, cijeli <article> se može
+           obrisati; lista tada sama zauzme punu širinu. -->
+      <article class="news__feature reveal">
+        <p class="badge badge--promo">Za nove pacijente</p>
+        <h3 class="news__feature-title">Prvi pregled besplatan</h3>
+        <p class="news__feature-text">Upoznajmo se bez obveze - dovedite ljubimca na prvi pregled bez naknade. Nazovite i dogovorite termin.</p>
+        <a class="btn btn--accent news__cta" href="tel:+38512012068">
+          <svg class="btn__icon" aria-hidden="true"><use href="#i-phone"></use></svg>Nazovite nas
+        </a>
+      </article>
 
-      <div class="ptabs__panel" role="tabpanel" id="cj-panel-2" aria-labelledby="cj-tab-2" tabindex="0" hidden>
-        <div class="ptabs__head">
-          <h3 class="ptabs__name">Cijepljenje psa</h3>
-          <span class="chip chip--price" data-todo="cijena-cijepljenje-psa">[TBD] €</span>
-        </div>
-        <p class="ptabs__desc">Pregled prije cijepljenja, cjepivo protiv bjesnoće ili zaraznih bolesti te upis u knjižicu.</p>
-      </div>
+      <!-- ===== LISTA NOVOSTI =====
+           Jedna stavka = jedan <li>: oznaka, naslov, jedna rečenica. Bez
+           datuma - stavke su trajni podsjetnici, pa ne zastarijevaju. -->
+      <ul class="news__list reveal">
+        <li class="news__item">
+          <p class="badge badge--remind">Podsjetnik</p>
+          <h3 class="news__item-title">Godišnje cijepljenje</h3>
+          <p class="news__item-text">Provjerite knjižicu ljubimca i javite se kad je vrijeme.</p>
+        </li>
 
-      <div class="ptabs__panel" role="tabpanel" id="cj-panel-3" aria-labelledby="cj-tab-3" tabindex="0" hidden>
-        <div class="ptabs__head">
-          <h3 class="ptabs__name">Cijepljenje mačke</h3>
-          <span class="chip chip--price" data-todo="cijena-cijepljenje-macke">[TBD] €</span>
-        </div>
-        <p class="ptabs__desc">Pregled prije cijepljenja, cjepivo prema dobi i načinu držanja mačke te upis u knjižicu.</p>
-      </div>
+        <li class="news__item">
+          <p class="badge badge--remind">Podsjetnik</p>
+          <h3 class="news__item-title">Krpelji i buhe</h3>
+          <p class="news__item-text">Zaštitite ljubimca kroz toplu sezonu.</p>
+        </li>
 
-      <div class="ptabs__panel" role="tabpanel" id="cj-panel-4" aria-labelledby="cj-tab-4" tabindex="0" hidden>
-        <div class="ptabs__head">
-          <h3 class="ptabs__name">Mikročipiranje</h3>
-          <span class="chip chip--price" data-todo="cijena-mikrocipiranje">[TBD] €</span>
-        </div>
-        <p class="ptabs__desc">Ugradnja mikročipa, očitanje broja i prijava u Upisnik kućnih ljubimaca.</p>
-      </div>
-
-      <div class="ptabs__panel" role="tabpanel" id="cj-panel-5" aria-labelledby="cj-tab-5" tabindex="0" hidden>
-        <div class="ptabs__head">
-          <h3 class="ptabs__name">Sterilizacija / kastracija</h3>
-          <span class="chip chip--price" data-todo="cijena-sterilizacija-kastracija">[TBD] €</span>
-        </div>
-        <p class="ptabs__desc">Preoperativni pregled, zahvat u anesteziji i kontrola nakon zahvata.</p>
-      </div>
-
-      <div class="ptabs__panel" role="tabpanel" id="cj-panel-6" aria-labelledby="cj-tab-6" tabindex="0" hidden>
-        <div class="ptabs__head">
-          <h3 class="ptabs__name">Čišćenje zubnog kamenca</h3>
-          <span class="chip chip--price" data-todo="cijena-zubni-kamenac">[TBD] €</span>
-        </div>
-        <p class="ptabs__desc">Ultrazvučno uklanjanje kamenca i poliranje zubi u kratkotrajnoj anesteziji.</p>
-      </div>
+        <!-- NOVA NOVOST: dodaj stavku ovdje - kopiraj jedan <li> iznad pa
+             promijeni klasu oznake, njezin tekst, naslov i rečenicu.
+             Popis nema gornju granicu; nove stavke idu na vrh ako su svježije. -->
+      </ul>
     </div>
-
-    <p class="pricing__note reveal">Za sve ostale usluge i procjene nazovite nas na <a class="link-contact" href="tel:+38512012068">01 2012 068</a>.</p>
   </div>
 </section>
 
@@ -1245,7 +1219,8 @@
       <ul class="footer__links">
         <li><a href="#onama">O nama</a></li>
         <li><a href="#usluge">Usluge</a></li>
-        <li><a href="#cjenik">Cjenik</a></li>
+        <li><a href="#novosti">Novosti</a></li>
+        <li><a href="#galerija">Galerija</a></li>
         <li><a href="#recenzije">Recenzije</a></li>
         <li><a href="#faq">FAQ</a></li>
         <li><a href="#kontakt">Kontakt</a></li>
@@ -1329,8 +1304,8 @@
   "@context": "https://schema.org",
   "@type": "VeterinaryCare",
   "name": "Veterinarska ambulanta Novo Brestje",
-  "url": "https://veterina-brestje.hr/",
-  "image": "https://veterina-brestje.hr/img/stranica/og-image.jpg",
+  "url": "https://filipcabraja77.github.io/",
+  "image": "https://filipcabraja77.github.io/img/stranica/og-image.jpg",
   "telephone": "+38512012068",
   "email": "veterinarnb@gmail.com",
   "priceRange": "€€",

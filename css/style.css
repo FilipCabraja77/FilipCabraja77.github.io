@@ -26,8 +26,13 @@
      #EE9276 daje 4,78:1. Obrnuto nego na svijetloj podlozi, gdje se accent
      mora zatamniti (--accent-btn). */
   --accent-on-navy: #EE9276;
-  /* Prigušeno zlatna - samo zvjezdice ocjene. */
+  /* Prigušeno zlatna - zvjezdice ocjene. */
   --gold: #D9A62E;
+  /* Par izveden iz zlatne, samo za oznaku „Podsjetnik" u Novostima: na
+     --gold bi bijeli tekst pao ispod AA, a tamni je pretaman. Ova dva daju
+     6,1:1. */
+  --gold-soft: #F7EAC9;
+  --gold-deep: #6E5210;
   --text: #1C2434;
   --text-muted: #55617A;
   --text-inverse: #FFFFFF;
@@ -1010,100 +1015,84 @@ section[id] { scroll-margin-top: calc(var(--header-h) + 12px); }
 .acc__panel p { padding: 0 18px 18px; color: var(--text-muted); font-size: .97rem; }
 .acc__panel a:not(.link-contact) { color: var(--navy); font-weight: 600; text-decoration: underline; text-underline-offset: 3px; }
 
-.chip {
-  display: inline-flex;
-  align-items: center;
-  padding: 6px 12px;
-  border-radius: var(--r-btn);
-  background: var(--ice);
-  color: var(--navy);
-  font-size: .9rem;
-  font-weight: 700;
-  font-variant-numeric: tabular-nums;
-  white-space: nowrap;
-}
-/* Cijena u panelu cjenika - isti chip, samo krupniji i u Frauncesu,
-   jer je u toj sekciji glavni podatak. */
-.chip--price {
-  padding: 8px 16px;
-  font-family: var(--font-head);
-  font-size: 1.1rem;
-  letter-spacing: -.01em;
+/* ---------- 4.8 NOVOSTI (istaknuti blok + lista) ----------
+   Na ovom je mjestu bio cjenik (tabovi/akordeon); s njim su otišli i
+   `.ptabs*`, `.pricing__note` te `.chip` / `.chip--price` - chip je postojao
+   samo zbog cijena.
+
+   Dva stupca: lijevo širi istaknuti blok, desno lista. Ispod 900px slažu se
+   jedno ispod drugog, a kako istaknuti blok i u HTML-u stoji prvi, ne treba
+   nikakav `order`. ---------- */
+.news__grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.15fr) minmax(0, 1fr);
+  gap: var(--gap);
+  align-items: start;
 }
 
-/* ---------- 4.8 CJENIK (tabovi na desktopu, akordeon na mobitelu) ----------
-   Vodoravna traka tabova; jedan tab = jedna usluga, vidljiv je samo panel
-   aktivnog taba. Radijus je --r-btn, a ne pilula (99px) - projekt nema
-   pilula nigdje, pa ih ni ovdje ne uvodimo.
-   Ispod 768px isti gumbi i paneli slažu se u akordeon (vidi RESPONSIVE). */
-.ptabs__list {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 10px;
-  margin-bottom: clamp(24px, 3.4vw, 34px);
-}
-.ptabs__tab {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  min-height: 44px;            /* dodirna meta */
-  padding: 10px 18px;
-  border: 1.5px solid transparent;  /* uvijek prisutan - hover ne pomiče raspored */
-  border-radius: var(--r-btn);
-  background: var(--ice);
-  color: var(--navy);
-  font-size: .95rem;
-  font-weight: 600;
-  line-height: 1.25;
-  text-align: center;
-  transition: background-color .15s ease, border-color .15s ease, color .15s ease;
-}
-.ptabs__tab:hover { border-color: var(--navy); }
-.ptabs__tab[aria-selected="true"] {
+/* Istaknuta novost - jedina navy ploha u ovom dijelu stranice, pa nosi
+   pozornost bez dodatnih ukrasa. */
+.news__feature {
+  padding: clamp(26px, 3.4vw, 40px);
+  border-radius: var(--r-lg);
   background: var(--navy);
-  border-color: var(--navy);
+  color: var(--text-inverse);
+  box-shadow: var(--shadow-md);
+}
+.news__feature-title {
+  margin: 14px 0 12px;
+  font-size: clamp(1.5rem, 2.6vw, 2rem);
   color: var(--text-inverse);
 }
-/* Znak +/− pripada samo akordeonu - na traci tabova ga nema. */
-.ptabs__plus { display: none; }
+.news__feature-text {
+  max-width: 46ch;
+  margin: 0 0 24px;
+  color: rgba(255, 255, 255, .82);
+}
 
-/* Traka tabova ide punom širinom containera, a panel ostaje u širini
-   ostalih tekstualnih sekcija (880px) da redak opisa ostane čitljiv. */
-.ptabs__panel {
-  max-width: 880px;
-  margin-inline: auto;
-  background: #fff;
+/* Lista - ravne kartice na cream podlozi; okvir nosi definiciju umjesto sjene. */
+.news__list { display: grid; gap: 12px; }
+
+.news__item {
+  padding: 18px 20px;
   border: 1px solid var(--card-line);
-  border-radius: var(--r-lg);
-  box-shadow: var(--shadow-sm);
-  padding: clamp(22px, 3.2vw, 34px);
+  border-radius: var(--r-md);
+  background: var(--cream);
+  transition: border-color .2s ease, background-color .2s ease;
 }
-/* Meki ulaz pri prebacivanju taba. Uz prefers-reduced-motion globalno
-   pravilo skrati trajanje, pa panel jednostavno odmah stoji. */
-.ptabs__panel:not([hidden]) { animation: ptabs-in .25s ease-out both; }
-@keyframes ptabs-in {
-  from { opacity: 0; transform: translateY(6px); }
-  to   { opacity: 1; transform: none; }
-}
-.ptabs__head {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: space-between;
-  gap: 12px 20px;
-  margin-bottom: 14px;
-}
-.ptabs__name {
-  font-size: clamp(1.3rem, 2.6vw, 1.6rem);
+.news__item:hover { border-color: var(--navy); background: var(--bg); }
+
+.news__item-title {
+  margin: 10px 0 6px;
+  font-size: 1.15rem;
   color: var(--navy-dark);
 }
-.ptabs__desc { margin: 0; color: var(--text-muted); }
+.news__item-text { margin: 0; color: var(--text-muted); font-size: .97rem; }
 
-.pricing__note { max-width: 680px; margin: 26px auto 0; text-align: center; color: var(--text-muted); }
-/* .link-contact zadržava svoje pravilo (bez trajne podcrte); ostali linkovi
-   u napomeni su obične riječi u rečenici pa ostaju podcrtani. */
-.pricing__note a:not(.link-contact) { color: var(--navy); font-weight: 600; text-decoration: underline; text-underline-offset: 3px; }
+/* Oznake (badge) - BOJA NOSI ZNAČENJE, ne ukras. Četiri vrste i ništa peto:
+     --promo   accent   Promocija / Ponuda
+     --info    navy     Obavijest
+     --remind  zlatna   Podsjetnik
+     --tip     ice      Savjet
+   Uz svaku je izmjereni kontrast teksta prema podlozi; tekst je sitan
+   (12px), pa je AA prag 4,5:1. Ako dodajete petu vrstu, prvo izmjerite. */
+.badge {
+  display: inline-flex;
+  align-items: center;
+  margin: 0;
+  padding: 5px 11px;
+  border-radius: var(--r-btn);
+  font-family: var(--font-body);
+  font-size: .75rem;
+  font-weight: 700;
+  line-height: 1.4;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+}
+.badge--promo  { background: var(--accent-btn); color: #fff; }              /* 4,7:1 */
+.badge--info   { background: var(--navy);       color: #fff; }              /* 11,1:1 */
+.badge--remind { background: var(--gold-soft);  color: var(--gold-deep); }  /* 6,1:1 */
+.badge--tip    { background: var(--ice);        color: var(--navy); }       /* 9,7:1 */
 
 /* ---------- 4.11 FAQ ----------
    Dva stupca: lijevo naslov i mini kartica (ljepljivi), desno ravan popis
@@ -2177,6 +2166,10 @@ body.has-ckbar .fab {
   .herocard { grid-template-columns: 1fr; }
   .herocard__cell { border-left: 0; border-top: 1px solid var(--line); }
   .herocard__cell:first-child { border-top: 0; }
+
+  /* Novosti u jedan stupac. Istaknuti blok i u HTML-u stoji prvi, pa ostaje
+     gore bez ijednog `order`. */
+  .news__grid { grid-template-columns: 1fr; }
 }
 
 @media (max-width: 1024px) {
@@ -2395,6 +2388,9 @@ body.has-ckbar .fab {
   .ckmodal__actions { flex-direction: column; }
   .ckmodal__actions .btn { width: 100%; }
 
+  /* Novosti: gumb istaknute novosti ide punom širinom bloka. */
+  .news__cta { width: 100%; }
+
   /* Galerija na mobitelu: dva stupca i nešto manji razmak. */
   .gallery__grid { column-count: 2; column-gap: 12px; }
   .gallery__item { margin-bottom: 12px; }
@@ -2483,89 +2479,6 @@ body.has-ckbar .fab {
   .faq__intro { order: 1; }
   #faq-acc    { order: 2; margin-top: 32px; }
   .faq__cta   { order: 3; }
-
-  /* ----- Cjenik: tabovi prelaze u okomiti akordeon -----
-     Na uskom ekranu vodoravna traka tražila bi klizanje, pa bi dio usluga i
-     cijena bio skriven iza ruba. Umjesto toga sve usluge stoje jedna ispod
-     druge, s cijenom vidljivom i kad je stavka zatvorena.
-
-     Markup ostaje isti: .ptabs__list se rastvara (display: contents) pa gumbi
-     i paneli postaju stavke istog stupca, a `order` ih složi u parove
-     naslov → opis (gumb n → order 2n−1, panel n → order 2n).
-     Cijenu iz panela u gumb premješta main.js, koji ujedno mijenja uloge
-     (tab/tabpanel ↔ aria-expanded). Izgled je posuđen od .acc--flat: bez
-     okvira, samo tanke crte i znak + / −. */
-  .ptabs { display: flex; flex-direction: column; border-bottom: 1px solid var(--card-line); }
-  .ptabs__list { display: contents; }
-
-  .ptabs__tab:nth-child(1) { order: 1; }
-  .ptabs__tab:nth-child(2) { order: 3; }
-  .ptabs__tab:nth-child(3) { order: 5; }
-  .ptabs__tab:nth-child(4) { order: 7; }
-  .ptabs__tab:nth-child(5) { order: 9; }
-  .ptabs__tab:nth-child(6) { order: 11; }
-  .ptabs__panel:nth-child(2) { order: 2; }
-  .ptabs__panel:nth-child(3) { order: 4; }
-  .ptabs__panel:nth-child(4) { order: 6; }
-  .ptabs__panel:nth-child(5) { order: 8; }
-  .ptabs__panel:nth-child(6) { order: 10; }
-  .ptabs__panel:nth-child(7) { order: 12; }
-
-  .ptabs__tab {
-    width: 100%;
-    justify-content: flex-start;
-    gap: 14px;
-    min-height: 64px;              /* dodirna meta s rezervom */
-    padding: 18px 2px;
-    background: transparent;
-    border: 0;
-    border-top: 1px solid var(--card-line);
-    border-radius: 0;
-    color: var(--navy-dark);
-    text-align: left;
-  }
-  .ptabs__tab:hover { background: transparent; }
-  /* Aktivan tab je na desktopu puna navy ploha; u akordeonu stanje nosi
-     znak +/−, pa se ispuna poništava (aria-selected ionako uklanja JS,
-     ovo je zaštita ako se stanja preklope pri promjeni širine). */
-  .ptabs__tab[aria-selected="true"] { background: transparent; color: var(--navy-dark); }
-  .ptabs__label { flex: 1; font-size: 1.0625rem; font-weight: 600; line-height: 1.35; }
-  .ptabs__tab .chip--price { font-size: 1rem; padding: 6px 12px; }
-
-  .ptabs__plus {
-    display: grid;
-    place-items: center;
-    width: 18px;
-    height: 18px;
-    flex: none;
-    color: var(--text-muted);
-    transition: color .15s ease;
-  }
-  .ptabs__plus svg { width: 18px; height: 18px; }
-  .ptabs__ico--minus { display: none; }
-  .ptabs__tab[aria-expanded="true"] .ptabs__plus { color: var(--navy); }
-  .ptabs__tab[aria-expanded="true"] .ptabs__ico--plus { display: none; }
-  .ptabs__tab[aria-expanded="true"] .ptabs__ico--minus { display: block; }
-
-  .ptabs__panel {
-    max-width: none;
-    margin-inline: 0;
-    padding: 0 2px 22px;
-    background: transparent;
-    border: 0;
-    border-radius: 0;
-    box-shadow: none;
-    /* Otvaranje vodi max-height iz akordeona (expand/collapse u main.js),
-       pa ulazna animacija tabova ovdje ne treba. */
-    animation: none;
-    overflow: hidden;
-    transition: max-height .35s ease, opacity .3s ease;
-  }
-  /* Naziv i cijena stoje u gumbu, pa zaglavlje panela ostaje prazno.
-     Bez JS-a se oboje vraća - vidi <noscript> u index.html. */
-  .ptabs__head { margin: 0; }
-  .ptabs__name { display: none; }
-  .ptabs__desc { max-width: 66ch; }
 
   /* Na uskim ekranima ide kraća inačica poruke. Traka je viša i tekst krupniji
      nego na desktopu - ponuda je na mobitelu prvo što se vidi, pa se ne smije
