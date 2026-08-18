@@ -992,9 +992,6 @@ section[id] { scroll-margin-top: calc(var(--header-h) + 12px); }
   line-height: 1.7;
   color: var(--text-muted);
 }
-/* Privremeni tekst dok ne stigne pravi životopis druge doktorice. Kurziv ga
-   jasno odvaja od pravog sadržaja; --text-muted na bijeloj daje 7,1:1. */
-.team__text--todo { font-style: italic; }
 
 /* ---------- 4.7b O NAMA + 4.11 FAQ (akordeon) ----------
    Cjenik više ne koristi akordeon - prešao je na tabove (4.8 niže). */
