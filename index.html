@@ -569,14 +569,18 @@
       </div>
 
       <figure class="about__figure reveal">
-        <img class="photo-grade" src="img/stranica/ines.webp" alt="Veterinarka u radnoj odori s mačkom na ramenu ispred ambulante" width="800" height="1000" loading="lazy" decoding="async">
+        <img class="photo-grade" src="img/stranica/onama.webp" alt="Ulaz u ambulantu" width="1000" height="750" loading="lazy" decoding="async">
       </figure>
     </div>
 
-    <!-- Naš tim - dvije ravnopravne kartice. Koriste isti recept kao ostale
-         kartice na stranici (bijela ploha, --card-line obrub, --r-md radijus,
-         --shadow-sm) i istu gradaciju fotografija (.photo-grade). -->
-    <div class="team reveal">
+    <!-- Naš tim - dvije ŠIROKE kartice, jedna ispod druge. Koriste isti recept
+         kao ostale kartice na stranici (bijela ploha, --card-line obrub, --r-md
+         radijus, --shadow-sm) i istu gradaciju fotografija (.photo-grade).
+         Fotografija stoji lijevo u fiksnih 280px i prikazana je CIJELA - visina
+         prati prirodni omjer 4:5 (800 × 1000), bez kadriranja. Široki tekstualni
+         stupac desno drži životopis u malo redaka, pa kartica na desktopu ostaje
+         šira nego viša. Ispod 768px kartica se složi okomito (fotka gore). -->
+    <div class="team reveal" id="nas-tim">
       <header class="team__head">
         <p class="overline">Naš tim</p>
         <h3 class="team__title">Ljudi koji brinu</h3>
@@ -585,28 +589,32 @@
       <ul class="team__grid">
         <li class="team__member">
           <figure class="team__figure">
-            <img class="photo-grade" src="img/stranica/ines.webp" alt="Ines Petrović s mačkom na ramenu ispred ambulante" width="800" height="1000" loading="lazy" decoding="async">
+            <img class="photo-grade" src="img/stranica/ines.webp" alt="Ines Petrović, dr. med. vet., u radnoj odori s mačkom na ramenu ispred ambulante" width="800" height="1000" loading="lazy" decoding="async">
           </figure>
           <div class="team__body">
             <h4 class="team__name">Ines Petrović</h4>
             <p class="team__role">dr. med. vet. <span aria-hidden="true">·</span> voditeljica</p>
-            <p class="team__text">Više od 20 godina u kvartu; strpljiv, nježan pristup i osobna briga za svakog pacijenta.</p>
+            <p class="team__text">Veterinarski fakultet u Zagrebu završila sam 2004. i od tada radim u ambulanti Novo Brestje za kućne ljubimce. Državni stručni ispit za ovlaštenog veterinara položila sam 2006., a 2008. upisala poslijediplomski specijalistički studij „Patologija i uzgoj malih mesojeda", na kojem sam magistrirala 2011. Redovito sudjelujem na veterinarskim kongresima i radionicama - posljednju, iz ultrazvuka abdomena, pohađala sam 2026. na Okean akademiji u Pančevu. U slobodno vrijeme volim planinarenje, alpinizam i putovanja, a kućni ljubimci su mi svakodnevna radost.</p>
           </div>
         </li>
 
-        <!-- TODO (klijent): ime, prezime i rečenica druge veterinarke.
+        <!-- TODO (klijent): ime, prezime i PUNI ŽIVOTOPIS druge veterinarke.
+             Pravi tekst zamjenjuje sadržaj u uglatim zagradama niže - format je
+             isti kao kod Ines (fakultet i godina, stručni ispit / specijalizacija,
+             usavršavanja, osobna crtica na kraju). Kad tekst stigne, maknuti i
+             klasu .team__text--todo te oba data-todo atributa.
              Fotografija je već obrađena - img/stranica/vet-2.webp (800 × 1000, WebP),
              izvornik: „Nove slike/PHOTO-2026-08-06-19-21-46.jpg". Kad ime bude
              poznato, datoteku je najbolje preimenovati u img/stranica/vet-<ime>.webp i
-             uskladiti src ovdje. -->
+             uskladiti src ovdje te dopuniti alt tekst imenom. -->
         <li class="team__member">
           <figure class="team__figure">
-            <img class="photo-grade" src="img/stranica/vet-2.webp" alt="Veterinarka ambulante s velikim bijelim psom u ordinaciji" width="800" height="1000" loading="lazy" decoding="async">
+            <img class="photo-grade" src="img/stranica/vet-2.webp" alt="Veterinarka ambulante, dr. med. vet., s velikim bijelim psom u ordinaciji" width="800" height="1000" loading="lazy" decoding="async">
           </figure>
           <div class="team__body">
-            <h4 class="team__name" data-todo="ime-druge-veterinarke">[IME PREZIME 2. VET]</h4>
+            <h4 class="team__name" data-todo="ime-druge-veterinarke">[Ime i prezime]</h4>
             <p class="team__role">dr. med. vet.</p>
-            <p class="team__text" data-todo="opis-druge-veterinarke">[JEDNA REČENICA o pristupu ili čime se posebno bavi]</p>
+            <p class="team__text team__text--todo" data-todo="zivotopis-druge-veterinarke">[Životopis druge doktorice - isti format kao Ines; dostavit ćemo tekst.]</p>
           </div>
         </li>
       </ul>
