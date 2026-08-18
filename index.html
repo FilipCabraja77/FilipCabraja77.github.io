@@ -576,8 +576,9 @@
     <!-- Naš tim - dvije ŠIROKE kartice, jedna ispod druge. Koriste isti recept
          kao ostale kartice na stranici (bijela ploha, --card-line obrub, --r-md
          radijus, --shadow-sm) i istu gradaciju fotografija (.photo-grade).
-         Fotografija stoji lijevo u fiksnih 280px i prikazana je CIJELA - visina
-         prati prirodni omjer 4:5 (800 × 1000), bez kadriranja. Široki tekstualni
+         Fotografija stoji lijevo u okviru omjera 3:4 (350px) i prikazana je
+         CIJELA - `object-fit: contain` je uklapa bez rezanja, a praznina uz
+         uspravnije kadrove popunjena je --ice plohom. Široki tekstualni
          stupac desno drži životopis u malo redaka, pa kartica na desktopu ostaje
          šira nego viša. Ispod 768px kartica se složi okomito (fotka gore). -->
     <div class="team reveal" id="nas-tim">
@@ -600,10 +601,11 @@
 
         <!-- Petra je veterinarska tehničarka i groomerica, ne doktorica -
              .team__role zato NE nosi „dr. med. vet.". Izvornik fotografije:
-             „Nove slike/PHOTO-2026-08-06-19-21-46.jpg". -->
+             „Nove slike/PHOTO-2026-08-06-19-21-46.jpg"; webp je puni kadr
+             izvornika (800 × 1427), bez rezanja, pa se pas vidi cijeli. -->
         <li class="team__member">
           <figure class="team__figure">
-            <img class="photo-grade" src="img/stranica/vet-petra.webp" alt="Petra Jaić s velikim bijelim psom u ordinaciji" width="800" height="1000" loading="lazy" decoding="async">
+            <img class="photo-grade" src="img/stranica/vet-petra.webp" alt="Petra Jaić s velikim bijelim psom u ordinaciji" width="800" height="1427" loading="lazy" decoding="async">
           </figure>
           <div class="team__body">
             <h4 class="team__name">Petra Jaić</h4>

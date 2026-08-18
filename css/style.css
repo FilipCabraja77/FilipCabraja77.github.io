@@ -947,7 +947,7 @@ section[id] { scroll-margin-top: calc(var(--header-h) + 12px); }
    stupac drži životopis u malo redaka, pa kartica ostaje šira nego viša. */
 .team__member {
   display: grid;
-  grid-template-columns: 280px minmax(0, 1fr);
+  grid-template-columns: 350px minmax(0, 1fr);
   gap: clamp(22px, 3vw, 34px);
   align-items: center;
   padding: clamp(20px, 2.4vw, 28px);
@@ -956,11 +956,18 @@ section[id] { scroll-margin-top: calc(var(--header-h) + 12px); }
   border-radius: var(--r-md);
   box-shadow: var(--shadow-sm);
 }
-/* Bez fiksne visine i bez aspect-ratio: okvir prati prirodni omjer fotografije
-   (4:5, 800 × 1000), pa je cijela osoba vidljiva - ništa se ne odreže. */
+/* Okvir je za obje kartice isti (3:4), a fotografija u njemu stoji CIJELA -
+   `object-fit: contain` je uklapa po dužoj stranici, pa se ništa ne reže:
+   Ines je 4:5 (800 × 1000) i gotovo ispuni okvir, a Petra je uspravnija
+   9:16 (800 × 1427) pa uz nju ostaju uske trake sa strane. Te trake nose
+   --ice, istu svijetlu plohu kao ledene sekcije, da praznina izgleda kao
+   dio kartice, a ne kao propust. */
 .team__figure {
   margin: 0;
-  width: 280px;
+  width: 350px;
+  aspect-ratio: 3 / 4;
+  display: grid;
+  place-items: center;
   border-radius: var(--r-md);
   overflow: hidden;
   background: var(--ice);
@@ -968,7 +975,7 @@ section[id] { scroll-margin-top: calc(var(--header-h) + 12px); }
 .team__figure img {
   display: block;
   width: 100%;
-  height: auto;
+  height: 100%;
   object-fit: contain;
 }
 /* 78ch drži redak ispod 80 znakova i kad je kartica na punih 1200px. */
@@ -2203,6 +2210,11 @@ body.has-ckbar .fab {
 }
 
 @media (max-width: 1024px) {
+  /* Tim: kartica je još u dva stupca, ali je uža - okvir fotografije spustimo
+     na 300px da tekstu ostane dovoljno širine. Omjer i puni kadar ostaju. */
+  .team__member { grid-template-columns: 300px minmax(0, 1fr); }
+  .team__figure { width: 300px; }
+
   /* Mozaik galerije: četiri stupca postaju pretijesna. Uži stupci = viši
      mozaik, pa maska raste s njima. */
   .gallery__grid { column-count: 3; }
@@ -2394,15 +2406,15 @@ body.has-ckbar .fab {
 }
 
 @media (max-width: 768px) {
-  /* Tim: kartica se slaže okomito - fotografija gore, tekst dolje. Fotka
-     ostaje cijela i pristojno velika (do 320px, na najužim ekranima puna
-     širina kartice), a kartica je pune širine. */
+  /* Tim: kartica se slaže okomito - fotografija gore, tekst dolje. Okvir
+     zadrži isti omjer (3:4) i fotografiju u punom kadru, samo se po širini
+     spusti na 340px, odnosno na punu širinu kartice na najužim ekranima. */
   .team__member {
     grid-template-columns: 1fr;
     gap: 18px;
     align-items: start;
   }
-  .team__figure { width: min(320px, 100%); }
+  .team__figure { width: min(340px, 100%); }
   .team__body { max-width: none; }
 
   /* Okrugli gumb za poziv. Traka pune širine više ne postoji, pa nema ni
