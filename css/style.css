@@ -1115,7 +1115,11 @@ section[id] { scroll-margin-top: calc(var(--header-h) + 12px); }
 .notes {
   columns: 3;
   column-gap: 24px;
-  margin: 0;
+  /* Razmak među ceduljama nosi `margin-bottom` na svakoj, pa ga i posljednja
+     u stupcu vuče za sobom. Negativna donja margina poništava taj višak, da
+     ploča ispod zadnjeg reda završi na istom razmaku kao sa strana, a ne
+     24px niže. */
+  margin: 0 0 -24px;
   padding: 0;
   list-style: none;
 }
@@ -1124,7 +1128,9 @@ section[id] { scroll-margin-top: calc(var(--header-h) + 12px); }
   position: relative;
   break-inside: avoid;
   margin: 0 0 24px;
-  padding: 22px;
+  /* Gore 42px: ondje sjedi trakica (13px + 20px visine), pa oznaka počinje
+     ispod nje. Ostale tri strane su 22px. */
+  padding: 42px 22px 24px;
   border-radius: var(--r-md);
   background: #FBF6EC;
   box-shadow: 0 14px 30px rgba(9, 22, 48, .34);
@@ -1134,12 +1140,18 @@ section[id] { scroll-margin-top: calc(var(--header-h) + 12px); }
 .note:nth-child(odd)  { transform: rotate(-.9deg); }
 .note:nth-child(even) { transform: rotate(1deg); }
 
-/* Trakica. Poluprozirna je pa preko cedulje potamni kremu, a preko ploče se
-   gotovo izgubi - upravo kao washi traka. Bez sjaja, uzorka i oštrog ruba. */
+/* Trakica. Poluprozirna je pa preko cedulje potamni kremu - kao washi traka.
+   Bez sjaja, uzorka i oštrog ruba.
+
+   Stoji CIJELA na cedulji (`top` je pozitivan). Ranije je visjela 10px iznad
+   gornjeg ruba: kod prve cedulje u stupcu to je izgledalo uredno, ali kod
+   svake sljedeće trakica bi pala u razmak od 24px između dviju cedulja i
+   čitala se kao komad trake zalijepljen na samu ploču. Zato je gornji padding
+   cedulje veći od ostalih - traka mu je razlog. */
 .note::before {
   content: "";
   position: absolute;
-  top: -10px;
+  top: 13px;
   left: 50%;
   width: 76px;
   height: 20px;
@@ -1157,6 +1169,9 @@ section[id] { scroll-margin-top: calc(var(--header-h) + 12px); }
   background: var(--bg);
   border-top: 3px solid var(--accent-btn);
 }
+/* `top` se mjeri od padding boxa, a taj je ovdje 3px niže zbog gornjeg ruba -
+   pa se za tih 3px korigira da trakica stoji jednako kao na ostalim ceduljama. */
+.note--feature::before { top: 10px; }
 .note--feature .note__title { font-size: 1.42rem; }
 .note__cta { margin-top: 18px; }
 
@@ -1208,7 +1223,9 @@ section[id] { scroll-margin-top: calc(var(--header-h) + 12px); }
 }
 @media (max-width: 540px) {
   .notes { columns: 1; }
-  .note { padding: 20px 18px; }
+  /* Gornji padding i dalje mora primiti trakicu, pa se stišavaju samo bočni
+     i donji. */
+  .note { padding: 42px 18px 22px; }
   .note--feature .note__title { font-size: 1.3rem; }
   /* Na jednom stupcu cedulja je široka koliko i ploča, pa gumb ide punom
      širinom - kao ostali gumbi na mobitelu. */
