@@ -1049,100 +1049,171 @@ section[id] { scroll-margin-top: calc(var(--header-h) + 12px); }
 .acc__panel p { padding: 0 18px 18px; color: var(--text-muted); font-size: .97rem; }
 .acc__panel a:not(.link-contact) { color: var(--navy); font-weight: 600; text-decoration: underline; text-underline-offset: 3px; }
 
-/* ---------- 4.8 NOVOSTI (istaknuti blok + lista) ----------
+/* ---------- 4.8 NOVOSTI - oglasna ploča ----------
    Na ovom je mjestu bio cjenik (tabovi/akordeon); s njim su otišli i
-   `.ptabs*`, `.pricing__note` te `.chip` / `.chip--price` - chip je postojao
-   samo zbog cijena.
+   `.ptabs*`, `.pricing__note` te `.chip` / `.chip--price`.
 
-   Dva stupca: lijevo širi istaknuti blok, desno lista. Ispod 900px slažu se
-   jedno ispod drugog, a kako istaknuti blok i u HTML-u stoji prvi, ne treba
-   nikakav `order`. ---------- */
-/* Bez `align-items: start`: oba stupca rastežu se na visinu retka (zadani
-   `stretch`), pa desni stupac zna koliko je visok lijevi i može svoj sadržaj
-   centrirati. S `start` bi lista bila visoka koliko i kartice, a centriranje
-   ne bi imalo prema čemu. */
-.news__grid {
-  display: grid;
-  grid-template-columns: minmax(0, 1.15fr) minmax(0, 1fr);
-  gap: var(--gap);
+   Sekcija je ploča: navy ploha `.board` unutar containera, a na njoj cedulje
+   `.note` složene u `columns`. Zidarski raspored znači da se visine NE
+   izjednačavaju - cedulja je visoka koliko joj treba, pa smiju biti različito
+   duge. Sav izgled nosi `.board`; sama sekcija ostaje bez pozadine. */
+.board {
+  position: relative;
+  padding: clamp(30px, 4.4vw, 46px) clamp(16px, 3.4vw, 40px);
+  border-radius: 26px;
+  /* Blagi otklon svjetla prema vrhu: ploča djeluje kao ploha pod svjetlom,
+     bez teksture i bez šuma. */
+  background: radial-gradient(120% 90% at 50% -10%, #26467E 0%, var(--navy) 42%, var(--navy-dark) 100%);
+  box-shadow: 0 26px 60px rgba(21, 43, 82, .24);
+  overflow: hidden;
+}
+/* Jedini „materijalni" detalj: 1px svjetla po gornjem rubu, s prozirnim
+   krajevima da ne izgleda kao nacrtana crta. */
+.board::before {
+  content: "";
+  position: absolute;
+  inset: 0 0 auto;
+  height: 1px;
+  background: linear-gradient(90deg,
+    transparent 0%,
+    rgba(255, 255, 255, .42) 22%,
+    rgba(255, 255, 255, .42) 78%,
+    transparent 100%);
 }
 
-/* Istaknuta novost - jedina navy ploha u ovom dijelu stranice, pa nosi
-   pozornost bez dodatnih ukrasa. */
-.news__feature {
-  padding: clamp(26px, 3.4vw, 40px);
-  border-radius: var(--r-lg);
-  background: var(--navy);
-  color: var(--text-inverse);
-  box-shadow: var(--shadow-md);
+.board__head {
+  max-width: 640px;
+  margin: 0 auto clamp(28px, 3.6vw, 44px);
+  text-align: center;
 }
-.news__feature-title {
-  margin: 14px 0 12px;
-  font-size: clamp(1.5rem, 2.6vw, 2rem);
+/* Nadnaslov je accent, ali posvijetljen. Mjereno prema NAJSVJETLIJOJ točki
+   ploče (#26467E, vrh gradijenta - baš ondje gdje nadnaslov i stoji):
+   --accent #E07A5F daje 3,1:1, --accent-on-navy #EE9276 daje 4,0:1 - oboje
+   ispod AA za sitan tekst (13px/600). #F0A98F daje 4,8:1 i prolazi.
+   Zato ovdje literal, a ne token: --accent-on-navy je mjeren prema punom
+   --navy, koji je tamniji od vrha ove ploče. */
+.board__overline {
+  margin: 0;
+  letter-spacing: .2em;
+  color: #F0A98F;
+}
+.board__title {
+  margin: 10px 0 0;
+  font-size: clamp(1.6rem, 3.2vw, 2rem);
   color: var(--text-inverse);
 }
-.news__feature-text {
-  max-width: 46ch;
+.board__lead {
+  max-width: 520px;
+  margin: 12px auto 0;
+  font-size: 1rem;
+  color: rgba(226, 235, 250, .72);
+}
+
+/* Zidarski raspored. `columns` puni stupac po stupac, pa vizualni redoslijed
+   nije isti kao u DOM-u - za čitače ekrana i tipkovnicu vrijedi redoslijed iz
+   HTML-a, koji je uredniški ispravan (istaknuta prva). */
+.notes {
+  columns: 3;
+  column-gap: 24px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.note {
+  position: relative;
+  break-inside: avoid;
   margin: 0 0 24px;
-  color: rgba(255, 255, 255, .82);
-}
-
-/* Lista - ravne kartice na cream podlozi; okvir nosi definiciju umjesto sjene.
-
-   `align-content: center` drži kartice okomito po sredini stupca: kad je
-   istaknuti blok viši (a obično jest), praznina se dijeli gore i dolje umjesto
-   da sva padne na dno. Kartice zadržavaju svoju visinu - `align-content`
-   raspoređuje retke unutar mreže, ne rasteže ih. Ako ih ikad bude toliko da
-   ispune visinu, pravilo jednostavno nema što pomaknuti.
-
-   Na mobitelu (jedan stupac) lista je visoka točno koliko i kartice, pa je i
-   ondje bez učinka - zato nema iznimke u responsive bloku. */
-.news__list {
-  display: grid;
-  gap: 12px;
-  align-content: center;
-}
-
-.news__item {
-  padding: 18px 20px;
-  border: 1px solid var(--card-line);
+  padding: 22px;
   border-radius: var(--r-md);
-  background: var(--cream);
-  transition: border-color .2s ease, background-color .2s ease;
+  background: #FBF6EC;
+  box-shadow: 0 14px 30px rgba(9, 22, 48, .34);
 }
-.news__item:hover { border-color: var(--navy); background: var(--bg); }
+/* Zakret je naizmjeničan i sitan (ispod 1°): cedulje djeluju ručno
+   zalijepljeno, ali red se i dalje čita. Veći kut brzo izgleda kao nemar. */
+.note:nth-child(odd)  { transform: rotate(-.9deg); }
+.note:nth-child(even) { transform: rotate(1deg); }
 
-.news__item-title {
-  margin: 10px 0 6px;
-  font-size: 1.15rem;
-  color: var(--navy-dark);
+/* Trakica. Poluprozirna je pa preko cedulje potamni kremu, a preko ploče se
+   gotovo izgubi - upravo kao washi traka. Bez sjaja, uzorka i oštrog ruba. */
+.note::before {
+  content: "";
+  position: absolute;
+  top: -10px;
+  left: 50%;
+  width: 76px;
+  height: 20px;
+  border-radius: 2px;
+  transform: translateX(-50%) rotate(-2.5deg);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, .12);
 }
-.news__item-text { margin: 0; color: var(--text-muted); font-size: .97rem; }
+.note--promo::before  { background: rgba(224, 122, 95, .45); }  /* accent  */
+.note--info::before   { background: rgba(30, 58, 110, .40); }   /* navy    */
+.note--remind::before { background: rgba(217, 166, 46, .45); }  /* zlatna  */
+
+/* Istaknuta cedulja: bijeli papir umjesto kremastog i tanka accent linija po
+   vrhu. Uvijek najviše jedna - kad ih je dvije, nijedna nije istaknuta. */
+.note--feature {
+  background: var(--bg);
+  border-top: 3px solid var(--accent-btn);
+}
+.note--feature .note__title { font-size: 1.42rem; }
+.note__cta { margin-top: 18px; }
+
+.note__title {
+  margin: 12px 0 8px;
+  font-size: 1.18rem;
+  color: var(--navy);
+}
+.note__text {
+  margin: 0;
+  font-size: .97rem;
+  line-height: 1.65;
+  color: var(--text-muted);
+}
 
 /* Oznake (badge) - BOJA NOSI ZNAČENJE, ne ukras. Četiri vrste i ništa peto:
      --promo   accent   Promocija / Ponuda
-     --info    navy     Obavijest
+     --info    ice      Obavijest
      --remind  zlatna   Podsjetnik
-     --tip     ice      Savjet
-   Uz svaku je izmjereni kontrast teksta prema podlozi; tekst je sitan
-   (12px), pa je AA prag 4,5:1. Ako dodajete petu vrstu, prvo izmjerite. */
+     --tip     navy     Savjet
+   Uz svaku je izmjereni kontrast teksta prema podlozi; tekst je sitan (11px),
+   pa je AA prag 4,5:1. Ako dodajete petu vrstu, prvo izmjerite.
+
+   Radijus je namjerna iznimka od tri stepenice iz varijabli: oznaka je pilula
+   jer na cedulji stoji uz naslov, a ne u nizu s gumbima. */
 .badge {
   display: inline-flex;
   align-items: center;
   margin: 0;
   padding: 5px 11px;
-  border-radius: var(--r-btn);
+  border-radius: 99px;
   font-family: var(--font-body);
-  font-size: .75rem;
+  font-size: .6875rem;
   font-weight: 700;
   line-height: 1.4;
-  letter-spacing: .08em;
+  letter-spacing: .05em;
   text-transform: uppercase;
 }
 .badge--promo  { background: var(--accent-btn); color: #fff; }              /* 4,7:1 */
-.badge--info   { background: var(--navy);       color: #fff; }              /* 11,1:1 */
+.badge--info   { background: var(--ice);        color: var(--navy); }       /* 9,7:1 */
 .badge--remind { background: var(--gold-soft);  color: var(--gold-deep); }  /* 6,1:1 */
-.badge--tip    { background: var(--ice);        color: var(--navy); }       /* 9,7:1 */
+.badge--tip    { background: var(--navy);       color: #fff; }              /* 11,1:1 */
+
+/* Ploča ima vlastite pragove (820px i 540px), a ne one iz donjeg
+   responsive bloka: broj stupaca ovisi o širini cedulje, ne o rasporedu
+   stranice. Zato stoje ovdje, uz komponentu. */
+@media (max-width: 820px) {
+  .notes { columns: 2; }
+}
+@media (max-width: 540px) {
+  .notes { columns: 1; }
+  .note { padding: 20px 18px; }
+  .note--feature .note__title { font-size: 1.3rem; }
+  /* Na jednom stupcu cedulja je široka koliko i ploča, pa gumb ide punom
+     širinom - kao ostali gumbi na mobitelu. */
+  .note__cta { width: 100%; }
+}
 
 /* ---------- 4.11 FAQ ----------
    Dva stupca: lijevo naslov i mini kartica (ljepljivi), desno ravan popis
@@ -2217,9 +2288,6 @@ body.has-ckbar .fab {
   .herocard__cell { border-left: 0; border-top: 1px solid var(--line); }
   .herocard__cell:first-child { border-top: 0; }
 
-  /* Novosti u jedan stupac. Istaknuti blok i u HTML-u stoji prvi, pa ostaje
-     gore bez ijednog `order`. */
-  .news__grid { grid-template-columns: 1fr; }
 }
 
 @media (max-width: 1024px) {
@@ -2450,8 +2518,6 @@ body.has-ckbar .fab {
   .ckmodal__actions { flex-direction: column; }
   .ckmodal__actions .btn { width: 100%; }
 
-  /* Novosti: gumb istaknute novosti ide punom širinom bloka. */
-  .news__cta { width: 100%; }
 
   /* Galerija na mobitelu: dva stupca i nešto manji razmak. */
   .gallery__grid { column-count: 2; column-gap: 12px; }

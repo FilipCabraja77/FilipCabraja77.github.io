@@ -654,66 +654,69 @@
   </div>
 </section>
 
-<!-- ===== 4.8 Novosti =====
-     Na ovom mjestu bio je cjenik. Dva stupca: lijevo istaknuta novost
-     (navy blok), desno lista kratkih obavijesti. Oba su mjesta zamišljena za
-     često mijenjanje - vidi komentare niže.
+<!-- ===== 4.8 Novosti - oglasna ploča =====
+     Sekcija je oglasna ploča: navy ploha (.board) na koju su „zalijepljene"
+     cedulje (.note), svaka pričvršćena trakicom (::before). Raspored cedulja
+     je CSS `columns`, dakle zidarski - visina se ne izjednačava, pa cedulje
+     smiju biti različito duge.
+
+     Sekcija radi bez JavaScripta; nema popisa ni u JS-u.
 
      OZNAKE (.badge) - boja nosi značenje, držite se ovih četiriju:
        .badge--promo   accent   Promocija / Ponuda
-       .badge--info    navy     Obavijest
+       .badge--info    ice      Obavijest
        .badge--remind  zlatna   Podsjetnik
-       .badge--tip     ice      Savjet
+       .badge--tip     navy     Savjet
+     TRAKICA prati oznaku: cedulja uz oznaku nosi i modifikator
+     .note--promo / .note--info / .note--remind, koji joj daje boju trakice.
      Tekst oznake je slobodan („Za nove pacijente", „Podsjetnik"…), ali klasa
      mora odgovarati vrsti - inače boje prestaju nešto značiti. -->
 <section class="news section" id="novosti" aria-labelledby="news-title">
   <div class="container">
-    <header class="section__head reveal">
-      <p class="overline">Novosti</p>
-      <h2 class="section__title" id="news-title">Novosti i obavijesti</h2>
-    </header>
+    <div class="board reveal">
 
-    <div class="news__grid">
+      <header class="board__head">
+        <p class="overline board__overline">Novosti</p>
+        <h2 class="board__title" id="news-title">Novosti i obavijesti</h2>
+        <p class="board__lead">Aktualne obavijesti, podsjetnici i ponude naše ambulante.</p>
+      </header>
 
-      <!-- ===== ISTAKNUTA NOVOST / PROMOCIJA =====
-           Uvijek točno JEDAN blok. Kad stigne prava novost, promijenite
-           oznaku (i njezinu klasu), naslov, tekst i gumb - raspored se ne
-           dira. Ako trenutačno nema što istaknuti, cijeli <article> se može
-           obrisati; lista tada sama zauzme punu širinu. -->
-      <article class="news__feature reveal">
-        <p class="badge badge--promo">Za nove pacijente</p>
-        <h3 class="news__feature-title">Prvi pregled besplatan</h3>
-        <p class="news__feature-text">Upoznajmo se bez obveze - dovedite ljubimca na prvi pregled bez naknade. Nazovite i dogovorite termin.</p>
-        <a class="btn btn--accent news__cta" href="tel:+38512012068">
-          <svg class="btn__icon" aria-hidden="true"><use href="#i-phone"></use></svg>Nazovite nas
-        </a>
-      </article>
+      <!-- Jedna cedulja = jedan <li>: oznaka, naslov, jedna rečenica. Bez
+           datuma - cedulje su trajni podsjetnici pa ne zastarijevaju.
+           Istaknuta (.note--feature) je uvijek najviše JEDNA i stoji prva. -->
+      <ul class="notes">
 
-      <!-- ===== LISTA NOVOSTI =====
-           Jedna stavka = jedan <li>: oznaka, naslov, jedna rečenica. Bez
-           datuma - stavke su trajni podsjetnici, pa ne zastarijevaju. -->
-      <ul class="news__list reveal">
-        <li class="news__item">
-          <p class="badge badge--remind">Podsjetnik</p>
-          <h3 class="news__item-title">Godišnje cijepljenje</h3>
-          <p class="news__item-text">Provjerite knjižicu ljubimca i javite se kad je vrijeme.</p>
+        <li class="note note--promo note--feature">
+          <p class="badge badge--promo">Za nove pacijente</p>
+          <h3 class="note__title">Prvi pregled besplatan</h3>
+          <p class="note__text">Upoznajmo se bez obveze - dovedite ljubimca na prvi pregled bez naknade.</p>
+          <a class="btn btn--accent note__cta" href="tel:+38512012068">
+            <svg class="btn__icon" aria-hidden="true"><use href="#i-phone"></use></svg>Nazovite nas
+          </a>
         </li>
 
-        <li class="news__item">
+        <li class="note note--remind">
           <p class="badge badge--remind">Podsjetnik</p>
-          <h3 class="news__item-title">Krpelji i buhe</h3>
-          <p class="news__item-text">Zaštitite ljubimca kroz toplu sezonu.</p>
+          <h3 class="note__title">Godišnje cijepljenje</h3>
+          <p class="note__text">Provjerite knjižicu ljubimca i javite se kad je vrijeme za dozu.</p>
         </li>
 
-        <li class="news__item">
+        <li class="note note--info">
           <p class="badge badge--info">Obavijest</p>
-          <h3 class="news__item-title">Veterinarska hrana za ljubimce</h3>
-          <p class="news__item-text">U ambulanti možete nabaviti veterinarsku hranu za pse i mačke - pitajte nas za preporuku prilagođenu vašem ljubimcu.</p>
+          <h3 class="note__title">Veterinarska hrana za ljubimce</h3>
+          <p class="note__text">U ambulanti možete nabaviti hranu za pse i mačke - pitajte za preporuku.</p>
         </li>
 
-        <!-- NOVA NOVOST: dodaj stavku ovdje - kopiraj jedan <li> iznad pa
-             promijeni klasu oznake, njezin tekst, naslov i rečenicu.
-             Popis nema gornju granicu; nove stavke idu na vrh ako su svježije. -->
+        <li class="note note--remind">
+          <p class="badge badge--remind">Podsjetnik</p>
+          <h3 class="note__title">Krpelji i buhe</h3>
+          <p class="note__text">Zaštitite ljubimca kroz toplu sezonu redovitom preventivom.</p>
+        </li>
+
+        <!-- NOVA NOVOST: dodaj cedulju ovdje - kopiraj jedan <li> iznad pa
+             promijeni modifikator cedulje (.note--promo / --info / --remind),
+             klasu i tekst oznake, naslov i rečenicu. Popis nema gornju
+             granicu; nove cedulje idu na vrh ako su svježije. -->
       </ul>
     </div>
   </div>
