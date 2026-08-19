@@ -949,7 +949,11 @@ section[id] { scroll-margin-top: calc(var(--header-h) + 12px); }
   display: grid;
   grid-template-columns: 350px minmax(0, 1fr);
   gap: clamp(22px, 3vw, 34px);
-  align-items: center;
+  /* `start`, ne `center`: ime počinje u liniji s gornjim rubom fotografije.
+     Centrirano je tekst gurala u sredinu pa je kartica dobivala prazninu i
+     iznad i ispod životopisa - ovako je sva rezerva na jednom mjestu, pri
+     dnu, i čita se kao namjeran raspored, a ne kao rupa. */
+  align-items: start;
   padding: clamp(20px, 2.4vw, 28px);
   background: #fff;
   border: 1px solid var(--card-line);
@@ -978,25 +982,34 @@ section[id] { scroll-margin-top: calc(var(--header-h) + 12px); }
   height: 100%;
   object-fit: contain;
 }
-/* 78ch drži redak ispod 80 znakova i kad je kartica na punih 1200px. */
+/* Gornja granica retka. Na punih 1200px stupac je ionako uži od 78ch, pa
+   mjeru ondje diktira sam raspored (~78 znakova pri 18px) - ovo je zaštita
+   ako kartica ikad dobije više širine. */
 .team__body { min-width: 0; max-width: 78ch; }
+/* Ime je najkrupniji tekst u kartici, ali ostaje ispod .team__title
+   („Ljudi koji brinu") na obje krajnosti raspona - 22 px prema 24 px na
+   mobitelu, 28,8 px prema 32 px na desktopu - da hijerarhija h3 → h4 ostane
+   čitljiva. */
 .team__name {
-  margin: 0 0 5px;
-  font-size: clamp(1.15rem, 1.8vw, 1.35rem);
+  margin: 0 0 7px;
+  font-size: clamp(1.375rem, 2.2vw, 1.8rem);
   color: var(--navy-dark);
 }
 /* Titula nosi --accent-btn (ne --accent): na bijeloj plohi daje pun kontrast. */
 .team__role {
-  margin: 0 0 10px;
-  font-size: .8125rem;
+  margin: 0 0 14px;
+  font-size: clamp(.9375rem, 1vw, 1.0625rem);
   font-weight: 600;
   letter-spacing: .04em;
   color: var(--accent-btn);
 }
+/* Životopis je bio sitniji od osnovnog teksta stranice (15 px prema 17 px) -
+   sad kreće od te osnovne mjere i na širokim ekranima ide na 18 px, pa
+   tekstualni stupac zauzme bitno više visine uz fotografiju. */
 .team__text {
   margin: 0;
-  font-size: .9375rem;
-  line-height: 1.7;
+  font-size: clamp(1.0625rem, 1.15vw, 1.125rem);
+  line-height: 1.75;
   color: var(--text-muted);
 }
 
@@ -2409,10 +2422,11 @@ body.has-ckbar .fab {
   /* Tim: kartica se slaže okomito - fotografija gore, tekst dolje. Okvir
      zadrži isti omjer (3:4) i fotografiju u punom kadru, samo se po širini
      spusti na 340px, odnosno na punu širinu kartice na najužim ekranima. */
+  /* `align-items: start` ovdje se više ne ponavlja - osnovno pravilo ga
+     već nosi. */
   .team__member {
     grid-template-columns: 1fr;
     gap: 18px;
-    align-items: start;
   }
   .team__figure { width: min(340px, 100%); }
   .team__body { max-width: none; }
