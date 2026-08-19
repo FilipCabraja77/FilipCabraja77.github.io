@@ -90,6 +90,9 @@
   <symbol id="i-heart" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
     <path d="M20.8 5.6a5 5 0 0 0-7.1 0L12 7.3l-1.7-1.7a5 5 0 1 0-7.1 7.1l8.8 8.8 8.8-8.8a5 5 0 0 0 0-7.1Z"/>
   </symbol>
+  <symbol id="i-scissors" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+    <circle cx="6" cy="6" r="3"/><circle cx="6" cy="18" r="3"/><path d="M20 4 8.12 15.88M14.47 14.48 20 20M8.12 8.12 12 12"/>
+  </symbol>
   <symbol id="i-plus" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round">
     <path d="M12 5v14M5 12h14"/>
   </symbol>
@@ -405,6 +408,21 @@
         </article>
       </li>
 
+      <li class="scard">
+        <article class="scard__inner">
+          <div class="scard__media">
+            <img class="scard__img photo-grade" src="img/stranica/usluga-grooming.webp" alt="Njegovan pas nakon šišanja" width="600" height="740" loading="lazy" decoding="async" style="object-position: 50% 35%">
+          </div>
+          <div class="scard__body">
+            <h3 class="scard__title" id="usluga-7-title">
+              <button type="button" class="scard__toggle" aria-expanded="false" aria-controls="usluga-7"><span class="scard__titletext">Njega i uređenje (grooming)</span></button>
+            </h3>
+            <p class="scard__desc">Šišanje, kupanje i uređenje pasa.</p>
+            <span class="scard__btn" aria-hidden="true">Saznaj više <svg><use href="#i-chevron-down"></use></svg></span>
+          </div>
+        </article>
+      </li>
+
     </ul>
   </div>
 
@@ -543,6 +561,29 @@
           </div>
         </div>
       </div>
+
+      <div class="service__panel" id="usluga-7" role="region" aria-labelledby="usluga-7-title" hidden>
+        <div class="service__panel-inner">
+          <div class="panel__head">
+            <p class="panel__title" aria-hidden="true">Njega i uređenje (grooming)</p>
+            <button type="button" class="panel__close" aria-label="Zatvori detalje: Njega i uređenje (grooming)">
+              <svg aria-hidden="true"><use href="#i-close"></use></svg>
+            </button>
+          </div>
+          <div class="panel__grid">
+            <div class="panel__text">
+              <p>Šišanje škarama i mašinicom, kupanje te njega dlake, pandži i ušiju - prilagođeno pasmini i temperamentu vašeg psa.</p>
+              <p>Grooming vodi naša groomerica Petra Jaić. Za termin nas nazovite na <a class="link-contact" href="tel:+38512012068">01 2012 068</a>.</p>
+            </div>
+            <ul class="panel__list">
+              <li>Šišanje škarama i mašinicom</li>
+              <li>Kupanje i njega dlake</li>
+              <li>Skraćivanje pandži</li>
+              <li>Čišćenje ušiju</li>
+            </ul>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 </section>
@@ -662,6 +703,12 @@
           <p class="badge badge--remind">Podsjetnik</p>
           <h3 class="news__item-title">Krpelji i buhe</h3>
           <p class="news__item-text">Zaštitite ljubimca kroz toplu sezonu.</p>
+        </li>
+
+        <li class="news__item">
+          <p class="badge badge--info">Obavijest</p>
+          <h3 class="news__item-title">Veterinarska hrana za ljubimce</h3>
+          <p class="news__item-text">U ambulanti možete nabaviti veterinarsku hranu za pse i mačke - pitajte nas za preporuku prilagođenu vašem ljubimcu.</p>
         </li>
 
         <!-- NOVA NOVOST: dodaj stavku ovdje - kopiraj jedan <li> iznad pa
@@ -1286,8 +1333,9 @@
       <!-- .photo-grade i ovdje: bez njega bi klik na sličicu vidljivo
            promijenio boje jer mozaik nosi gradaciju, a uvećana slika ne bi. -->
       <img class="lbox__img photo-grade" id="lbox-img" alt="" decoding="async">
+      <!-- Natpis se namjerno ne ispisuje: opis fotografije živi samo u
+           `alt` atributu (pristupačnost i SEO), a vidljiv ostaje brojač. -->
       <figcaption class="lbox__caption">
-        <span class="lbox__desc" id="lbox-desc"></span>
         <span class="lbox__count" id="lbox-count"></span>
       </figcaption>
     </figure>

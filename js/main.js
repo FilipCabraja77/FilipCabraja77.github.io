@@ -539,7 +539,6 @@
 
     var panel = $('.lbox__panel', box);
     var imgEl = $('#lbox-img');
-    var descEl = $('#lbox-desc');
     var countEl = $('#lbox-count');
     var allBtn = $('#galerija-sve');
     var countOut = $('#galerija-broj');
@@ -557,7 +556,7 @@
       imgEl.setAttribute('alt', p.alt);
       if (p.w) imgEl.setAttribute('width', p.w);
       if (p.h) imgEl.setAttribute('height', p.h);
-      descEl.textContent = p.alt;
+      // Opis ostaje samo u `alt` - vidljiv natpis se ne ispisuje.
       countEl.textContent = (index + 1) + ' / ' + photos.length;
     }
 
