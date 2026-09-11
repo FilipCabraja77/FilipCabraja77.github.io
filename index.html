@@ -2,1408 +2,2469 @@
 <html lang="hr">
 <head>
 <meta charset="UTF-8">
-<meta name="robots" content="noindex">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Veterinarska ambulanta Novo Brestje - Vaša veterinarka u Sesvetama</title>
-<meta name="description" content="Pregledi, cijepljenja, kirurgija i mikročipiranje pasa i mačaka. Ulica Orhideja 89, Sesvete. Nazovite 01 2012 068.">
-<meta name="theme-color" content="#1E3A6E">
-<link rel="canonical" href="https://filipcabraja77.github.io/" data-todo="canonical-domain">
-
-<meta property="og:type" content="website">
-<meta property="og:locale" content="hr_HR">
-<meta property="og:site_name" content="Veterinarska ambulanta Novo Brestje">
-<meta property="og:title" content="Veterinarska ambulanta Novo Brestje - Vaša veterinarka u Sesvetama">
-<meta property="og:description" content="Pregledi, cijepljenja, kirurgija i mikročipiranje pasa i mačaka. Ulica Orhideja 89, Sesvete. Nazovite 01 2012 068.">
-<meta property="og:url" content="https://filipcabraja77.github.io/" data-todo="canonical-domain">
-<meta property="og:image" content="https://filipcabraja77.github.io/img/stranica/og-image.jpg" data-todo="canonical-domain">
-<meta property="og:image:width" content="1200">
-<meta property="og:image:height" content="630">
-<meta property="og:image:alt" content="Veterinarska ambulanta Novo Brestje, Ulica Orhideja 89, Sesvete">
-<meta name="twitter:card" content="summary_large_image">
-
-<link rel="icon" href="img/stranica/favicon.svg" type="image/svg+xml">
-<link rel="apple-touch-icon" href="img/stranica/favicon.svg">
-
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pizzeria 269 | pizze u Sesvetama</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="preload" as="image" href="img/stranica/hero.webp" fetchpriority="high">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&display=swap">
-<link rel="stylesheet" href="css/style.css">
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800&family=Barlow:wght@400;500;600;700&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+/* ---------- TOKENS ---------- */
+:root {
+  --color-bg: #f7f5f0;
+  --color-dark: #15140f;
+  --color-blue: #c9a227;
+  --color-blue-dark: #9c7c17;
+  --color-text: #17160f;
+  --color-muted: #6e6b60;
+  --color-white: #ffffff;
+  --color-border: rgba(0,0,0,0.12);
+  --font-display: "Barlow Condensed", system-ui, sans-serif;
+  --font-label: "Barlow", system-ui, sans-serif;
+  --font-body: "Inter", system-ui, sans-serif;
+}
 
-<noscript><style>
-  /* Bez JavaScripta svi paneli akordeona ostaju otvoreni i čitljivi. */
-  .service__panel[hidden], .acc__panel[hidden] { display: block !important; }
-  /* Novosti ne trebaju JS - sekcija je čist HTML i radi i bez skripte. */
-  .scard__btn, .acc__plus, .hamburger,
-  .services__arrow, .panel__close { display: none !important; }
-  .scard__toggle, .acc__toggle { cursor: default; }
-  .reveal { opacity: 1 !important; transform: none !important; }
-</style></noscript>
+/* ---------- RESET ---------- */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+* { border-radius: 0 !important; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: var(--font-body);
+  font-weight: 400;
+  font-size: 1rem;
+  line-height: 1.75;
+  color: var(--color-text);
+  background: var(--color-bg);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+}
+
+img { max-width: 100%; display: block; }
+a { color: inherit; text-decoration: none; }
+button { font-family: inherit; cursor: pointer; border: none; background: none; }
+
+/* ---------- UTILITIES ---------- */
+.container {
+  width: 100%;
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 32px;
+}
+
+.label {
+  font-family: var(--font-label);
+  font-weight: 700;
+  font-size: 0.77rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--color-blue);
+}
+
+.h1 {
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: clamp(3rem, 8vw, 7rem);
+  line-height: 0.95;
+  letter-spacing: -0.01em;
+  text-transform: uppercase;
+}
+
+.h2 {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: clamp(2rem, 5vw, 3.5rem);
+  line-height: 1.05;
+  letter-spacing: -0.01em;
+  text-transform: uppercase;
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 16px 28px;
+  font-family: var(--font-label);
+  font-weight: 700;
+  font-size: 0.8rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  transition: background 0.2s ease, color 0.2s ease, border-color 0.2s ease;
+  border: 2px solid transparent;
+}
+.btn-blue {
+  background: var(--color-blue);
+  color: var(--color-white);
+  border-color: var(--color-blue);
+}
+.btn-blue:hover { background: var(--color-blue-dark); border-color: var(--color-blue-dark); }
+.btn-outline {
+  border-color: rgba(255,255,255,0.7);
+  color: var(--color-white);
+}
+.btn-outline:hover { background: var(--color-white); color: var(--color-dark); border-color: var(--color-white); }
+.btn-outline-blue {
+  background: transparent;
+  color: var(--color-blue);
+  border-color: var(--color-blue);
+}
+.btn-outline-blue:hover {
+  background: var(--color-blue);
+  color: var(--color-white);
+  border-color: var(--color-blue);
+}
+.call-mobile { display: inline; }
+.call-desktop { display: none; }
+@media (min-width: 900px) {
+  .call-mobile { display: none; }
+  .call-desktop { display: inline; }
+}
+.feature-cta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 32px;
+}
+
+/* ---------- NAVBAR ---------- */
+.nav {
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  z-index: 100;
+  background: var(--color-dark);
+  border-bottom: 2px solid transparent;
+  transition: transform 0.3s ease, border-color 0.2s ease;
+}
+.nav.scrolled { border-bottom-color: var(--color-blue); }
+.nav.hidden { transform: translateY(-100%); }
+
+.nav-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 72px;
+  padding: 0 32px;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.brand {
+  display: flex;
+  flex-direction: column;
+  line-height: 1;
+}
+.brand-name {
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: 1.3rem;
+  letter-spacing: 0.05em;
+  color: var(--color-white);
+}
+.brand-sub {
+  font-family: var(--font-label);
+  font-weight: 500;
+  font-size: 0.6rem;
+  letter-spacing: 0.3em;
+  color: var(--color-blue);
+  margin-top: 4px;
+}
+
+.nav-links {
+  display: flex;
+  gap: 40px;
+  list-style: none;
+}
+.nav-links a {
+  font-family: var(--font-body);
+  font-weight: 400;
+  font-size: 0.8rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--color-white);
+  transition: color 0.2s ease;
+}
+.nav-links a:hover { color: var(--color-blue); }
+
+.nav-cta {
+  background: var(--color-blue);
+  color: var(--color-white);
+  padding: 14px 22px;
+  font-family: var(--font-label);
+  font-weight: 600;
+  font-size: 0.75rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  transition: background 0.2s ease;
+}
+.nav-cta:hover { background: var(--color-blue-dark); }
+
+.nav-burger {
+  display: none;
+  width: 32px;
+  height: 32px;
+  position: relative;
+}
+.nav-burger span {
+  display: block;
+  position: absolute;
+  left: 0; right: 0;
+  height: 2px;
+  background: var(--color-white);
+  transition: transform 0.3s ease, opacity 0.2s ease, top 0.3s ease;
+}
+.nav-burger span:nth-child(1) { top: 10px; }
+.nav-burger span:nth-child(2) { top: 16px; }
+.nav-burger span:nth-child(3) { top: 22px; }
+.nav-burger.open span:nth-child(1) { top: 16px; transform: rotate(45deg); }
+.nav-burger.open span:nth-child(2) { opacity: 0; }
+.nav-burger.open span:nth-child(3) { top: 16px; transform: rotate(-45deg); }
+
+.nav-mobile { display: none; }
+
+/* ---------- HERO ---------- */
+.hero {
+  position: relative;
+  min-height: 100vh;
+  min-height: 100dvh;
+  background: var(--color-dark);
+  color: var(--color-white);
+  display: grid;
+  grid-template-columns: 55% 45%;
+  padding-top: 72px;
+}
+
+.hero-content {
+  padding: clamp(24px, 4vh, 64px) clamp(24px, 4vw, 64px) clamp(40px, 6vh, 80px);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+  z-index: 2;
+  min-width: 0;
+}
+
+.hero-bg-overlay {
+  position: absolute;
+  inset: 0;
+  background-image: url('images/hero.jpg');
+  background-size: cover;
+  background-position: center;
+  opacity: 0.18;
+  z-index: 1;
+  pointer-events: none;
+}
+
+.hero-label {
+  font-family: var(--font-label);
+  font-weight: 700;
+  font-size: 0.9rem;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  color: var(--color-blue);
+  margin-bottom: clamp(20px, 3vh, 32px);
+}
+
+.hero h1 {
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: clamp(2.5rem, 7vw, 6rem);
+  line-height: 0.95;
+  letter-spacing: -0.01em;
+  text-transform: uppercase;
+  color: var(--color-white);
+  margin-bottom: clamp(20px, 3vh, 32px);
+}
+.hero h1 .line {
+  display: block;
+  opacity: 0;
+  transform: translateY(40px);
+  animation: heroLine 0.8s ease forwards;
+}
+.hero h1 .line:nth-child(1) { animation-delay: 0ms; }
+.hero h1 .line:nth-child(2) { animation-delay: 150ms; }
+.hero h1 .line:nth-child(3) { animation-delay: 300ms; }
+
+@keyframes heroLine {
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.hero-text {
+  max-width: 440px;
+  font-size: clamp(0.95rem, 1.1vw, 1.05rem);
+  line-height: 1.6;
+  color: rgba(255,255,255,0.7);
+  margin-bottom: clamp(24px, 4vh, 40px);
+}
+
+.hero-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-bottom: 16px;
+}
+
+.hero-note {
+  font-size: 0.85rem;
+  color: rgba(255,255,255,0.5);
+  margin-top: 8px;
+}
+
+.hero-image {
+  position: relative;
+  height: 100%;
+  min-height: 380px;
+}
+.hero-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+@media (max-height: 760px) {
+  .hero h1 { font-size: clamp(2.25rem, 5.5vw, 4.6rem); }
+}
+@media (max-width: 599px) {
+  .hero {
+    min-height: 100vh;
+    min-height: 100svh;
+    min-height: 100dvh;
+  }
+  .hero-bg-overlay {
+    opacity: 1;
+    background-image: linear-gradient(rgba(43, 35, 38, 0.72), rgba(43, 35, 38, 0.72)), url('images/hero.jpg');
+    background-size: cover;
+    background-position: center;
+  }
+  .hero-image { display: none; }
+  .hero-label {
+    font-size: 0.99rem;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .hero-label-sep { display: none; }
+  .hero h1 { font-size: clamp(2.75rem, 7.7vw, 6.6rem); }
+  .feature-cta { flex-direction: column; align-items: stretch; }
+  .feature-cta .btn { width: 100%; }
+  .feature-cta .btn-blue { display: none; }
+  .feature-cta .btn-outline-blue {
+    background: var(--color-blue);
+    color: var(--color-white);
+    border-color: var(--color-blue);
+  }
+  .feature-cta .btn-outline-blue:hover {
+    background: var(--color-blue-dark);
+    color: var(--color-white);
+    border-color: var(--color-blue-dark);
+  }
+}
+
+/* ---------- FEATURE ROWS ---------- */
+.feature {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: stretch;
+  min-height: 540px;
+}
+.feature-img {
+  width: 100%;
+  height: 560px;
+  position: relative;
+  overflow: hidden;
+}
+.feature-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+.feature-text {
+  padding: clamp(48px, 8vw, 96px);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background: var(--color-white);
+}
+.feature-text.alt { background: var(--color-bg); }
+.feature .label { margin-bottom: 20px; }
+.feature h2 { margin-bottom: 28px; }
+.feature-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  align-items: center;
+  font-family: var(--font-label);
+  font-weight: 600;
+  font-size: 0.8rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  margin-bottom: 32px;
+}
+.feature-links a {
+  color: var(--color-blue);
+  border-bottom: 2px solid var(--color-blue);
+  padding-bottom: 2px;
+  transition: color 0.2s ease, border-color 0.2s ease;
+}
+.feature-links a:hover { color: var(--color-blue-dark); border-color: var(--color-blue-dark); }
+.feature-links .sep { color: var(--color-muted); border: none; }
+.feature-body {
+  max-width: 480px;
+  color: var(--color-text);
+  font-size: 1rem;
+  line-height: 1.75;
+}
+@media (max-width: 599px) {
+  .feature-text { padding-left: 20px; padding-right: 20px; }
+  .feature-body { max-width: none; }
+  .feature h2 {
+    white-space: nowrap;
+    margin-right: -20px;
+  }
+  .feature h2 br { display: none; }
+}
+
+/* ---------- MARQUEE ---------- */
+.marquee {
+  background: var(--color-dark);
+  color: var(--color-white);
+  overflow: hidden;
+  padding: 22px 0;
+  border-top: 1px solid rgba(255,255,255,0.08);
+  border-bottom: 1px solid rgba(255,255,255,0.08);
+}
+.marquee-track {
+  display: flex;
+  white-space: nowrap;
+  width: max-content;
+  animation: marquee 35s linear infinite;
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: 1rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+.marquee-track span {
+  padding: 0 28px;
+  display: inline-block;
+}
+.marquee-track .dot {
+  color: var(--color-blue);
+  padding: 0 6px;
+}
+@keyframes marquee {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+
+/* ---------- REVIEWS (auto-scroll marquee) ---------- */
+.reviews {
+  background: var(--color-white);
+  padding: clamp(72px, 10vw, 128px) 0;
+}
+@media (min-width: 900px) {
+  .reviews { padding: clamp(36px, 5vw, 64px) 0; }
+}
+.reviews-head {
+  text-align: center;
+  margin-bottom: 56px;
+}
+.reviews-head .label { margin-bottom: 20px; }
+.reviews-head h2 {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: clamp(1.6rem, 4vw, 2.8rem);
+  letter-spacing: 0.01em;
+}
+.reviews-head .stars { color: var(--color-blue); margin-right: 12px; }
+.reviews-meta {
+  margin-top: 14px;
+  display: inline-flex;
+  align-items: center;
+  gap: 14px;
+  font-family: var(--font-body);
+  font-size: 1.3rem;
+  color: var(--color-muted);
+  letter-spacing: 0.02em;
+}
+.rating-stars {
+  position: relative;
+  display: inline-block;
+  line-height: 1;
+  letter-spacing: 0.1em;
+  white-space: nowrap;
+}
+.rating-stars-base {
+  color: var(--color-border);
+}
+.rating-stars-fill {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 96%;
+  overflow: hidden;
+  white-space: nowrap;
+  color: var(--color-blue);
+}
+.reviews-meta > span:not(.rating-stars) {
+  font-size: 0.99rem;
+  font-weight: 700;
+}
+
+.reviews-marquee {
+  overflow: hidden;
+  margin-bottom: 56px;
+  contain: layout paint;
+}
+.reviews-marquee-track {
+  display: flex;
+  gap: 24px;
+  width: max-content;
+  padding: 8px 12px;
+  animation: reviewsMarquee 180s linear infinite;
+  will-change: transform;
+  backface-visibility: hidden;
+  transform: translateZ(0);
+}
+.reviews-marquee:hover .reviews-marquee-track,
+.reviews-marquee:active .reviews-marquee-track {
+  animation-play-state: paused;
+}
+@keyframes reviewsMarquee {
+  from { transform: translate3d(0, 0, 0); }
+  to   { transform: translate3d(-50%, 0, 0); }
+}
+.review-card {
+  flex: 0 0 340px;
+  width: 340px;
+  background: var(--color-white);
+  border: 1px solid var(--color-border);
+  padding: 28px 28px 24px;
+  display: flex;
+  flex-direction: column;
+}
+.review-stars {
+  color: #fbbc04;
+  font-size: 1rem;
+  letter-spacing: 2px;
+  margin-bottom: 18px;
+  line-height: 1;
+}
+.review-text {
+  font-family: var(--font-body);
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: var(--color-text);
+  font-style: italic;
+  margin-bottom: 20px;
+  flex: 1 1 auto;
+}
+.review-divider {
+  height: 1px;
+  background: var(--color-border);
+  margin-bottom: 16px;
+}
+.review-name {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 1.05rem;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: var(--color-dark);
+  margin-bottom: 4px;
+}
+.review-source {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-family: var(--font-body);
+  font-size: 0.78rem;
+  color: var(--color-muted);
+  letter-spacing: 0.04em;
+}
+.review-source svg {
+  width: 16px;
+  height: 16px;
+  display: block;
+  flex-shrink: 0;
+}
+
+.reviews-cta {
+  text-align: center;
+}
+.btn-google {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  padding: 14px 26px;
+  background: var(--color-white);
+  color: var(--color-dark);
+  border: 1px solid var(--color-border);
+  font-family: var(--font-label);
+  font-weight: 700;
+  font-size: 0.8rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  transition: background 0.2s ease, border-color 0.2s ease;
+}
+.btn-google:hover {
+  background: var(--color-bg);
+  border-color: var(--color-muted);
+}
+.btn-google svg {
+  width: 18px;
+  height: 18px;
+  display: block;
+  flex-shrink: 0;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .reviews-marquee-track { animation: none; }
+}
+@media (max-width: 640px) {
+  .review-card { flex: 0 0 280px; width: 280px; padding: 24px 22px 20px; }
+}
+
+/* ---------- CONTACT ---------- */
+.contact {
+  background: var(--color-white);
+  padding: clamp(72px, 10vw, 128px) 0;
+}
+@media (min-width: 900px) {
+  .contact { padding: clamp(36px, 5vw, 64px) 0; }
+}
+.contact-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0;
+  border: 1px solid var(--color-border);
+}
+.contact-info {
+  background: var(--color-white);
+  padding: clamp(40px, 6vw, 64px);
+}
+.contact-info .label { margin-bottom: 20px; }
+.contact-info h2 { margin-bottom: 40px; }
+.contact-row {
+  display: flex;
+  flex-direction: column;
+  padding: 18px 0;
+  border-bottom: 1px solid var(--color-border);
+}
+.contact-row:last-of-type { border-bottom: none; }
+.contact-row .k {
+  font-family: var(--font-label);
+  font-weight: 500;
+  font-size: 0.7rem;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--color-muted);
+  margin-bottom: 6px;
+}
+.contact-row .v {
+  font-family: var(--font-body);
+  font-size: 1.05rem;
+  font-weight: 500;
+  color: var(--color-text);
+}
+.contact-row .v a:hover { color: var(--color-blue); }
+.contact-note {
+  margin-top: 28px;
+  font-style: italic;
+  color: var(--color-muted);
+  font-size: 0.9rem;
+  line-height: 1.6;
+}
+.contact-map iframe {
+  width: 100%;
+  height: 100%;
+  min-height: 420px;
+  border: none;
+  display: block;
+}
+
+/* ---------- FOOTER ---------- */
+.footer {
+  background: var(--color-dark);
+  color: var(--color-white);
+  border-top: 3px solid var(--color-blue);
+  padding: 56px 0 24px;
+}
+.footer-inner {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 32px;
+}
+.footer-top {
+  display: grid;
+  grid-template-columns: 1.6fr 1fr 1.1fr 1.3fr;
+  gap: 40px;
+  padding-bottom: 40px;
+}
+.footer-brand-col {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+.footer-logo {
+  display: inline-block;
+  align-self: flex-start;
+}
+.footer-logo img {
+  display: block;
+  width: auto;
+  max-width: 100%;
+  height: 44px;
+  object-fit: contain;
+}
+.footer-desc {
+  font-family: var(--font-body);
+  font-size: 0.88rem;
+  line-height: 1.6;
+  color: rgba(255,255,255,0.6);
+  max-width: 320px;
+}
+.footer-social {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border: 1px solid rgba(255,255,255,0.2);
+  color: rgba(255,255,255,0.7);
+  transition: background 0.2s ease, color 0.2s ease, border-color 0.2s ease;
+}
+.footer-social:hover {
+  background: var(--color-blue);
+  border-color: var(--color-blue);
+  color: var(--color-white);
+}
+.footer-social svg {
+  width: 16px;
+  height: 16px;
+  display: block;
+}
+.footer-heading {
+  font-family: var(--font-label);
+  font-weight: 700;
+  font-size: 0.78rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--color-blue);
+  margin-bottom: 20px;
+}
+.footer-links {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.footer-links a {
+  font-family: var(--font-body);
+  font-size: 0.92rem;
+  color: rgba(255,255,255,0.7);
+  transition: color 0.2s ease;
+}
+.footer-links a:hover { color: var(--color-blue); }
+.footer-contact {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.footer-contact li {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  font-family: var(--font-body);
+  font-size: 0.92rem;
+  color: rgba(255,255,255,0.7);
+  line-height: 1.45;
+}
+.footer-contact svg {
+  width: 16px;
+  height: 16px;
+  flex-shrink: 0;
+  color: var(--color-blue);
+  margin-top: 2px;
+}
+.footer-contact a {
+  color: rgba(255,255,255,0.7);
+  transition: color 0.2s ease;
+}
+.footer-contact a:hover { color: var(--color-blue); }
+.footer-bottom {
+  border-top: 1px solid rgba(255,255,255,0.1);
+  padding-top: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+.footer-copy {
+  font-family: var(--font-body);
+  font-size: 0.8rem;
+  color: rgba(255,255,255,0.55);
+  letter-spacing: 0.03em;
+}
+.footer-credit {
+  font-family: var(--font-body);
+  font-size: 0.8rem;
+  color: rgba(255,255,255,0.55);
+  letter-spacing: 0.03em;
+}
+.footer-credit a {
+  color: rgba(255,255,255,0.75);
+  transition: color 0.2s ease;
+}
+.footer-credit a:hover { color: var(--color-blue); }
+@media (max-width: 900px) {
+  .footer { padding: 48px 0 24px; }
+  .footer-top { grid-template-columns: 1fr 1fr; gap: 32px; }
+}
+@media (max-width: 600px) {
+  .footer-top { grid-template-columns: 1fr; gap: 32px; }
+  .footer-bottom { flex-direction: column; align-items: flex-start; }
+  .footer-logo { display: block; width: 100%; align-self: stretch; }
+  .footer-logo img { width: 100%; height: auto; max-width: 100%; }
+}
+
+/* ---------- REVEAL ANIMATION ---------- */
+.reveal {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+.reveal.in {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ---------- RESPONSIVE ---------- */
+@media (max-width: 968px) {
+  .hero {
+    display: flex;
+    flex-direction: column;
+    grid-template-columns: none;
+    padding-top: 64px;
+  }
+  .hero-content {
+    padding: clamp(32px, 5vh, 64px) 28px clamp(32px, 5vh, 56px);
+    flex: 1 1 auto;
+  }
+  .hero-image {
+    height: 280px;
+    min-height: 280px;
+    flex: 0 0 280px;
+  }
+  .feature {
+    grid-template-columns: 1fr;
+    min-height: auto;
+  }
+  .feature-img { height: 300px; }
+  .feature.reverse .feature-img { order: -1; }
+  .reviews-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .contact-grid {
+    grid-template-columns: 1fr;
+  }
+  .contact-map iframe { min-height: 320px; }
+}
+
+@media (max-width: 768px) {
+  .nav-inner { padding: 0 20px; height: 64px; }
+  .nav-links, .nav-cta { display: none; }
+  .nav-burger { display: block; }
+  .nav.menu-open .nav-mobile {
+    display: flex;
+  }
+  .nav-mobile {
+    display: none;
+    flex-direction: column;
+    background: var(--color-dark);
+    border-top: 1px solid rgba(255,255,255,0.1);
+    padding: 24px;
+    gap: 20px;
+  }
+  .nav-mobile a {
+    font-family: var(--font-body);
+    font-size: 0.85rem;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--color-white);
+  }
+  .nav-mobile .nav-cta-mobile {
+    background: var(--color-blue);
+    color: var(--color-white);
+    padding: 14px 22px;
+    text-align: center;
+    font-family: var(--font-label);
+    font-weight: 600;
+    font-size: 0.75rem;
+    letter-spacing: 0.18em;
+  }
+  .container { padding: 0 20px; }
+  .reviews-grid {
+    grid-template-columns: 1fr;
+  }
+  .hero-buttons { flex-direction: column; align-items: stretch; }
+  .hero-buttons .btn { width: 100%; }
+}
+
+/* ---------- USLUGE (SERVICES) ---------- */
+.usluge {
+  background: var(--color-white);
+  padding: clamp(72px, 10vw, 128px) 0;
+}
+@media (min-width: 900px) {
+  .usluge { padding: clamp(36px, 5vw, 64px) 0; }
+}
+@media (max-width: 899px) {
+  .usluge { padding: clamp(36px, 5vw, 64px) 0; }
+  .usluge-cta { flex-direction: column; align-items: stretch; }
+  .usluge-cta .btn { width: 100%; }
+}
+.usluge-head {
+  text-align: center;
+  max-width: 760px;
+  margin: 0 auto 64px;
+}
+.usluge-head .label { margin-bottom: 20px; }
+.usluge-slider {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  grid-template-areas:
+    "prev viewport next"
+    ".    dots     .";
+  align-items: center;
+  column-gap: 16px;
+  row-gap: 40px;
+}
+.usluge-controls { display: contents; }
+.usluge-arrow.prev { grid-area: prev; }
+.usluge-arrow.next { grid-area: next; }
+.usluge-viewport {
+  grid-area: viewport;
+  min-width: 0;
+  overflow: hidden;
+  cursor: grab;
+}
+.usluge-track {
+  display: flex;
+  gap: 24px;
+  align-items: stretch;
+  transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+  will-change: transform;
+  touch-action: pan-y;
+  user-select: none;
+  -webkit-user-select: none;
+}
+.usluge-track img {
+  -webkit-user-drag: none;
+  user-drag: none;
+}
+.usluge-slider.is-dragging .usluge-viewport,
+.usluge-slider.is-dragging .usluge-track {
+  cursor: grabbing;
+}
+.usluge-track .usluge-card {
+  flex: 0 0 auto;
+}
+.usluge-arrow {
+  flex: 0 0 44px;
+  width: 44px;
+  height: 44px;
+  background: var(--color-blue);
+  color: var(--color-white);
+  border: none;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50% !important;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.18);
+  transition: background 0.2s ease, box-shadow 0.2s ease;
+}
+.usluge-arrow:hover {
+  background: var(--color-blue-dark);
+  box-shadow: 0 8px 22px rgba(0,0,0,0.24);
+}
+.usluge-arrow:focus-visible {
+  outline: 2px solid var(--color-dark);
+  outline-offset: 3px;
+}
+.usluge-arrow svg {
+  width: 16px;
+  height: 16px;
+  display: block;
+}
+.usluge-dots {
+  grid-area: dots;
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+.usluge-cta {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 12px;
+  margin-top: 56px;
+}
+.usluge-dot {
+  width: 10px;
+  height: 10px;
+  background: var(--color-border);
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  transition: background 0.2s ease, transform 0.2s ease;
+  border-radius: 50% !important;
+}
+.usluge-dot:hover { background: var(--color-muted); }
+.usluge-dot.active {
+  background: var(--color-blue);
+  transform: scale(1.2);
+}
+.usluge-dot:focus-visible {
+  outline: 2px solid var(--color-blue);
+  outline-offset: 2px;
+}
+@media (prefers-reduced-motion: reduce) {
+  .usluge-track { transition-duration: 0.01s; }
+  .usluge-card:hover .usluge-img img { transform: none; }
+}
+.usluge-card {
+  background: var(--color-white);
+  border: 1px solid var(--color-border);
+  transition: border-color 0.25s ease, transform 0.25s ease;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+.usluge-card:hover {
+  border-color: var(--color-blue);
+  transform: translateY(-2px);
+}
+.usluge-card:hover .usluge-img img {
+  transform: scale(1.05);
+}
+.usluge-img {
+  position: relative;
+  width: 100%;
+  height: 190px;
+  overflow: hidden;
+  background: var(--color-dark);
+}
+.usluge-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.5s ease;
+}
+.usluge-img::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: var(--color-blue);
+  opacity: 0.12;
+  pointer-events: none;
+}
+.usluge-body {
+  padding: 28px 32px 36px;
+  flex: 1 1 auto;
+}
+.usluge-card h3 {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 1.2rem;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--color-dark);
+  line-height: 1.2;
+  margin-bottom: 18px;
+}
+.usluge-card ul {
+  list-style: none;
+  padding: 0;
+}
+.usluge-card ul li {
+  font-family: var(--font-body);
+  font-size: 0.92rem;
+  line-height: 1.55;
+  color: var(--color-text);
+  padding: 10px 0;
+  border-top: 1px solid var(--color-border);
+}
+.usluge-card ul li:first-child {
+  border-top: none;
+  padding-top: 0;
+}
+@media (max-width: 899px) {
+  .usluge-slider {
+    display: block;
+  }
+  .usluge-viewport {
+    width: 100%;
+  }
+  .usluge-controls {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+    margin-top: 32px;
+  }
+  .usluge-arrow {
+    flex: 0 0 auto;
+    flex-shrink: 0;
+    width: 38px;
+    height: 38px;
+    border-radius: 50% !important;
+  }
+}
+@media (max-width: 640px) {
+  .usluge-body { padding: 24px 26px 32px; }
+  .usluge-img { height: 200px; }
+}
+
+/* ---------- O NAMA (ABOUT) ---------- */
+.about {
+  background: var(--color-bg);
+  padding: clamp(72px, 10vw, 128px) 0;
+}
+@media (min-width: 900px) {
+  .about { padding: clamp(54px, 7.5vw, 96px) 0; }
+}
+@media (max-width: 599px) {
+  .about { padding-top: clamp(36px, 5vw, 64px); }
+}
+.about-grid {
+  display: grid;
+  grid-template-columns: 6fr 5fr;
+  gap: clamp(40px, 8vw, 96px);
+  align-items: center;
+}
+.about-text .about-body { margin-top: 32px; }
+.about-head .label { margin-bottom: 20px; }
+.about-head h2 {
+  position: relative;
+  padding-bottom: 24px;
+}
+.about-head h2::after {
+  content: "";
+  display: block;
+  width: 64px;
+  height: 2px;
+  background: var(--color-blue);
+  margin-top: 28px;
+}
+.about-body p {
+  font-family: var(--font-body);
+  font-size: 1.05rem;
+  line-height: 1.75;
+  color: var(--color-text);
+}
+.about-body p + p {
+  margin-top: 20px;
+  color: var(--color-muted);
+}
+.about-media {
+  position: relative;
+}
+.about-media img {
+  position: relative;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  display: block;
+  z-index: 2;
+}
+.about-bracket {
+  position: absolute;
+  width: 110px;
+  height: 110px;
+  z-index: 1;
+  pointer-events: none;
+}
+.about-bracket.tr {
+  top: -20px;
+  right: -20px;
+  border-top: 2px solid var(--color-blue);
+  border-right: 2px solid var(--color-blue);
+}
+.about-bracket.bl {
+  bottom: -20px;
+  left: -20px;
+  border-bottom: 2px solid var(--color-blue);
+  border-left: 2px solid var(--color-blue);
+}
+@media (max-width: 968px) {
+  .about-grid {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 32px;
+  }
+  .about-text, .about-body { display: contents; }
+  .about-head { order: 1; align-self: stretch; width: 100%; }
+  .about-body p:first-child { order: 2; align-self: stretch; width: 100%; }
+  .about-media { order: 3; margin: 0 20px; align-self: stretch; }
+  .about-body p + p { order: 4; margin-top: 0; align-self: stretch; width: 100%; }
+  .about-head h2::after { margin-top: 20px; margin-left: 0; }
+  .about-bracket { width: 82px; height: 82px; }
+  .about-head,
+  .about-head .label,
+  .about-head h2 {
+    margin-left: 0;
+    padding-left: 0;
+    text-indent: 0;
+  }
+}
+
+/* ---------- FAQ ---------- */
+.faq {
+  background: var(--color-bg);
+  padding: clamp(72px, 10vw, 128px) 0;
+}
+@media (min-width: 900px) {
+  .faq { padding: clamp(36px, 5vw, 64px) 0; }
+}
+.faq-head {
+  text-align: center;
+  max-width: 720px;
+  margin: 0 auto 56px;
+}
+.faq-head .label { margin-bottom: 20px; }
+.faq-list {
+  max-width: 880px;
+  margin: 0 auto;
+  border-top: 1px solid var(--color-border);
+}
+.faq-item {
+  border-bottom: 1px solid var(--color-border);
+}
+.faq-q {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  padding: 26px 4px;
+  text-align: left;
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: clamp(1.05rem, 2vw, 1.25rem);
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  color: var(--color-dark);
+  background: none;
+  border: none;
+  cursor: pointer;
+  transition: color 0.2s ease;
+}
+.faq-q:hover { color: var(--color-blue); }
+.faq-q .faq-mark {
+  flex-shrink: 0;
+  width: 28px;
+  height: 28px;
+  position: relative;
+  color: var(--color-blue);
+}
+.faq-q .faq-mark::before,
+.faq-q .faq-mark::after {
+  content: "";
+  position: absolute;
+  background: currentColor;
+  left: 50%;
+  top: 50%;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+.faq-q .faq-mark::before {
+  width: 14px;
+  height: 1.5px;
+  transform: translate(-50%, -50%);
+}
+.faq-q .faq-mark::after {
+  width: 1.5px;
+  height: 14px;
+  transform: translate(-50%, -50%);
+}
+.faq-item.open .faq-q { color: var(--color-blue); }
+.faq-item.open .faq-q .faq-mark::after {
+  transform: translate(-50%, -50%) rotate(90deg);
+  opacity: 0;
+}
+.faq-a {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.35s ease;
+}
+.faq-a-inner {
+  padding: 0 4px 28px;
+  font-family: var(--font-body);
+  font-size: 1rem;
+  line-height: 1.75;
+  color: var(--color-muted);
+  max-width: 760px;
+}
+@media (max-width: 640px) {
+  .faq-q { padding: 22px 4px; font-size: 1rem; }
+  .faq-a-inner { padding: 0 4px 24px; font-size: 0.95rem; }
+}
+
+/* ---------- CONTACT HOURS LIST ---------- */
+.hours-list {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+.hours-row {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 16px;
+  font-family: var(--font-body);
+  font-size: 1rem;
+  line-height: 1.5;
+  color: var(--color-text);
+  border-bottom: 1px dashed var(--color-border);
+  padding-bottom: 4px;
+}
+.hours-row:last-child { border-bottom: none; }
+.hours-row .day {
+  font-weight: 500;
+}
+.hours-row .time {
+  font-variant-numeric: tabular-nums;
+  letter-spacing: 0.02em;
+}
+.hours-row.closed .day,
+.hours-row.closed .time {
+  color: var(--color-muted);
+}
+.hours-blagdani {
+  display: block;
+  margin-top: 10px;
+  font-family: var(--font-label);
+  font-size: 0.75rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--color-muted);
+}
+
+/* ---------- MAP ---------- */
+.contact-map {
+  position: relative;
+  min-height: 420px;
+  background: var(--color-dark);
+}
+.contact-map iframe {
+  position: relative;
+  z-index: 1;
+}
+.contact-map .map-link {
+  position: absolute;
+  left: 16px;
+  bottom: 16px;
+  z-index: 2;
+  padding: 12px 20px;
+  font-size: 0.74rem;
+}
+
+@media (max-width: 599px) {
+  /* Usluge: gap between heading and cards */
+  .usluge-head { margin-bottom: 32px; }
+
+  /* O nama: half gap from accent line to first paragraph, half bottom padding */
+  .about-body p:first-child { margin-top: -16px; }
+  .about { padding-bottom: clamp(36px, 5vw, 64px); }
+
+  /* Reviews: spacing tweaks */
+  .reviews { padding-top: clamp(36px, 5vw, 64px); padding-bottom: clamp(54px, 7.5vw, 96px); }
+  .reviews-head { margin-bottom: 28px; }
+  .reviews-marquee { margin-bottom: 42px; }
+
+  /* FAQ: half top padding, -25% bottom padding */
+  .faq { padding-top: clamp(36px, 5vw, 64px); padding-bottom: clamp(54px, 7.5vw, 96px); }
+
+  /* Contact: -25% heading-to-address gap, -25% top padding */
+  .contact { padding-top: clamp(54px, 7.5vw, 96px); }
+  .contact-info h2 { margin-bottom: 30px; }
+}
+</style>
 </head>
 <body>
 
-<a class="skip-link" href="#glavni-sadrzaj">Preskoči na sadržaj</a>
-
-<!-- ===== SVG ikone (sprite) ===== -->
-<svg class="sprite" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg">
-  <symbol id="i-paw" viewBox="0 0 64 64">
-    <ellipse cx="32" cy="42" rx="13" ry="10"/>
-    <ellipse cx="19" cy="26" rx="5.2" ry="6.8" transform="rotate(-18 19 26)"/>
-    <ellipse cx="27.5" cy="20" rx="5.2" ry="7" transform="rotate(-7 27.5 20)"/>
-    <ellipse cx="36.5" cy="20" rx="5.2" ry="7" transform="rotate(7 36.5 20)"/>
-    <ellipse cx="45" cy="26" rx="5.2" ry="6.8" transform="rotate(18 45 26)"/>
-  </symbol>
-  <symbol id="i-phone" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-    <path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.2a2 2 0 0 1 2.1-.5c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2Z"/>
-  </symbol>
-  <symbol id="i-mail" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-    <rect x="2" y="4" width="20" height="16" rx="2"/><path d="m2 7 10 6 10-6"/>
-  </symbol>
-  <symbol id="i-pin" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-    <path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/>
-  </symbol>
-  <symbol id="i-parking" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-    <rect x="3" y="3" width="18" height="18" rx="3"/><path d="M9 17V7h3.5a3 3 0 0 1 0 6H9"/>
-  </symbol>
-  <symbol id="i-clock" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-    <circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/>
-  </symbol>
-  <symbol id="i-calendar" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-    <rect x="3" y="5" width="18" height="16" rx="3"/><path d="M3 10h18M8 3v4M16 3v4"/><circle cx="12" cy="15.5" r="1.4" fill="currentColor" stroke="none"/>
-  </symbol>
-  <symbol id="i-stethoscope" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-    <path d="M5 3v6a4 4 0 0 0 8 0V3"/><path d="M3 3h3M12 3h3"/><path d="M9 13v2a5 5 0 0 0 10 0v-1"/><circle cx="19" cy="11" r="2.2"/>
-  </symbol>
-  <symbol id="i-syringe" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-    <path d="m17 3 4 4"/><path d="m14 4 6 6"/><path d="m11.5 6.5 6 6-6.5 6.5H7v-4Z"/><path d="m4 20 2.5-2.5"/><path d="m12.5 9.5 2 2"/>
-  </symbol>
-  <symbol id="i-scalpel" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-    <circle cx="6" cy="6" r="3"/><circle cx="6" cy="18" r="3"/>
-    <path d="M20 4 8.12 15.88"/><path d="M14.47 14.48 20 20"/><path d="M8.12 8.12 12 12"/>
-  </symbol>
-  <symbol id="i-tooth" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-    <path d="M12 5.5c2-1.6 4.5-2 6-1 1.7 1.2 1.7 3.7 1.2 6-.5 2.2-1 4-1.5 6.4-.3 1.5-.9 2.6-1.9 2.6-1.2 0-1.5-1.4-1.8-3.3-.3-1.7-.6-2.9-2-2.9s-1.7 1.2-2 2.9c-.3 1.9-.6 3.3-1.8 3.3-1 0-1.6-1.1-1.9-2.6-.5-2.4-1-4.2-1.5-6.4-.5-2.3-.5-4.8 1.2-6 1.5-1 4-.6 6 1Z"/>
-  </symbol>
-  <symbol id="i-chip" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-    <rect x="7" y="7" width="10" height="10" rx="2"/><path d="M10 2v3M14 2v3M10 19v3M14 19v3M2 10h3M2 14h3M19 10h3M19 14h3"/>
-  </symbol>
-  <symbol id="i-heart" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-    <path d="M20.8 5.6a5 5 0 0 0-7.1 0L12 7.3l-1.7-1.7a5 5 0 1 0-7.1 7.1l8.8 8.8 8.8-8.8a5 5 0 0 0 0-7.1Z"/>
-  </symbol>
-  <symbol id="i-scissors" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-    <circle cx="6" cy="6" r="3"/><circle cx="6" cy="18" r="3"/><path d="M20 4 8.12 15.88M14.47 14.48 20 20M8.12 8.12 12 12"/>
-  </symbol>
-  <symbol id="i-plus" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round">
-    <path d="M12 5v14M5 12h14"/>
-  </symbol>
-  <symbol id="i-minus" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round">
-    <path d="M5 12h14"/>
-  </symbol>
-  <!-- Deblji potez (2) od ostatka seta: stoji na punom navy gumbu, gdje bi
-       linija od 1.5 djelovala tanko. Koristi se samo ondje. -->
-  <symbol id="i-chevron-down" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-    <path d="m6 9 6 6 6-6"/>
-  </symbol>
-  <symbol id="i-arrow-left" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-    <path d="M15 19 8 12l7-7"/>
-  </symbol>
-  <symbol id="i-arrow-right" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-    <path d="m9 5 7 7-7 7"/>
-  </symbol>
-  <symbol id="i-close" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round">
-    <path d="M6 6l12 12M18 6 6 18"/>
-  </symbol>
-  <!-- Službeni Facebook znak: krug s izrezanim „f", jedan puni path. -->
-  <!-- Dvije preklopljene fotografije - gumb „Prikaži sve fotke" u galeriji. -->
-  <symbol id="i-images" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-    <rect x="7" y="3" width="14" height="11" rx="2"/><path d="m9 12 3-3 4 4 2-2 3 3"/><path d="M17 17v2a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V9a2 2 0 0 1 2-2h2"/>
-  </symbol>
-  <symbol id="i-facebook" viewBox="0 0 24 24">
-    <path d="M22 12.06C22 6.5 17.52 2 12 2S2 6.5 2 12.06c0 5.02 3.66 9.18 8.44 9.94v-7.03H7.9v-2.91h2.54V9.85c0-2.51 1.49-3.9 3.77-3.9 1.09 0 2.24.2 2.24.2v2.46h-1.26c-1.24 0-1.63.78-1.63 1.57v1.88h2.78l-.45 2.91h-2.33V22c4.78-.76 8.44-4.92 8.44-9.94Z"/>
-  </symbol>
-  <symbol id="i-star" viewBox="0 0 24 24">
-    <path d="m12 2.6 2.9 5.9 6.5.9-4.7 4.6 1.1 6.5-5.8-3-5.8 3 1.1-6.5L2.6 9.4l6.5-.9L12 2.6Z"/>
-  </symbol>
-  <symbol id="i-star-outline" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round">
-    <path d="m12 2.6 2.9 5.9 6.5.9-4.7 4.6 1.1 6.5-5.8-3-5.8 3 1.1-6.5L2.6 9.4l6.5-.9L12 2.6Z"/>
-  </symbol>
-  <!-- Jedina višebojna ikona na stranici: službeni Googleov logotip stoji uz
-       poveznicu na Google recenzije. Nije UI ikona, nego znak marke. -->
-  <symbol id="i-google-color" viewBox="0 0 24 24">
-    <path fill="#4285F4" d="M23.52 12.27c0-.79-.07-1.54-.2-2.27H12v4.51h6.47c-.28 1.48-1.12 2.73-2.4 3.58v3h3.88c2.27-2.09 3.57-5.17 3.57-8.82Z"/>
-    <path fill="#34A853" d="M12 24c3.24 0 5.95-1.08 7.94-2.91l-3.88-3c-1.08.72-2.45 1.16-4.06 1.16-3.13 0-5.78-2.11-6.73-4.96H1.26v3.09C3.24 21.3 7.31 24 12 24Z"/>
-    <path fill="#FBBC05" d="M5.27 14.29c-.24-.72-.38-1.49-.38-2.29s.14-1.57.38-2.29V6.62H1.26A11.99 11.99 0 0 0 0 12c0 1.94.46 3.77 1.26 5.38l4.01-3.09Z"/>
-    <path fill="#EA4335" d="M12 4.75c1.77 0 3.35.61 4.6 1.8l3.44-3.44C17.95 1.19 15.24 0 12 0 7.31 0 3.24 2.7 1.26 6.62l4.01 3.09C6.22 6.86 8.87 4.75 12 4.75Z"/>
-  </symbol>
-  <symbol id="i-directions" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-    <path d="m21.7 11.3-9-9a1 1 0 0 0-1.4 0l-9 9a1 1 0 0 0 0 1.4l9 9a1 1 0 0 0 1.4 0l9-9a1 1 0 0 0 0-1.4Z"/><path d="M9 14v-2.5A1.5 1.5 0 0 1 10.5 10H15"/><path d="m13 8 2 2-2 2"/>
-  </symbol>
-</svg>
-
-<!-- ===== 4.1 Promo traka =====
-     Ponudu (prvi pregled besplatan) treba potvrditi klijent prije objave. -->
-<div class="promo" id="promo" role="region" aria-label="Obavijest" data-todo="potvrditi-promo">
-  <div class="container promo__inner">
-    <p class="promo__text">
-      <svg class="promo__paw" aria-hidden="true"><use href="#i-paw"></use></svg>
-      <span class="promo__full">Posebna ponuda za nove pacijente - prvi pregled besplatan! Nazovite: <a class="link-contact" href="tel:+38512012068">01 2012 068</a></span>
-      <span class="promo__short">Prvi pregled besplatan - <a class="link-contact" href="tel:+38512012068">01 2012 068</a></span>
-    </p>
-  </div>
-</div>
-
-<!-- ===== 4.2 Zaglavlje ===== -->
-<header class="header" id="header">
-  <div class="container header__inner">
-    <a class="logo" href="#top" aria-label="Veterinarska ambulanta Novo Brestje - početak stranice">
-      <span class="logo__mark"><svg aria-hidden="true"><use href="#i-paw"></use></svg></span>
-      <span class="logo__text">
-        <span class="logo__small">Veterinarska ambulanta</span>
-        <span class="logo__big">Novo Brestje</span>
-      </span>
+<!-- ===== NAVBAR ===== -->
+<nav class="nav" id="nav">
+  <div class="nav-inner">
+    <a href="#top" class="brand" aria-label="Pizzeria 269">
+      <span class="brand-name">269</span>
+      <span class="brand-sub">Pizzeria &middot; Sesvete</span>
     </a>
-
-    <!-- Gumb za zatvaranje stoji izvan .nav__inner: taj omotač je na mobitelu
-         klizni stupac, pa bi X inače otklizao sa sadržajem.
-         .nav__inner je na desktopu display: contents, dakle zaglavlje ostaje
-         nepromijenjeno; sve ispod popisa vidi se samo na mobitelu. -->
-    <nav class="nav" id="nav" aria-label="Glavna navigacija">
-      <button class="nav__close" type="button" id="nav-close" aria-label="Zatvori izbornik">
-        <svg aria-hidden="true"><use href="#i-close"></use></svg>
-      </button>
-
-      <div class="nav__inner">
-        <!-- Redoslijed prati sekcije u DOM-u:
-             #top - #usluge - #onama - #novosti - #galerija - #recenzije - #faq - #kontakt -->
-        <ul class="nav__list">
-          <li><a href="#top">Naslovnica</a></li>
-          <li><a href="#usluge">Usluge</a></li>
-          <li><a href="#onama">O nama</a></li>
-          <li><a href="#novosti">Novosti</a></li>
-          <li><a href="#galerija">Galerija</a></li>
-          <li><a href="#recenzije">Recenzije</a></li>
-          <li><a href="#faq">FAQ</a></li>
-          <li><a href="#kontakt">Kontakt</a></li>
-        </ul>
-
-        <div class="nav__contact">
-          <hr class="nav__rule">
-          <p class="nav__heading">Kontaktirajte nas</p>
-
-          <p class="nav__row nav__row--tap">
-            <span class="nav__ico" aria-hidden="true"><svg><use href="#i-phone"></use></svg></span>
-            <a class="link-contact nav__phone" href="tel:+38512012068">01 2012 068</a>
-          </p>
-
-          <p class="nav__row nav__row--tap">
-            <span class="nav__ico" aria-hidden="true"><svg><use href="#i-mail"></use></svg></span>
-            <a class="link-contact nav__mail" href="mailto:veterinarnb@gmail.com">veterinarnb@gmail.com</a>
-          </p>
-
-          <a class="btn btn--accent nav__cta" href="tel:+38512012068">
-            <svg class="btn__icon" aria-hidden="true"><use href="#i-phone"></use></svg>Nazovite nas
-          </a>
-
-          <p class="nav__row">
-            <span class="nav__ico" aria-hidden="true"><svg><use href="#i-clock"></use></svg></span>
-            <span>Pon-pet 9-12, 16-19 <span aria-hidden="true">·</span> Sub 9-12</span>
-          </p>
-
-          <p class="nav__row">
-            <span class="nav__ico" aria-hidden="true"><svg><use href="#i-pin"></use></svg></span>
-            <span>Ulica Orhideja 89, Sesvete</span>
-          </p>
-        </div>
-      </div>
-    </nav>
-
-    <a class="btn btn--accent header__cta" href="tel:+38512012068">
-      <svg class="btn__icon" aria-hidden="true"><use href="#i-phone"></use></svg>
-      <span>01 2012 068</span>
-    </a>
-
-    <button class="hamburger" type="button" id="hamburger" aria-label="Otvori izbornik" aria-expanded="false" aria-controls="nav">
+    <ul class="nav-links">
+      <li><a href="#usluge">Usluge</a></li>
+      <li><a href="#o-nama">O nama</a></li>
+      <li><a href="#recenzije">Recenzije</a></li>
+      <li><a href="#kontakt">Kontakt</a></li>
+    </ul>
+    <a href="tel:+38516070961" class="nav-cta">Rezervirajte stol</a>
+    <button class="nav-burger" id="burger" aria-label="Menu">
       <span></span><span></span><span></span>
     </button>
   </div>
+  <div class="nav-mobile">
+    <a href="#usluge">Usluge</a>
+    <a href="#o-nama">O nama</a>
+    <a href="#recenzije">Recenzije</a>
+    <a href="#kontakt">Kontakt</a>
+    <a href="tel:+38516070961" class="nav-cta-mobile">Rezervirajte stol</a>
+  </div>
+</nav>
+
+<!-- ===== HERO ===== -->
+<header class="hero" id="top">
+  <div class="hero-bg-overlay"></div>
+  <div class="hero-content">
+    <div class="hero-label">
+      <span class="hero-label-text">Pizzeria</span>
+      <span class="hero-label-sep" aria-hidden="true"> &middot; </span>
+      <span class="hero-label-text">Sesvete</span>
+      <span class="hero-label-sep" aria-hidden="true"> &middot; </span>
+      <span class="hero-label-text">Klasične i autorske pizze</span>
+    </div>
+    <h1>
+      <span class="line">Tijesto.</span>
+      <span class="line">Sastojci.</span>
+      <span class="line">Pizza.</span>
+    </h1>
+    <p class="hero-text">
+      Klasične i autorske pizze na tankom, fino pečenom tijestu i s kvalitetnim sastojcima. Svratite na pizzu u ugodnom prostoru za društva i obitelji ili je naručite za preuzimanje.
+    </p>
+    <div class="hero-buttons">
+      <a href="tel:+38516070961" class="btn btn-blue">Rezervirajte stol</a>
+      <a href="tel:+38516070961" class="btn btn-outline">Nazovite <span class="call-mobile">&nbsp;nas</span><span class="call-desktop">&nbsp;- 01 6070 961</span></a>
+    </div>
+    <p class="hero-note">Stol i narudžbe dogovarate telefonom.</p>
+  </div>
+  <div class="hero-image">
+    <img src="images/hero.jpg" alt="Pizza tankog tijesta iz Pizzerije 269 u Sesvetama" loading="eager" decoding="async" fetchpriority="high">
+  </div>
 </header>
 
-<main id="glavni-sadrzaj">
-
-<!-- ===== 4.3 Hero ===== -->
-<section class="hero" id="top">
-  <img class="hero__img" src="img/stranica/hero.webp" alt="Mačka sjedi na stolu za pregled, a rotvajler joj se naslonio šapom i njuši je" width="1600" height="900" fetchpriority="high" decoding="async">
-  <span class="hero__scrim" aria-hidden="true"></span>
-  <span class="paws paws--hero" aria-hidden="true">
-    <svg><use href="#i-paw"></use></svg><svg><use href="#i-paw"></use></svg><svg><use href="#i-paw"></use></svg>
-    <svg><use href="#i-paw"></use></svg><svg><use href="#i-paw"></use></svg><svg><use href="#i-paw"></use></svg>
-    <svg><use href="#i-paw"></use></svg>
-  </span>
-
-  <div class="container hero__inner">
-    <div class="hero__content">
-      <p class="overline overline--light">20+ godina brige za ljubimce Sesveta</p>
-      <h1 class="hero__title">Vaša veterinarka<br>u Novom Brestju</h1>
-      <p class="hero__sub">Stručna skrb, nježan pristup i susjedska briga - ambulanta u koju vaši ljubimci rado dolaze, na istoj adresi već više od 20 godina.</p>
-      <div class="hero__actions">
-        <a class="btn btn--accent btn--lg" href="tel:+38512012068">
-          <svg class="btn__icon" aria-hidden="true"><use href="#i-phone"></use></svg>Nazovite nas
-        </a>
-        <a class="btn btn--ghost btn--lg" href="#usluge">Pogledajte usluge</a>
-      </div>
-    </div>
-  </div>
-
-  <!-- Jedan simetričan luk (bez infleksije): bijelo se diže u kutovima i
-       blago spušta prema sredini, ispod info kartice. -->
-  <div class="curve curve--hero" aria-hidden="true">
-    <svg viewBox="0 0 1440 110" preserveAspectRatio="none"><path d="M0,30 C 360,102 1080,102 1440,30 L1440,110 L0,110 Z"/></svg>
-  </div>
-</section>
-
-<!-- ===== 4.4 Info kartica (preklapa krivulju heroja) ===== -->
-<section class="herocard-wrap" aria-label="Termin, kontakt i radno vrijeme">
+<!-- ===== USLUGE (SERVICES) ===== -->
+<section class="usluge reveal" id="usluge">
   <div class="container">
-    <div class="herocard reveal">
-      <div class="herocard__cell">
-        <p class="herocard__title">
-          <svg aria-hidden="true"><use href="#i-calendar"></use></svg>Dogovorite termin
-        </p>
-        <p class="herocard__text">Nazovite i dogovorite pregled bez čekanja - za kirurške zahvate termin je obavezan.</p>
-      </div>
-
-      <div class="herocard__cell">
-        <p class="herocard__title">
-          <svg aria-hidden="true"><use href="#i-phone"></use></svg>Kontakt
-        </p>
-        <p class="herocard__text">
-          <a class="link-contact link-contact--lead" href="tel:+38512012068">01 2012 068</a><br>
-          <a class="link-contact" href="mailto:veterinarnb@gmail.com">veterinarnb@gmail.com</a><br>
-          Orhideja 89, Sesvete
-        </p>
-      </div>
-
-      <div class="herocard__cell">
-        <p class="herocard__title">
-          <svg aria-hidden="true"><use href="#i-clock"></use></svg>Radno vrijeme
-        </p>
-        <p class="herocard__text">
-          Pon-pet 9-12 i 16-19 <span aria-hidden="true">·</span> Sub 9-12<br>
-          Nedjelja: zatvoreno
-        </p>
-      </div>
+    <div class="usluge-head">
+      <div class="label">Naše usluge</div>
+      <h2 class="h2">Klasične i autorske pizze<br>na jednom mjestu</h2>
     </div>
-  </div>
-</section>
 
-<!-- ===== 4.5 Usluge ===== -->
-<section class="services section" id="usluge">
-  <div class="container">
-    <header class="section__head section__head--split reveal">
-      <div class="section__head-text">
-        <p class="overline">Naše usluge</p>
-        <h2 class="section__title">Sve za zdravlje vašeg ljubimca<br class="br-md"> - na jednom mjestu</h2>
+    <div class="usluge-slider">
+      <div class="usluge-viewport">
+        <div class="usluge-track">
+
+      <article class="usluge-card">
+        <div class="usluge-img">
+          <img src="images/usluga-klasicne.jpg" alt="Klasična pizza tankog tijesta u Pizzeriji 269, Sesvete" decoding="async">
+        </div>
+        <div class="usluge-body">
+          <h3>Klasične pizze</h3>
+          <ul>
+            <li>Margarita, capricciosa i drugi klasici</li>
+            <li>Tanko, fino pečeno tijesto</li>
+            <li>Provjerene, omiljene kombinacije</li>
+            <li>Porcije za svaki apetit</li>
+          </ul>
+        </div>
+      </article>
+
+      <article class="usluge-card">
+        <div class="usluge-img">
+          <img src="images/usluga-autorske.jpg" alt="Autorska pizza s kvalitetnim sastojcima u Pizzeriji 269" decoding="async">
+        </div>
+        <div class="usluge-body">
+          <h3>Autorske pizze</h3>
+          <ul>
+            <li>Autorske kombinacije okusa</li>
+            <li>Bogato punjene pizze</li>
+            <li>Mesne i vege varijante</li>
+            <li>Nešto drukčije za istraživače</li>
+          </ul>
+        </div>
+      </article>
+
+      <article class="usluge-card">
+        <div class="usluge-img">
+          <img src="images/usluga-zavan.jpg" alt="Pizza spremna za preuzimanje u Pizzeriji 269" decoding="async">
+        </div>
+        <div class="usluge-body">
+          <h3>Pizze za preuzimanje</h3>
+          <ul>
+            <li>Sve pizze i za van</li>
+            <li>Pečemo tek kad naručite</li>
+            <li>Spremno za dogovoreno vrijeme</li>
+            <li>Narudžba telefonom</li>
+          </ul>
+        </div>
+      </article>
+
+      <article class="usluge-card">
+        <div class="usluge-img">
+          <img src="images/usluga-sastojci.jpg" alt="Svježi sastojci za pizzu u Pizzeriji 269" decoding="async">
+        </div>
+        <div class="usluge-body">
+          <h3>Kvalitetni sastojci</h3>
+          <ul>
+            <li>Svježi, pažljivo birani sastojci</li>
+            <li>Prava mozzarella i sir</li>
+            <li>Domaći umak od rajčice</li>
+            <li>Okus koji se osjeti</li>
+          </ul>
+        </div>
+      </article>
+
+      <article class="usluge-card">
+        <div class="usluge-img">
+          <img src="images/usluga-prostor.jpg" alt="Pizza poslužena u prostoru Pizzerije 269 za društva i obitelji" decoding="async">
+        </div>
+        <div class="usluge-body">
+          <h3>Prostor za društva i obitelji</h3>
+          <ul>
+            <li>Ugodan prostor za obitelji</li>
+            <li>Mjesta za manja i veća društva</li>
+            <li>Opuštena, domaća atmosfera</li>
+            <li>Pizza za stolom, svježe pečena</li>
+          </ul>
+        </div>
+      </article>
+
+      <article class="usluge-card">
+        <div class="usluge-img">
+          <img src="images/usluga-grupe.jpg" alt="Pizza za veće društvo i proslave u Pizzeriji 269" decoding="async">
+        </div>
+        <div class="usluge-body">
+          <h3>Proslave i veće grupe</h3>
+          <ul>
+            <li>Rođendani i manje proslave</li>
+            <li>Prostor za veće grupe</li>
+            <li>Najava za veća društva unaprijed</li>
+            <li>Dogovor termina telefonom</li>
+          </ul>
+        </div>
+      </article>
+
+        </div>
       </div>
-      <div class="services__nav">
-        <button class="services__arrow" type="button" id="services-prev" aria-label="Prikaži prethodne usluge" aria-controls="services-scroller">
-          <svg aria-hidden="true"><use href="#i-arrow-left"></use></svg>
+      <div class="usluge-controls">
+        <button type="button" class="usluge-arrow prev" aria-label="Prethodna">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="square" stroke-linejoin="miter" aria-hidden="true">
+            <polyline points="15 5 8 12 15 19"/>
+          </svg>
         </button>
-        <button class="services__arrow" type="button" id="services-next" aria-label="Prikaži sljedeće usluge" aria-controls="services-scroller">
-          <svg aria-hidden="true"><use href="#i-arrow-right"></use></svg>
+        <div class="usluge-dots" role="tablist" aria-label="Usluge"></div>
+        <button type="button" class="usluge-arrow next" aria-label="Sljedeća">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="square" stroke-linejoin="miter" aria-hidden="true">
+            <polyline points="9 5 16 12 9 19"/>
+          </svg>
         </button>
       </div>
-    </header>
-  </div>
+    </div>
 
-  <div class="services__scroller reveal" id="services-scroller" tabindex="0" role="region" aria-label="Usluge - vodoravni popis, klizni ustranu">
-    <ul class="services__track">
-
-      <li class="scard">
-        <article class="scard__inner">
-          <div class="scard__media">
-            <img class="scard__img photo-grade" src="img/stranica/usluga-pregledi.webp" alt="Ultrazvučni uređaj u ordinaciji veterinarske ambulante" width="600" height="740" loading="lazy" decoding="async" style="object-position: 50% 20%">
-          </div>
-          <div class="scard__body">
-            <h3 class="scard__title" id="usluga-1-title">
-              <button type="button" class="scard__toggle" aria-expanded="false" aria-controls="usluga-1"><span class="scard__titletext">Pregledi i dijagnostika</span></button>
-            </h3>
-            <p class="scard__desc">Klinički pregledi s laboratorijskom i ultrazvučnom dijagnostikom.</p>
-            <span class="scard__btn" aria-hidden="true">Saznaj više <svg><use href="#i-chevron-down"></use></svg></span>
-          </div>
-        </article>
-      </li>
-
-      <li class="scard">
-        <article class="scard__inner">
-          <div class="scard__media">
-            <img class="scard__img photo-grade" src="img/stranica/usluga-cijepljenja.webp" alt="Četiri šteneta patuljastog šnaucera u košari u ambulanti" width="600" height="740" loading="lazy" decoding="async">
-          </div>
-          <div class="scard__body">
-            <h3 class="scard__title" id="usluga-2-title">
-              <button type="button" class="scard__toggle" aria-expanded="false" aria-controls="usluga-2"><span class="scard__titletext">Cijepljenja i preventiva</span></button>
-            </h3>
-            <p class="scard__desc">Zaštita od bjesnoće, zaraznih bolesti i parazita.</p>
-            <span class="scard__btn" aria-hidden="true">Saznaj više <svg><use href="#i-chevron-down"></use></svg></span>
-          </div>
-        </article>
-      </li>
-
-      <li class="scard">
-        <article class="scard__inner">
-          <div class="scard__media">
-            <img class="scard__img photo-grade" src="img/stranica/usluga-kirurgija.webp" alt="Mama s novorođenim štencima" width="600" height="740" loading="lazy" decoding="async" style="object-position: 50% 35%">
-          </div>
-          <div class="scard__body">
-            <h3 class="scard__title" id="usluga-3-title">
-              <button type="button" class="scard__toggle" aria-expanded="false" aria-controls="usluga-3"><span class="scard__titletext">Kirurški zahvati</span></button>
-            </h3>
-            <p class="scard__desc">Kastracije, carski rez, kirurgija mekih tkiva…</p>
-            <span class="scard__btn" aria-hidden="true">Saznaj više <svg><use href="#i-chevron-down"></use></svg></span>
-          </div>
-        </article>
-      </li>
-
-      <li class="scard">
-        <article class="scard__inner">
-          <div class="scard__media">
-            <img class="scard__img photo-grade" src="img/stranica/usluga-dentalna.webp" alt="Jazavčar uzima dentalnu poslasticu iz ruke" width="600" height="740" loading="lazy" decoding="async" style="object-position: 50% 35%">
-          </div>
-          <div class="scard__body">
-            <h3 class="scard__title" id="usluga-4-title">
-              <button type="button" class="scard__toggle" aria-expanded="false" aria-controls="usluga-4"><span class="scard__titletext">Dentalna higijena</span></button>
-            </h3>
-            <p class="scard__desc">Ultrazvučno uklanjanje zubnog kamenca.</p>
-            <span class="scard__btn" aria-hidden="true">Saznaj više <svg><use href="#i-chevron-down"></use></svg></span>
-          </div>
-        </article>
-      </li>
-
-      <li class="scard">
-        <article class="scard__inner">
-          <div class="scard__media">
-            <img class="scard__img photo-grade" src="img/stranica/usluga-cipiranje.webp" alt="Sivo mače sjedi na pultu recepcije u ambulanti" width="600" height="740" loading="lazy" decoding="async" style="object-position: 50% 35%">
-          </div>
-          <div class="scard__body">
-            <h3 class="scard__title" id="usluga-5-title">
-              <button type="button" class="scard__toggle" aria-expanded="false" aria-controls="usluga-5"><span class="scard__titletext">Mikročipiranje i EU putovnice</span></button>
-            </h3>
-            <p class="scard__desc">Označavanje, registracija i EU putovnice.</p>
-            <span class="scard__btn" aria-hidden="true">Saznaj više <svg><use href="#i-chevron-down"></use></svg></span>
-          </div>
-        </article>
-      </li>
-
-      <li class="scard">
-        <article class="scard__inner">
-          <div class="scard__media">
-            <img class="scard__img photo-grade" src="img/stranica/usluga-savjeti.webp" alt="Ošišan bijeli psić sjedi u ambulanti i gleda u objektiv" width="600" height="740" loading="lazy" decoding="async" style="object-position: 50% 35%">
-          </div>
-          <div class="scard__body">
-            <h3 class="scard__title" id="usluga-6-title">
-              <button type="button" class="scard__toggle" aria-expanded="false" aria-controls="usluga-6"><span class="scard__titletext">Savjeti i skrb kroz život</span></button>
-            </h3>
-            <p class="scard__desc">Od prehrane šteneta do njege starijeg psa.</p>
-            <span class="scard__btn" aria-hidden="true">Saznaj više <svg><use href="#i-chevron-down"></use></svg></span>
-          </div>
-        </article>
-      </li>
-
-      <li class="scard">
-        <article class="scard__inner">
-          <div class="scard__media">
-            <img class="scard__img photo-grade" src="img/stranica/usluga-grooming.webp" alt="Njegovan pas nakon šišanja" width="600" height="740" loading="lazy" decoding="async" style="object-position: 50% 35%">
-          </div>
-          <div class="scard__body">
-            <h3 class="scard__title" id="usluga-7-title">
-              <button type="button" class="scard__toggle" aria-expanded="false" aria-controls="usluga-7"><span class="scard__titletext">Šišanje i uređivanje pasa (grooming)</span></button>
-            </h3>
-            <p class="scard__desc">Šišanje, kupanje i uređenje pasa.</p>
-            <span class="scard__btn" aria-hidden="true">Saznaj više <svg><use href="#i-chevron-down"></use></svg></span>
-          </div>
-        </article>
-      </li>
-
-    </ul>
-  </div>
-
-  <div class="container">
-    <div class="services__panels">
-      <div class="service__panel" id="usluga-1" role="region" aria-labelledby="usluga-1-title" hidden>
-        <div class="service__panel-inner">
-          <div class="panel__head">
-            <p class="panel__title" aria-hidden="true">Pregledi i dijagnostika</p>
-            <button type="button" class="panel__close" aria-label="Zatvori detalje: Pregledi i dijagnostika">
-              <svg aria-hidden="true"><use href="#i-close"></use></svg>
-            </button>
-          </div>
-          <div class="panel__grid">
-            <div class="panel__text">
-              <p>Svaki pregled počinje razgovorom - jer vi najbolje poznajete svog ljubimca (uzimanje anamneze). Klinički pregled možda je i najvažniji dio cijele dijagnostike.</p>
-              <p>Za dodatne pretrage surađujemo s certificiranim ustanovama (HVI, Veterinarski fakultet i Laboklin).</p>
-            </div>
-            <ul class="panel__list">
-              <li>Klinički pregled</li>
-              <li>Laboratorijska dijagnostika</li>
-              <li>Ultrazvučna dijagnostika (UZV)</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-
-      <div class="service__panel" id="usluga-2" role="region" aria-labelledby="usluga-2-title" hidden>
-        <div class="service__panel-inner">
-          <div class="panel__head">
-            <p class="panel__title" aria-hidden="true">Cijepljenja i preventiva</p>
-            <button type="button" class="panel__close" aria-label="Zatvori detalje: Cijepljenja i preventiva">
-              <svg aria-hidden="true"><use href="#i-close"></use></svg>
-            </button>
-          </div>
-          <div class="panel__grid">
-            <div class="panel__text">
-              <p>Cijepljenje pasa i mačaka počinje već sa 7 tjedana starosti. Prije svakog cijepljenja životinja treba biti tretirana od unutarnjih parazita (dehelmintizacija) - prvi tretman već od 4 tjedna starosti.</p>
-              <p>Nakon pregleda životinja se prvi put cijepi i mikročipira, izdaje se EU putovnica te se upisuje u Središnji upisnik pasa. Uz to dajemo i jasne upute o cijepljenju. Cijepljenje protiv bjesnoće zakonska je obveza za pse starije od 3 mjeseca, a za mačke je obavezno ako ih vodite na put preko granice RH. Za termin nazovite <a class="link-contact" href="tel:+38512012068">01 2012 068</a>.</p>
-            </div>
-            <ul class="panel__list">
-              <li>Cijepljenje pasa i mačaka od 7 tjedana</li>
-              <li>Cijepljenje protiv bjesnoće</li>
-              <li>Dehelmintizacija (unutarnji paraziti)</li>
-              <li>Zaštita od buha i krpelja</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-
-      <div class="service__panel" id="usluga-3" role="region" aria-labelledby="usluga-3-title" hidden>
-        <div class="service__panel-inner">
-          <div class="panel__head">
-            <p class="panel__title" aria-hidden="true">Kirurški zahvati</p>
-            <button type="button" class="panel__close" aria-label="Zatvori detalje: Kirurški zahvati">
-              <svg aria-hidden="true"><use href="#i-close"></use></svg>
-            </button>
-          </div>
-          <div class="panel__grid">
-            <div class="panel__text">
-              <p>Kirurški zahvati vrše se u općoj anesteziji uz prethodnu preoperativnu obradu. Nakon svake operacije pacijent ostaje kod nas na promatranju u stacionaru.</p>
-              <p>Za dogovor nazovite prije, pa ćete dobiti upute za pripremu vašeg ljubimca.</p>
-            </div>
-            <ul class="panel__list">
-              <li>Sterilizacije i kastracije</li>
-              <li>Meki kirurški zahvati</li>
-              <li>Anestezija prilagođena pacijentu</li>
-              <li>Kontrolni pregled nakon zahvata</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-
-      <div class="service__panel" id="usluga-4" role="region" aria-labelledby="usluga-4-title" hidden>
-        <div class="service__panel-inner">
-          <div class="panel__head">
-            <p class="panel__title" aria-hidden="true">Dentalna higijena</p>
-            <button type="button" class="panel__close" aria-label="Zatvori detalje: Dentalna higijena">
-              <svg aria-hidden="true"><use href="#i-close"></use></svg>
-            </button>
-          </div>
-          <div class="panel__grid">
-            <div class="panel__text">
-              <p>Zubni kamenac nije samo estetski problem - uzrokuje upale desni, bol i gubitak zuba, a bakterije iz usne šupljine opterećuju i unutarnje organe.</p>
-              <p>Kamenac uklanjamo ultrazvukom, nježno i temeljito, i pokazat ćemo vam kako zube ljubimca održavati kod kuće. Za termin nazovite <a class="link-contact" href="tel:+38512012068">01 2012 068</a>.</p>
-            </div>
-            <ul class="panel__list">
-              <li>Ultrazvučno uklanjanje zubnog kamenca</li>
-              <li>Pregled zubi i desni</li>
-              <li>Savjeti za njegu kod kuće</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-
-      <div class="service__panel" id="usluga-5" role="region" aria-labelledby="usluga-5-title" hidden>
-        <div class="service__panel-inner">
-          <div class="panel__head">
-            <p class="panel__title" aria-hidden="true">Mikročipiranje i EU putovnice</p>
-            <button type="button" class="panel__close" aria-label="Zatvori detalje: Mikročipiranje i EU putovnice">
-              <svg aria-hidden="true"><use href="#i-close"></use></svg>
-            </button>
-          </div>
-          <div class="panel__grid">
-            <div class="panel__text">
-              <p>Pse mikročipiramo i upisujemo u Središnji upisnik pasa (zakonska obveza). Vlasnik kuje s leglom dužan je štence cijepiti i mikročipirati na svoje ime te ih upisati u upisnik; prilikom prodaje ili udomljavanja mijenja se vlasnik u upisniku.</p>
-            </div>
-            <ul class="panel__list">
-              <li>Mikročipiranje i očitanje čipa</li>
-              <li>Upis u Središnji upisnik pasa</li>
-              <li>EU putovnice za pse i mačke</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-
-      <div class="service__panel" id="usluga-6" role="region" aria-labelledby="usluga-6-title" hidden>
-        <div class="service__panel-inner">
-          <div class="panel__head">
-            <p class="panel__title" aria-hidden="true">Savjeti i skrb kroz život</p>
-            <button type="button" class="panel__close" aria-label="Zatvori detalje: Savjeti i skrb kroz život">
-              <svg aria-hidden="true"><use href="#i-close"></use></svg>
-            </button>
-          </div>
-          <div class="panel__grid">
-            <div class="panel__text">
-              <p>Od prvog cjepiva šteneta do njege ljubimca u zrelim godinama - svaka životna dob nosi svoja pitanja, a mi smo tu da na njih odgovorimo bez žurbe.</p>
-              <p>Savjetujemo o prehrani, njezi i prevenciji, i pratimo zdravlje vašeg ljubimca kroz godine - jer najbolju skrb pruža netko tko ga poznaje. Nazovite nas na <a class="link-contact" href="tel:+38512012068">01 2012 068</a>.</p>
-            </div>
-            <ul class="panel__list">
-              <li>Savjeti o prehrani i njezi</li>
-              <li>Skrb za štence i mačiće</li>
-              <li>Njega starijih ljubimaca</li>
-              <li>Praćenje kroničnih stanja</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-
-      <div class="service__panel" id="usluga-7" role="region" aria-labelledby="usluga-7-title" hidden>
-        <div class="service__panel-inner">
-          <div class="panel__head">
-            <p class="panel__title" aria-hidden="true">Šišanje i uređivanje pasa (grooming)</p>
-            <button type="button" class="panel__close" aria-label="Zatvori detalje: Šišanje i uređivanje pasa (grooming)">
-              <svg aria-hidden="true"><use href="#i-close"></use></svg>
-            </button>
-          </div>
-          <div class="panel__grid">
-            <div class="panel__text">
-              <p>Šišanje škarama i mašinicom, kupanje te njega dlake, pandži i ušiju - prilagođeno pasmini i temperamentu vašeg psa.</p>
-              <p>Grooming vodi naša groomerica Petra Jaić. Za termin nas nazovite na <a class="link-contact" href="tel:+38512012068">01 2012 068</a>.</p>
-            </div>
-            <ul class="panel__list">
-              <li>Šišanje škarama i mašinicom</li>
-              <li>Kupanje i njega dlake</li>
-              <li>Skraćivanje pandži</li>
-              <li>Čišćenje ušiju</li>
-            </ul>
-          </div>
-        </div>
-      </div>
+    <div class="usluge-cta">
+      <a href="tel:+38516070961" class="btn btn-blue">Rezervirajte stol</a>
+      <a href="tel:+38516070961" class="btn btn-outline-blue">Nazovite <span class="call-mobile">&nbsp;nas</span><span class="call-desktop">&nbsp;- 01 6070 961</span></a>
     </div>
   </div>
 </section>
 
-<!-- ===== 4.6 O nama =====
-     Spojene nekadašnje sekcije „Priča" (navy traka) i „Upoznajte Ines".
-     Lijevo naslov i uvod, desno fotografija; ispod pod-sekcija „Naš tim".
-     Nekadašnji akordeon razloga uklonjen je - njegov sadržaj je uklopljen
-     u tri uvodna odlomka. -->
-<section class="about section section--cream" id="onama" aria-labelledby="about-title">
-  <div class="container">
-
-    <div class="about__inner">
-      <div class="about__body reveal">
-        <h2 class="about__title" id="about-title">Brinemo za ljubimce Novog Brestja <span class="about__accent">kao za svoje</span></h2>
-        <p class="about__lead">Ambulantu vodi Ines Petrović, dr. med. vet., uz veterinarsku tehničarku i groomericu Petru Jaić - uz jednostavnu filozofiju: stručna skrb i nježan pristup za svakog psa i mačku. Vlasnici iz kvarta vjeruju nam već više od 20 godina.</p>
-        <p class="about__lead">Kod nas je sve na jednom mjestu - preventiva, dijagnostika, liječenje i kirurški zahvati - uz vlastiti laboratorij i ultrazvuk. Mala smo, kvartovska ambulanta u srcu Novog Brestja: bez gužve velikih klinika i uz osobni pristup u kojem poznajete ljude koji brinu za vašeg ljubimca.</p>
-        <p class="about__lead">Svaka životinja zaslužuje pažnju, strpljenje i nježnu ruku - trudimo se da se i vi i vaš ljubimac kod nas osjećate opušteno.</p>
-      </div>
-
-      <figure class="about__figure reveal">
-        <img class="photo-grade" src="img/stranica/onama.webp" alt="Ulaz u ambulantu" width="1000" height="750" loading="lazy" decoding="async">
-      </figure>
-    </div>
-
-    <!-- Naš tim - dvije ŠIROKE kartice, jedna ispod druge. Koriste isti recept
-         kao ostale kartice na stranici (bijela ploha, --card-line obrub, --r-md
-         radijus, --shadow-sm) i istu gradaciju fotografija (.photo-grade).
-         Fotografija stoji lijevo u okviru omjera 3:4 (350px) i prikazana je
-         CIJELA - `object-fit: contain` je uklapa bez rezanja, a praznina uz
-         uspravnije kadrove popunjena je --ice plohom. Široki tekstualni
-         stupac desno drži životopis u malo redaka, pa kartica na desktopu ostaje
-         šira nego viša. Ispod 768px kartica se složi okomito (fotka gore). -->
-    <div class="team reveal" id="nas-tim">
-      <header class="team__head">
-        <p class="overline">Naš tim</p>
-        <h3 class="team__title">Ljudi koji brinu</h3>
-      </header>
-
-      <ul class="team__grid">
-        <li class="team__member">
-          <figure class="team__figure">
-            <img class="photo-grade" src="img/stranica/ines.webp" alt="Ines Petrović, dr. med. vet., u radnoj odori s mačkom na ramenu ispred ambulante" width="800" height="1000" loading="lazy" decoding="async">
-          </figure>
-          <div class="team__body">
-            <h4 class="team__name">Ines Petrović</h4>
-            <p class="team__role">dr. med. vet. <span aria-hidden="true">·</span> voditeljica</p>
-            <p class="team__text">Veterinarski fakultet u Zagrebu završila sam 2004. i od tada radim u ambulanti Novo Brestje za kućne ljubimce. Državni stručni ispit za ovlaštenog veterinara položila sam 2006., a 2008. upisala poslijediplomski specijalistički studij „Patologija i uzgoj malih mesojeda", na kojem sam magistrirala 2011. Redovito sudjelujem na veterinarskim kongresima i radionicama - posljednju, iz ultrazvuka abdomena, pohađala sam 2026. na Okean akademiji u Pančevu. U slobodno vrijeme volim planinarenje, alpinizam i putovanja, a kućni ljubimci su mi svakodnevna radost.</p>
-          </div>
-        </li>
-
-        <!-- Petra je veterinarska tehničarka i groomerica, ne doktorica -
-             .team__role zato NE nosi „dr. med. vet.". Izvornik fotografije:
-             „Nove slike/PHOTO-2026-08-06-19-21-46.jpg"; webp je puni kadr
-             izvornika (800 × 1427), bez rezanja, pa se pas vidi cijeli. -->
-        <li class="team__member">
-          <figure class="team__figure">
-            <img class="photo-grade" src="img/stranica/vet-petra.webp" alt="Petra Jaić s velikim bijelim psom u ordinaciji" width="800" height="1427" loading="lazy" decoding="async">
-          </figure>
-          <div class="team__body">
-            <h4 class="team__name">Petra Jaić</h4>
-            <p class="team__role">vet. teh. <span aria-hidden="true">·</span> groomerica</p>
-            <p class="team__text">Rođena sam 1991. godine u Kutini. Neću reći od rođenja, ali otkad za sebe znam, željela sam raditi sa životinjama, stoga sam završila srednju veterinarsku školu u Zagrebu 2012. godine. Stručno osposobljavanje odradila sam u Skloništu za nezbrinute životinje grada Zagreba, Dumovcu, i nakon toga položila stručni ispit. Dodatno sam u Mambu završila osnovni tečaj za njegu i uređenje pasa te još jedan osnovni tečaj šišanja škarama. U slobodno vrijeme, osim što brinem o svojim ljubimcima, brinem i o 13 biljaka, volim ples i pjesmu, plivanje...</p>
-          </div>
-        </li>
-      </ul>
-    </div>
+<!-- ===== FEATURE A ===== -->
+<section class="feature reveal" id="feature-sisanje">
+  <div class="feature-img">
+    <img src="images/feature-a.jpg" alt="Svježe pečena pizza tankog tijesta u Pizzeriji 269" loading="lazy" decoding="async">
   </div>
-</section>
-
-<!-- ===== 4.8 Novosti - oglasna ploča =====
-     Sekcija je oglasna ploča: navy ploha (.board) na koju su „zalijepljene"
-     cedulje (.note), svaka pričvršćena trakicom (::before). Raspored cedulja
-     je CSS `columns`, dakle zidarski - visina se ne izjednačava, pa cedulje
-     smiju biti različito duge.
-
-     Sekcija radi bez JavaScripta; nema popisa ni u JS-u.
-
-     OZNAKE (.badge) - boja nosi značenje, držite se ovih četiriju:
-       .badge--promo   accent   Promocija / Ponuda
-       .badge--info    ice      Obavijest
-       .badge--remind  zlatna   Podsjetnik
-       .badge--tip     navy     Savjet
-     TRAKICA prati oznaku: cedulja uz oznaku nosi i modifikator
-     .note--promo / .note--info / .note--remind, koji joj daje boju trakice.
-     Tekst oznake je slobodan („Za nove pacijente", „Podsjetnik"…), ali klasa
-     mora odgovarati vrsti - inače boje prestaju nešto značiti. -->
-<section class="news section" id="novosti" aria-labelledby="news-title">
-  <div class="container">
-    <div class="board reveal">
-
-      <header class="board__head">
-        <p class="overline board__overline">Novosti</p>
-        <h2 class="board__title" id="news-title">Novosti i obavijesti</h2>
-        <p class="board__lead">Aktualne obavijesti, podsjetnici i ponude naše ambulante.</p>
-      </header>
-
-      <!-- Jedna cedulja = jedan <li>: oznaka, naslov, jedna rečenica. Bez
-           datuma - cedulje su trajni podsjetnici pa ne zastarijevaju.
-           Istaknuta (.note--feature) je uvijek najviše JEDNA i stoji prva. -->
-      <ul class="notes">
-
-        <li class="note note--promo note--feature">
-          <p class="badge badge--promo">Za nove pacijente</p>
-          <h3 class="note__title">Prvi pregled besplatan</h3>
-          <p class="note__text">Upoznajmo se bez obveze - dovedite ljubimca na prvi pregled bez naknade.</p>
-          <a class="btn btn--accent note__cta" href="tel:+38512012068">
-            <svg class="btn__icon" aria-hidden="true"><use href="#i-phone"></use></svg>Nazovite nas
-          </a>
-        </li>
-
-        <li class="note note--remind">
-          <p class="badge badge--remind">Podsjetnik</p>
-          <h3 class="note__title">Godišnje cijepljenje</h3>
-          <p class="note__text">Provjerite knjižicu ljubimca i javite se kad je vrijeme za dozu.</p>
-        </li>
-
-        <li class="note note--info">
-          <p class="badge badge--info">Obavijest</p>
-          <h3 class="note__title">Veterinarska hrana za ljubimce</h3>
-          <p class="note__text">U ambulanti možete nabaviti hranu za pse i mačke - pitajte za preporuku.</p>
-        </li>
-
-        <li class="note note--remind">
-          <p class="badge badge--remind">Podsjetnik</p>
-          <h3 class="note__title">Krpelji i buhe</h3>
-          <p class="note__text">Zaštitite ljubimca kroz toplu sezonu redovitom preventivom.</p>
-        </li>
-
-        <!-- NOVA NOVOST: dodaj cedulju ovdje - kopiraj jedan <li> iznad pa
-             promijeni modifikator cedulje (.note--promo / --info / --remind),
-             klasu i tekst oznake, naslov i rečenicu. Popis nema gornju
-             granicu; nove cedulje idu na vrh ako su svježije. -->
-      </ul>
-    </div>
-  </div>
-</section>
-
-<!-- ===== 4.9 Galerija =====
-     Dvije razine, namjerno odvojene:
-
-     1) U SEKCIJI se vidi samo izbor najboljih fotografija - `<li>` s pravom
-        slikom unutra. Slažu se u mozaik (CSS `column-count`), a donji rub se
-        stapa s pozadinom (.gallery__fade) da se vidi kako ih ima još.
-     2) LIGHTBOX lista je CIJELI popis ispod - svi `<li class="gallery__item">`
-        u DOM redoslijedu. Skrivene stavke nemaju `<img>`, nego samo `data-*`
-        atribute: tako preglednik njihove datoteke ne skida dok se lightbox ne
-        otvori. main.js čita sliku iz `<img>` ako ga ima, inače iz `data-*`.
-
-     DODAVANJE NOVE FOTKE: spremite WebP u `img/galerija/` i dopišite jedan
-     `<li class="gallery__item" hidden data-src=… data-alt=… data-w=… data-h=…>`
-     na željeno mjesto u popisu. Broj u gumbu „Prikaži sve fotke" main.js
-     prebrojava sam. Ako fotku želite i u mozaiku, umjesto skrivene stavke
-     napišite je s `<a>` i `<img>` kao prvih sedam - raspored se ne dira. -->
-<section class="gallery section" id="galerija" aria-labelledby="gallery-title">
-  <div class="container">
-    <header class="section__head reveal">
-      <p class="overline">Galerija</p>
-      <h2 class="section__title" id="gallery-title">Zavirite u našu ambulantu</h2>
-    </header>
-
-    <!-- .gallery__mask ima ograničenu visinu i skriva prelijevanje: mozaik se
-         namjerno „odreže" pri dnu, a preko reza stoji gradijent s blagim
-         zamućenjem. Gumb ispod nije ukras - blur sam po sebi nije poziv na
-         akciju, pa se na njega ne oslanjamo. -->
-    <div class="gallery__mask reveal">
-      <ul class="gallery__grid" id="galerija-popis">
-
-        <!-- ---- Istaknute (vide se u sekciji) ---- -->
-        <li class="gallery__item">
-          <a class="gallery__btn" href="img/galerija/cekaonica.webp">
-            <img class="gallery__img photo-grade" src="img/galerija/cekaonica.webp" alt="Čekaonica ambulante" width="1200" height="900" loading="lazy" decoding="async">
-          </a>
-        </li>
-        <li class="gallery__item">
-          <a class="gallery__btn" href="img/galerija/beagle-stene.webp">
-            <img class="gallery__img photo-grade" src="img/galerija/beagle-stene.webp" alt="Štene beaglea u prsluku" width="694" height="1200" loading="lazy" decoding="async">
-          </a>
-        </li>
-        <li class="gallery__item">
-          <a class="gallery__btn" href="img/galerija/maca-na-pultu.webp">
-            <img class="gallery__img photo-grade" src="img/galerija/maca-na-pultu.webp" alt="Bijela mačka na pultu" width="1200" height="900" loading="lazy" decoding="async">
-          </a>
-        </li>
-        <li class="gallery__item">
-          <a class="gallery__btn" href="img/galerija/bijele-macke-transporter.webp">
-            <img class="gallery__img photo-grade" src="img/galerija/bijele-macke-transporter.webp" alt="Bijele mačke u transporteru" width="900" height="1200" loading="lazy" decoding="async">
-          </a>
-        </li>
-        <li class="gallery__item">
-          <a class="gallery__btn" href="img/galerija/laboratorij.webp">
-            <img class="gallery__img photo-grade" src="img/galerija/laboratorij.webp" alt="Analizator i mikroskop" width="1200" height="900" loading="lazy" decoding="async">
-          </a>
-        </li>
-        <li class="gallery__item">
-          <a class="gallery__btn" href="img/galerija/cihuahua-stenci.webp">
-            <img class="gallery__img photo-grade" src="img/galerija/cihuahua-stenci.webp" alt="Tri šteneta čivave" width="1200" height="900" loading="lazy" decoding="async">
-          </a>
-        </li>
-        <li class="gallery__item">
-          <a class="gallery__btn" href="img/galerija/maine-coon-odmor.webp">
-            <img class="gallery__img photo-grade" src="img/galerija/maine-coon-odmor.webp" alt="Maine coon na stolici" width="900" height="1200" loading="lazy" decoding="async">
-          </a>
-        </li>
-
-        <!-- ---- Ostatak seta: samo u lightboxu ---- -->
-        <li class="gallery__item" hidden data-src="img/galerija/recepcija.webp" data-w="1200" data-h="900" data-alt="Recepcija ambulante"></li>
-        <li class="gallery__item" hidden data-src="img/galerija/hematoloski-analizator.webp" data-w="900" data-h="1200" data-alt="Hematološki analizator krvi"></li>
-        <li class="gallery__item" hidden data-src="img/galerija/boksevi-hospitalizacija.webp" data-w="900" data-h="1200" data-alt="Boksevi za hospitalizaciju"></li>
-        <li class="gallery__item" hidden data-src="img/galerija/dva-psa-cekaonica.webp" data-w="1200" data-h="967" data-alt="Beagle i retriver"></li>
-        <li class="gallery__item" hidden data-src="img/galerija/labrador-stene.webp" data-w="1200" data-h="900" data-alt="Crno štene labradora"></li>
-        <li class="gallery__item" hidden data-src="img/galerija/beagle-pregled.webp" data-w="1200" data-h="900" data-alt="Beagle na stolu"></li>
-        <li class="gallery__item" hidden data-src="img/galerija/shih-tzu-stenci.webp" data-w="1200" data-h="900" data-alt="Tri šteneta shih tzua"></li>
-        <li class="gallery__item" hidden data-src="img/galerija/cihuahua-transporter.webp" data-w="900" data-h="1200" data-alt="Štenci čivave u transporteru"></li>
-        <li class="gallery__item" hidden data-src="img/galerija/pinceri-stenci.webp" data-w="1087" data-h="1200" data-alt="Štenci patuljastog pinča"></li>
-        <li class="gallery__item" hidden data-src="img/galerija/pudlica-nakon-sisanja.webp" data-w="900" data-h="1200" data-alt="Pudlica nakon šišanja"></li>
-        <li class="gallery__item" hidden data-src="img/galerija/macka-s-macicima.webp" data-w="900" data-h="1200" data-alt="Mačka s novorođenim mačićima"></li>
-        <li class="gallery__item" hidden data-src="img/galerija/macici-zdjelica.webp" data-w="960" data-h="608" data-alt="Mačići uz zdjelicu"></li>
-        <li class="gallery__item" hidden data-src="img/galerija/maine-coon-stenci.webp" data-w="1200" data-h="900" data-alt="Mačići maine coona"></li>
-        <li class="gallery__item" hidden data-src="img/galerija/maine-coon-kosara.webp" data-w="900" data-h="1200" data-alt="Maine coon u košari"></li>
-        <li class="gallery__item" hidden data-src="img/galerija/macici-penjalica.webp" data-w="900" data-h="1200" data-alt="Mačići na penjalici"></li>
-        <li class="gallery__item" hidden data-src="img/galerija/papiga-ara.webp" data-w="747" data-h="1200" data-alt="Ara papiga na ruci"></li>
-        <li class="gallery__item" hidden data-src="img/galerija/psi-oporavak.webp" data-w="900" data-h="1200" data-alt="Dva psa u ležaju"></li>
-        <li class="gallery__item" hidden data-src="img/galerija/macka-oporavak.webp" data-w="900" data-h="1200" data-alt="Mačka s ovratnikom"></li>
-        <li class="gallery__item" hidden data-src="img/galerija/pas-infuzija.webp" data-w="900" data-h="1200" data-alt="Belgijski ovčar na infuziji"></li>
-        <li class="gallery__item" hidden data-src="img/galerija/psic-kateter.webp" data-w="600" data-h="1200" data-alt="Veterinarka postavlja kateter psiću"></li>
-        <li class="gallery__item" hidden data-src="img/galerija/transfuzija-krvi.webp" data-w="900" data-h="1200" data-alt="Transfuzija krvi u boksu"></li>
-        <li class="gallery__item" hidden data-src="img/galerija/krvni-razmaz.webp" data-w="900" data-h="1200" data-alt="Krvni razmaz pod mikroskopom"></li>
-      </ul>
-
-      <span class="gallery__fade" aria-hidden="true"></span>
-    </div>
-
-    <p class="gallery__more">
-      <button class="btn btn--outline gallery__all" type="button" id="galerija-sve">
-        <svg class="btn__icon" aria-hidden="true"><use href="#i-images"></use></svg>
-        <span>Prikaži sve fotke (<span id="galerija-broj">29</span>)</span>
-      </button>
+  <div class="feature-text alt">
+    <div class="label">Klasične i autorske pizze</div>
+    <h2 class="h2">Pizza koja <br>se pamti</h2>
+    <p class="feature-body">
+      Svaku pizzu pečemo tek kad je naručite, na tankom i fino pečenom tijestu i s kvalitetnim sastojcima koje pažljivo biramo. Birajte klasike ili autorske kombinacije, jedite kod nas ili je uzmite za preuzimanje &ndash; okus ostaje isti.
     </p>
+    <div class="feature-cta">
+      <a href="tel:+38516070961" class="btn btn-blue">Rezervirajte stol</a>
+      <a href="tel:+38516070961" class="btn btn-outline-blue">Nazovite <span class="call-mobile">&nbsp;nas</span><span class="call-desktop">&nbsp;- 01 6070 961</span></a>
+    </div>
   </div>
 </section>
 
-<!-- ===== 4.10 Recenzije ===== -->
-<section class="reviews section section--cream" id="recenzije" aria-labelledby="reviews-title">
-  <div class="container">
-    <header class="section__head reveal">
-      <p class="overline">Recenzije</p>
-      <h2 class="reviews__title" id="reviews-title">Vlasnici nam vjeruju više od 20 godina</h2>
-      <p class="reviews__rating">
-        <span class="stars" aria-hidden="true"><svg><use href="#i-star"></use></svg><svg><use href="#i-star"></use></svg><svg><use href="#i-star"></use></svg><svg><use href="#i-star"></use></svg><svg><use href="#i-star-outline"></use></svg></span>
-        <a class="reviews__rating-link" href="https://www.google.com/maps/place/Veterinarska+ambulanta+Novo+Brestje/@45.8319298,16.0882696,17z/data=!4m8!3m7!1s0x4766782f4dc3497d:0xb469179316a5a455!8m2!3d45.8319261!4d16.0908445!9m1!1b1!16s%2Fg%2F1hd_vyk3_?entry=ttu" target="_blank" rel="noopener">4,1 / 5 <span aria-hidden="true">·</span> 45+ Google recenzija</a>
-      </p>
-    </header>
-  </div>
-
-  <div class="marquee reveal">
-    <ul class="marquee__track">
-        <li class="marquee__item">
-          <figure class="rcard">
-            <span class="rcard__stars" aria-hidden="true"><svg><use href="#i-star"></use></svg><svg><use href="#i-star"></use></svg><svg><use href="#i-star"></use></svg><svg><use href="#i-star"></use></svg><svg><use href="#i-star"></use></svg></span>
-            <blockquote class="rcard__text"><p>Svi moji peseki i mace ovdje su pacijenti i tako već više od 15 godina. Usluga je vrhunska kao i doktori. Svaka čast.</p></blockquote>
-            <figcaption class="rcard__meta">
-              <span class="rcard__name">Irena Šaran</span>
-              <a class="rcard__src" href="https://www.google.com/maps/place/Veterinarska+ambulanta+Novo+Brestje/@45.8319298,16.0882696,17z/data=!4m8!3m7!1s0x4766782f4dc3497d:0xb469179316a5a455!8m2!3d45.8319261!4d16.0908445!9m1!1b1!16s%2Fg%2F1hd_vyk3_?entry=ttu" target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#i-google-color"></use></svg>Google recenzija</a>
-            </figcaption>
-          </figure>
-        </li>
-        <li class="marquee__item">
-          <figure class="rcard">
-            <span class="rcard__stars" aria-hidden="true"><svg><use href="#i-star"></use></svg><svg><use href="#i-star"></use></svg><svg><use href="#i-star"></use></svg><svg><use href="#i-star"></use></svg><svg><use href="#i-star"></use></svg></span>
-            <blockquote class="rcard__text"><p>Odlična usluga i izuzetno ljubazno osoblje. Sve su detaljno objasnili i pristupili s puno pažnje. Topla preporuka!</p></blockquote>
-            <figcaption class="rcard__meta">
-              <span class="rcard__name">Nina</span>
-              <a class="rcard__src" href="https://www.google.com/maps/place/Veterinarska+ambulanta+Novo+Brestje/@45.8319298,16.0882696,17z/data=!4m8!3m7!1s0x4766782f4dc3497d:0xb469179316a5a455!8m2!3d45.8319261!4d16.0908445!9m1!1b1!16s%2Fg%2F1hd_vyk3_?entry=ttu" target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#i-google-color"></use></svg>Google recenzija</a>
-            </figcaption>
-          </figure>
-        </li>
-        <li class="marquee__item">
-          <figure class="rcard">
-            <span class="rcard__stars" aria-hidden="true"><svg><use href="#i-star"></use></svg><svg><use href="#i-star"></use></svg><svg><use href="#i-star"></use></svg><svg><use href="#i-star"></use></svg><svg><use href="#i-star"></use></svg></span>
-            <blockquote class="rcard__text"><p>Veterinarska ambulanta Novo Brestje stvarno uvijek pruža super skrb i uslugu. Doktorica Ines Petrović i cijela ekipa su profesionalni, brižni te učinkoviti…</p></blockquote>
-            <figcaption class="rcard__meta">
-              <span class="rcard__name">Gordana Zagorac</span>
-              <a class="rcard__src" href="https://www.google.com/maps/place/Veterinarska+ambulanta+Novo+Brestje/@45.8319298,16.0882696,17z/data=!4m8!3m7!1s0x4766782f4dc3497d:0xb469179316a5a455!8m2!3d45.8319261!4d16.0908445!9m1!1b1!16s%2Fg%2F1hd_vyk3_?entry=ttu" target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#i-google-color"></use></svg>Google recenzija</a>
-            </figcaption>
-          </figure>
-        </li>
-        <li class="marquee__item">
-          <figure class="rcard">
-            <span class="rcard__stars" aria-hidden="true"><svg><use href="#i-star"></use></svg><svg><use href="#i-star"></use></svg><svg><use href="#i-star"></use></svg><svg><use href="#i-star"></use></svg><svg><use href="#i-star"></use></svg></span>
-            <blockquote class="rcard__text"><p>Vrhunska usluga, osoblje predobro i velika briga za ljubimce. Za svaku preporuku.</p></blockquote>
-            <figcaption class="rcard__meta">
-              <span class="rcard__name">Antonio Bubić</span>
-              <a class="rcard__src" href="https://www.google.com/maps/place/Veterinarska+ambulanta+Novo+Brestje/@45.8319298,16.0882696,17z/data=!4m8!3m7!1s0x4766782f4dc3497d:0xb469179316a5a455!8m2!3d45.8319261!4d16.0908445!9m1!1b1!16s%2Fg%2F1hd_vyk3_?entry=ttu" target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#i-google-color"></use></svg>Google recenzija</a>
-            </figcaption>
-          </figure>
-        </li>
-        <li class="marquee__item">
-          <figure class="rcard">
-            <span class="rcard__stars" aria-hidden="true"><svg><use href="#i-star"></use></svg><svg><use href="#i-star"></use></svg><svg><use href="#i-star"></use></svg><svg><use href="#i-star"></use></svg><svg><use href="#i-star"></use></svg></span>
-            <blockquote class="rcard__text"><p>Jako sam zadovoljna, Bongo i Votka vole ići tamo 💗💗</p></blockquote>
-            <figcaption class="rcard__meta">
-              <span class="rcard__name">Ana-Martina Radecki</span>
-              <a class="rcard__src" href="https://www.google.com/maps/place/Veterinarska+ambulanta+Novo+Brestje/@45.8319298,16.0882696,17z/data=!4m8!3m7!1s0x4766782f4dc3497d:0xb469179316a5a455!8m2!3d45.8319261!4d16.0908445!9m1!1b1!16s%2Fg%2F1hd_vyk3_?entry=ttu" target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#i-google-color"></use></svg>Google recenzija</a>
-            </figcaption>
-          </figure>
-        </li>
-        <li class="marquee__item">
-          <figure class="rcard">
-            <span class="rcard__stars" aria-hidden="true"><svg><use href="#i-star"></use></svg><svg><use href="#i-star"></use></svg><svg><use href="#i-star"></use></svg><svg><use href="#i-star"></use></svg><svg><use href="#i-star"></use></svg></span>
-            <blockquote class="rcard__text"><p>Odlicna ambulanta, uvijek spremni pomoci i izuzetno strucni. Cijene povoljne. Usluga vrhunska.</p></blockquote>
-            <figcaption class="rcard__meta">
-              <span class="rcard__name">tajana zavalic</span>
-              <a class="rcard__src" href="https://www.google.com/maps/place/Veterinarska+ambulanta+Novo+Brestje/@45.8319298,16.0882696,17z/data=!4m8!3m7!1s0x4766782f4dc3497d:0xb469179316a5a455!8m2!3d45.8319261!4d16.0908445!9m1!1b1!16s%2Fg%2F1hd_vyk3_?entry=ttu" target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#i-google-color"></use></svg>Google recenzija</a>
-            </figcaption>
-          </figure>
-        </li>
-        <li class="marquee__item">
-          <figure class="rcard">
-            <span class="rcard__stars" aria-hidden="true"><svg><use href="#i-star"></use></svg><svg><use href="#i-star"></use></svg><svg><use href="#i-star"></use></svg><svg><use href="#i-star"></use></svg><svg><use href="#i-star"></use></svg></span>
-            <blockquote class="rcard__text"><p>Vrlo ljubazno i profesionalno osoblje koje se stvarno brine o životinjama. Pregled je bio temeljit, a sve mi je jasno objašnjeno…</p></blockquote>
-            <figcaption class="rcard__meta">
-              <span class="rcard__name">Marko Buljeta</span>
-              <a class="rcard__src" href="https://www.google.com/maps/place/Veterinarska+ambulanta+Novo+Brestje/@45.8319298,16.0882696,17z/data=!4m8!3m7!1s0x4766782f4dc3497d:0xb469179316a5a455!8m2!3d45.8319261!4d16.0908445!9m1!1b1!16s%2Fg%2F1hd_vyk3_?entry=ttu" target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#i-google-color"></use></svg>Google recenzija</a>
-            </figcaption>
-          </figure>
-        </li>
-        <li class="marquee__item" aria-hidden="true">
-          <figure class="rcard">
-            <span class="rcard__stars" aria-hidden="true"><svg><use href="#i-star"></use></svg><svg><use href="#i-star"></use></svg><svg><use href="#i-star"></use></svg><svg><use href="#i-star"></use></svg><svg><use href="#i-star"></use></svg></span>
-            <blockquote class="rcard__text"><p>Svi moji peseki i mace ovdje su pacijenti i tako već više od 15 godina. Usluga je vrhunska kao i doktori. Svaka čast.</p></blockquote>
-            <figcaption class="rcard__meta">
-              <span class="rcard__name">Irena Šaran</span>
-              <a class="rcard__src" href="https://www.google.com/maps/place/Veterinarska+ambulanta+Novo+Brestje/@45.8319298,16.0882696,17z/data=!4m8!3m7!1s0x4766782f4dc3497d:0xb469179316a5a455!8m2!3d45.8319261!4d16.0908445!9m1!1b1!16s%2Fg%2F1hd_vyk3_?entry=ttu" target="_blank" rel="noopener" tabindex="-1"><svg aria-hidden="true"><use href="#i-google-color"></use></svg>Google recenzija</a>
-            </figcaption>
-          </figure>
-        </li>
-        <li class="marquee__item" aria-hidden="true">
-          <figure class="rcard">
-            <span class="rcard__stars" aria-hidden="true"><svg><use href="#i-star"></use></svg><svg><use href="#i-star"></use></svg><svg><use href="#i-star"></use></svg><svg><use href="#i-star"></use></svg><svg><use href="#i-star"></use></svg></span>
-            <blockquote class="rcard__text"><p>Odlična usluga i izuzetno ljubazno osoblje. Sve su detaljno objasnili i pristupili s puno pažnje. Topla preporuka!</p></blockquote>
-            <figcaption class="rcard__meta">
-              <span class="rcard__name">Nina</span>
-              <a class="rcard__src" href="https://www.google.com/maps/place/Veterinarska+ambulanta+Novo+Brestje/@45.8319298,16.0882696,17z/data=!4m8!3m7!1s0x4766782f4dc3497d:0xb469179316a5a455!8m2!3d45.8319261!4d16.0908445!9m1!1b1!16s%2Fg%2F1hd_vyk3_?entry=ttu" target="_blank" rel="noopener" tabindex="-1"><svg aria-hidden="true"><use href="#i-google-color"></use></svg>Google recenzija</a>
-            </figcaption>
-          </figure>
-        </li>
-        <li class="marquee__item" aria-hidden="true">
-          <figure class="rcard">
-            <span class="rcard__stars" aria-hidden="true"><svg><use href="#i-star"></use></svg><svg><use href="#i-star"></use></svg><svg><use href="#i-star"></use></svg><svg><use href="#i-star"></use></svg><svg><use href="#i-star"></use></svg></span>
-            <blockquote class="rcard__text"><p>Veterinarska ambulanta Novo Brestje stvarno uvijek pruža super skrb i uslugu. Doktorica Ines Petrović i cijela ekipa su profesionalni, brižni te učinkoviti…</p></blockquote>
-            <figcaption class="rcard__meta">
-              <span class="rcard__name">Gordana Zagorac</span>
-              <a class="rcard__src" href="https://www.google.com/maps/place/Veterinarska+ambulanta+Novo+Brestje/@45.8319298,16.0882696,17z/data=!4m8!3m7!1s0x4766782f4dc3497d:0xb469179316a5a455!8m2!3d45.8319261!4d16.0908445!9m1!1b1!16s%2Fg%2F1hd_vyk3_?entry=ttu" target="_blank" rel="noopener" tabindex="-1"><svg aria-hidden="true"><use href="#i-google-color"></use></svg>Google recenzija</a>
-            </figcaption>
-          </figure>
-        </li>
-        <li class="marquee__item" aria-hidden="true">
-          <figure class="rcard">
-            <span class="rcard__stars" aria-hidden="true"><svg><use href="#i-star"></use></svg><svg><use href="#i-star"></use></svg><svg><use href="#i-star"></use></svg><svg><use href="#i-star"></use></svg><svg><use href="#i-star"></use></svg></span>
-            <blockquote class="rcard__text"><p>Vrhunska usluga, osoblje predobro i velika briga za ljubimce. Za svaku preporuku.</p></blockquote>
-            <figcaption class="rcard__meta">
-              <span class="rcard__name">Antonio Bubić</span>
-              <a class="rcard__src" href="https://www.google.com/maps/place/Veterinarska+ambulanta+Novo+Brestje/@45.8319298,16.0882696,17z/data=!4m8!3m7!1s0x4766782f4dc3497d:0xb469179316a5a455!8m2!3d45.8319261!4d16.0908445!9m1!1b1!16s%2Fg%2F1hd_vyk3_?entry=ttu" target="_blank" rel="noopener" tabindex="-1"><svg aria-hidden="true"><use href="#i-google-color"></use></svg>Google recenzija</a>
-            </figcaption>
-          </figure>
-        </li>
-        <li class="marquee__item" aria-hidden="true">
-          <figure class="rcard">
-            <span class="rcard__stars" aria-hidden="true"><svg><use href="#i-star"></use></svg><svg><use href="#i-star"></use></svg><svg><use href="#i-star"></use></svg><svg><use href="#i-star"></use></svg><svg><use href="#i-star"></use></svg></span>
-            <blockquote class="rcard__text"><p>Jako sam zadovoljna, Bongo i Votka vole ići tamo 💗💗</p></blockquote>
-            <figcaption class="rcard__meta">
-              <span class="rcard__name">Ana-Martina Radecki</span>
-              <a class="rcard__src" href="https://www.google.com/maps/place/Veterinarska+ambulanta+Novo+Brestje/@45.8319298,16.0882696,17z/data=!4m8!3m7!1s0x4766782f4dc3497d:0xb469179316a5a455!8m2!3d45.8319261!4d16.0908445!9m1!1b1!16s%2Fg%2F1hd_vyk3_?entry=ttu" target="_blank" rel="noopener" tabindex="-1"><svg aria-hidden="true"><use href="#i-google-color"></use></svg>Google recenzija</a>
-            </figcaption>
-          </figure>
-        </li>
-        <li class="marquee__item" aria-hidden="true">
-          <figure class="rcard">
-            <span class="rcard__stars" aria-hidden="true"><svg><use href="#i-star"></use></svg><svg><use href="#i-star"></use></svg><svg><use href="#i-star"></use></svg><svg><use href="#i-star"></use></svg><svg><use href="#i-star"></use></svg></span>
-            <blockquote class="rcard__text"><p>Odlicna ambulanta, uvijek spremni pomoci i izuzetno strucni. Cijene povoljne. Usluga vrhunska.</p></blockquote>
-            <figcaption class="rcard__meta">
-              <span class="rcard__name">tajana zavalic</span>
-              <a class="rcard__src" href="https://www.google.com/maps/place/Veterinarska+ambulanta+Novo+Brestje/@45.8319298,16.0882696,17z/data=!4m8!3m7!1s0x4766782f4dc3497d:0xb469179316a5a455!8m2!3d45.8319261!4d16.0908445!9m1!1b1!16s%2Fg%2F1hd_vyk3_?entry=ttu" target="_blank" rel="noopener" tabindex="-1"><svg aria-hidden="true"><use href="#i-google-color"></use></svg>Google recenzija</a>
-            </figcaption>
-          </figure>
-        </li>
-        <li class="marquee__item" aria-hidden="true">
-          <figure class="rcard">
-            <span class="rcard__stars" aria-hidden="true"><svg><use href="#i-star"></use></svg><svg><use href="#i-star"></use></svg><svg><use href="#i-star"></use></svg><svg><use href="#i-star"></use></svg><svg><use href="#i-star"></use></svg></span>
-            <blockquote class="rcard__text"><p>Vrlo ljubazno i profesionalno osoblje koje se stvarno brine o životinjama. Pregled je bio temeljit, a sve mi je jasno objašnjeno…</p></blockquote>
-            <figcaption class="rcard__meta">
-              <span class="rcard__name">Marko Buljeta</span>
-              <a class="rcard__src" href="https://www.google.com/maps/place/Veterinarska+ambulanta+Novo+Brestje/@45.8319298,16.0882696,17z/data=!4m8!3m7!1s0x4766782f4dc3497d:0xb469179316a5a455!8m2!3d45.8319261!4d16.0908445!9m1!1b1!16s%2Fg%2F1hd_vyk3_?entry=ttu" target="_blank" rel="noopener" tabindex="-1"><svg aria-hidden="true"><use href="#i-google-color"></use></svg>Google recenzija</a>
-            </figcaption>
-          </figure>
-        </li>
-    </ul>
-  </div>
-
-  <div class="container">
-    <p class="reviews__cta">
-      <a class="gbtn" href="https://www.google.com/maps/place/Veterinarska+ambulanta+Novo+Brestje/@45.8319298,16.0882696,17z/data=!4m8!3m7!1s0x4766782f4dc3497d:0xb469179316a5a455!8m2!3d45.8319261!4d16.0908445!9m1!1b1!16s%2Fg%2F1hd_vyk3_?entry=ttu" target="_blank" rel="noopener">
-        <svg class="gbtn__logo" aria-hidden="true"><use href="#i-google-color"></use></svg>Sve Google recenzije
-      </a>
+<!-- ===== FEATURE B ===== -->
+<section class="feature reverse reveal">
+  <div class="feature-text">
+    <div class="label">Prostor i druženje</div>
+    <h2 class="h2">Mjesto za <br>društva</h2>
+    <p class="feature-body">
+      Uz pizzu ide ugodan prostor u kojem se lako ostane, pogodan za obitelji i društva. Primamo manje proslave i veće grupe, a sve pizze možete uzeti i za preuzimanje kad vam tako više odgovara.
     </p>
+    <div class="feature-cta">
+      <a href="tel:+38516070961" class="btn btn-blue">Rezervirajte stol</a>
+      <a href="tel:+38516070961" class="btn btn-outline-blue">Nazovite <span class="call-mobile">&nbsp;nas</span><span class="call-desktop">&nbsp;- 01 6070 961</span></a>
+    </div>
+  </div>
+  <div class="feature-img">
+    <img src="images/feature-b.jpg" alt="Pizza s kvalitetnim sastojcima u Pizzeriji 269" loading="lazy" decoding="async">
   </div>
 </section>
 
-<!-- ===== 4.11 Brojke ===== -->
-<!-- Uska puna navy traka. Oba ruba nose isti jednostruki luk kao dno heroja
-     (kontrolne točke na x=360 i x=1080, bez infleksije). Luk se pri skrolanju
-     preobražava: gornji se izravnava dok se donji produbljuje - vidi
-     initStatsCurves() u main.js. Oba su ispunjena bojom --cream jer su i
-     Recenzije iznad i FAQ ispod cream sekcije, pa nema šava.
-     Vrijednosti d= ispod su statične inačice na umjerenoj dubini (30), tako
-     da traka izgleda ispravno i bez JS-a i uz prefers-reduced-motion.
-     Sredine lukova su y=8 (gore) i y=92 (dolje) - vidi initStatsCurves(). -->
-<section class="stats" id="stats-band" aria-labelledby="stats-title">
-  <div class="curve curve--top curve--cream" aria-hidden="true">
-    <svg viewBox="0 0 1440 100" preserveAspectRatio="none"><path id="stats-arc-top" d="M0,0 L1440,0 L1440,38 C 1080,-2 360,-2 0,38 Z"/></svg>
-  </div>
-
-  <span class="paws paws--stats" aria-hidden="true">
-    <svg><use href="#i-paw"></use></svg><svg><use href="#i-paw"></use></svg><svg><use href="#i-paw"></use></svg>
-    <svg><use href="#i-paw"></use></svg><svg><use href="#i-paw"></use></svg><svg><use href="#i-paw"></use></svg>
-    <svg><use href="#i-paw"></use></svg>
-  </span>
-
-  <div class="container stats__inner">
-    <h2 class="stats__title reveal" id="stats-title">Brojke koje govore za nas</h2>
-    <ul class="stats__grid" id="stats">
-      <li class="stat reveal">
-        <span class="stat__num" data-count="20" data-suffix="+">0+</span>
-        <span class="stat__label">Godina s vama</span>
-      </li>
-      <li class="stat reveal">
-        <span class="stat__num" data-count="45" data-suffix="+">0+</span>
-        <span class="stat__label">Google recenzija</span>
-      </li>
-      <li class="stat reveal">
-        <span class="stat__num" data-count="2" data-suffix="">0</span>
-        <span class="stat__label">Ordinacije i kirurška sala</span>
-      </li>
-      <li class="stat reveal">
-        <span class="stat__num" data-static="∞">∞</span>
-        <span class="stat__label">Podijeljenih maženja</span>
-      </li>
-    </ul>
-  </div>
-
-  <div class="curve curve--cream" aria-hidden="true">
-    <svg viewBox="0 0 1440 100" preserveAspectRatio="none"><path id="stats-arc-bottom" d="M0,62 C 360,102 1080,102 1440,62 L1440,100 L0,100 Z"/></svg>
-  </div>
-</section>
-
-<!-- ===== 4.12 FAQ ===== -->
-<section class="faq section section--cream" id="faq">
-  <div class="faq__wrap faq__inner">
-    <!-- Uvod i kartica su odvojeni omotači: ispod 768px .faq__aside se
-         rastvara (display: contents) pa se kartica može spustiti ispod
-         popisa pitanja. -->
-    <div class="faq__aside">
-      <div class="faq__intro reveal">
-        <h2 class="faq__title">Pitanja koja često čujemo</h2>
-        <p class="faq__sub">Odgovori na ono što nas vlasnici najčešće pitaju - o dolasku, pregledima i dokumentima.</p>
-      </div>
-
-      <div class="faq__cta reveal">
-        <p class="faq__cta-title">Imate još pitanja?</p>
-        <p class="faq__cta-text">Slobodno nazovite ili nam pišite - rado ćemo vam pomoći.</p>
-        <hr class="faq__cta-rule">
-        <p class="faq__cta-row"><span class="faq__cta-label">Telefon:</span> <a class="link-contact" href="tel:+38512012068">01 2012 068</a></p>
-        <p class="faq__cta-row"><span class="faq__cta-label">E-mail:</span> <a class="link-contact faq__cta-mail" href="mailto:veterinarnb@gmail.com">veterinarnb@gmail.com</a></p>
-        <p class="faq__cta-hours">Pon-pet 9-12 i 16-19 <span aria-hidden="true">·</span> Sub 9-12</p>
-        <a class="btn btn--accent btn--block" href="tel:+38512012068">Nazovite nas</a>
-      </div>
-    </div>
-
-    <div class="acc acc--flat" id="faq-acc">
-      <div class="acc__item reveal">
-        <h3 class="acc__heading">
-          <button type="button" class="acc__toggle" aria-expanded="true" aria-controls="faq-1">
-            <span class="acc__label">Trebam li najaviti dolazak?</span>
-            <span class="acc__plus" aria-hidden="true"><svg class="acc__icon-plus"><use href="#i-plus"></use></svg><svg class="acc__icon-minus"><use href="#i-minus"></use></svg></span>
-          </button>
-        </h3>
-        <div class="acc__panel" id="faq-1" role="region">
-          <p>Preporučujemo da nas prije dolaska nazovete na <a class="link-contact" href="tel:+38512012068">01 2012 068</a> kako biste izbjegli čekanje, a za kirurške zahvate termin je obavezan.</p>
-        </div>
-      </div>
-
-      <div class="acc__item reveal">
-        <h3 class="acc__heading">
-          <button type="button" class="acc__toggle" aria-expanded="false" aria-controls="faq-2">
-            <span class="acc__label">Što ponijeti na prvi pregled?</span>
-            <span class="acc__plus" aria-hidden="true"><svg class="acc__icon-plus"><use href="#i-plus"></use></svg><svg class="acc__icon-minus"><use href="#i-minus"></use></svg></span>
-          </button>
-        </h3>
-        <div class="acc__panel" id="faq-2" role="region" hidden>
-          <p>Ponesite putovnicu ili zdravstvenu knjižicu ljubimca ako je imate. Ako dolazite prvi put, dođite koju minutu ranije da se ljubimac opusti u prostoru.</p>
-        </div>
-      </div>
-
-      <div class="acc__item reveal">
-        <h3 class="acc__heading">
-          <button type="button" class="acc__toggle" aria-expanded="false" aria-controls="faq-3">
-            <span class="acc__label">Čipirate li i registrirate ljubimce?</span>
-            <span class="acc__plus" aria-hidden="true"><svg class="acc__icon-plus"><use href="#i-plus"></use></svg><svg class="acc__icon-minus"><use href="#i-minus"></use></svg></span>
-          </button>
-        </h3>
-        <div class="acc__panel" id="faq-3" role="region" hidden>
-          <p>Da - obavljamo mikročipiranje i upis u Upisnik kućnih ljubimaca te izdajemo putovnice i svu prateću dokumentaciju.</p>
-        </div>
-      </div>
-
-      <div class="acc__item reveal">
-        <h3 class="acc__heading">
-          <button type="button" class="acc__toggle" aria-expanded="false" aria-controls="faq-4">
-            <span class="acc__label">Gdje mogu parkirati?</span>
-            <span class="acc__plus" aria-hidden="true"><svg class="acc__icon-plus"><use href="#i-plus"></use></svg><svg class="acc__icon-minus"><use href="#i-minus"></use></svg></span>
-          </button>
-        </h3>
-        <div class="acc__panel" id="faq-4" role="region" hidden>
-          <p>Besplatno, na parkingu odmah ispred ambulante u Ulici Orhideja 89.</p>
-        </div>
-      </div>
-
-      <div class="acc__item reveal">
-        <h3 class="acc__heading">
-          <button type="button" class="acc__toggle" aria-expanded="false" aria-controls="faq-5">
-            <span class="acc__label">Koliko često treba cijepiti psa ili mačku?</span>
-            <span class="acc__plus" aria-hidden="true"><svg class="acc__icon-plus"><use href="#i-plus"></use></svg><svg class="acc__icon-minus"><use href="#i-minus"></use></svg></span>
-          </button>
-        </h3>
-        <div class="acc__panel" id="faq-5" role="region" hidden>
-          <p>Ovisi o dobi i vrsti cjepiva - štenci i mačići cijepe se po rasporedu u prvim mjesecima života, a odrasli ljubimci najčešće jednom godišnje. Nazovite nas pa ćemo provjeriti što je vašem ljubimcu na redu.</p>
-        </div>
-      </div>
-
-      <div class="acc__item reveal">
-        <h3 class="acc__heading">
-          <button type="button" class="acc__toggle" aria-expanded="false" aria-controls="faq-6">
-            <span class="acc__label">Kako pripremiti ljubimca za kirurški zahvat?</span>
-            <span class="acc__plus" aria-hidden="true"><svg class="acc__icon-plus"><use href="#i-plus"></use></svg><svg class="acc__icon-minus"><use href="#i-minus"></use></svg></span>
-          </button>
-        </h3>
-        <div class="acc__panel" id="faq-6" role="region" hidden>
-          <p>Na zahvat ljubimac dolazi natašte, a sve detaljne upute dobit ćete pri dogovoru termina. Nakon zahvata vodimo vas kroz oporavak - s jasnim uputama i kontrolnim pregledom.</p>
-        </div>
-      </div>
-
-      <div class="acc__item reveal">
-        <h3 class="acc__heading">
-          <button type="button" class="acc__toggle" aria-expanded="false" aria-controls="faq-7">
-            <span class="acc__label">Radite li subotom?</span>
-            <span class="acc__plus" aria-hidden="true"><svg class="acc__icon-plus"><use href="#i-plus"></use></svg><svg class="acc__icon-minus"><use href="#i-minus"></use></svg></span>
-          </button>
-        </h3>
-        <div class="acc__panel" id="faq-7" role="region" hidden>
-          <p data-todo="potvrditi-srijedu">Da - subotom od 9 do 12 sati. Radnim danom tu smo od 9 do 12 i od 16 do 19 sati.</p>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ===== 4.13 Kontakt ===== -->
-<section class="contact section" id="kontakt">
-  <div class="container">
-    <div class="contact__grid">
-
-      <div class="contact__info reveal">
-        <p class="overline">Kontakt</p>
-        <h2 class="contact__title">Veterinarska ambulanta Novo Brestje</h2>
-
-        <ul class="cinfo">
-          <li class="cinfo__item">
-            <span class="cinfo__icon" aria-hidden="true"><svg><use href="#i-pin"></use></svg></span>
-            <div class="cinfo__body">
-              <p class="cinfo__label">Adresa</p>
-              <p class="cinfo__value">Ulica Orhideja 89, 10360 Sesvete</p>
-            </div>
-          </li>
-          <li class="cinfo__item">
-            <span class="cinfo__icon" aria-hidden="true"><svg><use href="#i-phone"></use></svg></span>
-            <div class="cinfo__body">
-              <p class="cinfo__label">Telefon</p>
-              <p class="cinfo__value">
-                <a class="link-contact" href="tel:+38512012068">01 2012 068</a>
-                <span aria-hidden="true">·</span>
-                <span data-todo="potvrditi-mobitel">Mob: <a class="link-contact" href="tel:+385915106075">091 510 6075</a></span>
-              </p>
-            </div>
-          </li>
-          <li class="cinfo__item">
-            <span class="cinfo__icon" aria-hidden="true"><svg><use href="#i-mail"></use></svg></span>
-            <div class="cinfo__body">
-              <p class="cinfo__label">E-mail</p>
-              <p class="cinfo__value"><a class="link-contact" href="mailto:veterinarnb@gmail.com">veterinarnb@gmail.com</a></p>
-            </div>
-          </li>
-          <li class="cinfo__item">
-            <span class="cinfo__icon" aria-hidden="true"><svg><use href="#i-parking"></use></svg></span>
-            <div class="cinfo__body">
-              <p class="cinfo__label">Parking</p>
-              <p class="cinfo__value">Besplatan parking ispred ambulante</p>
-            </div>
-          </li>
-          <!-- Google navodi srijedu kao zatvorenu - vjerojatno greška profila; potvrditi s klijentom -->
-          <li class="cinfo__item">
-            <span class="cinfo__icon" aria-hidden="true"><svg><use href="#i-clock"></use></svg></span>
-            <div class="cinfo__body">
-              <p class="cinfo__label">Radno vrijeme</p>
-              <p class="cinfo__value" data-todo="potvrditi-srijedu">Ponedjeljak-petak 9:00-12:00 i 16:00-19:00 <span aria-hidden="true">·</span> Subota 9:00-12:00 <span aria-hidden="true">·</span> Nedjelja i praznici: zatvoreno</p>
-            </div>
-          </li>
-          <li class="cinfo__item">
-            <span class="cinfo__icon" aria-hidden="true"><svg><use href="#i-facebook"></use></svg></span>
-            <div class="cinfo__body">
-              <p class="cinfo__label">Facebook</p>
-              <p class="cinfo__value"><a class="link-contact" href="https://www.facebook.com/veterinabrestje" target="_blank" rel="noopener">facebook.com/veterinabrestje</a></p>
-            </div>
-          </li>
-        </ul>
-
-        <div class="contact__actions">
-          <a class="btn btn--accent" href="tel:+38512012068">
-            <svg class="btn__icon" aria-hidden="true"><use href="#i-phone"></use></svg>Nazovite nas
-          </a>
-          <a class="btn btn--outline" href="https://maps.app.goo.gl/PU812u5cfCyJNJPr9" target="_blank" rel="noopener">
-            <svg class="btn__icon" aria-hidden="true"><use href="#i-directions"></use></svg>Upute za dolazak
-          </a>
-        </div>
-      </div>
-
-      <!-- Karta se NE učitava bez privole: iframe namjerno nema src, pravi URL
-           stoji u data-src i postavlja ga js/cookies.js tek kad je odobrena
-           kategorija „karta". Do tada se vidi zaslon ispod. CSS skriva iframe
-           dok nema atribut src, pa ovo radi ispravno i prije nego se JS izvrši. -->
-      <div class="contact__map reveal" data-map-slot>
-        <div class="mapgate" data-map-gate>
-          <span class="mapgate__icon" aria-hidden="true"><svg><use href="#i-pin"></use></svg></span>
-          <p class="mapgate__title">Karta čeka vašu privolu</p>
-          <p class="mapgate__text">Google karta učitava se s Googleovih poslužitelja i pritom im se prenosi vaša IP adresa. Prikazom uključujete kategoriju „Vanjski sadržaj / karta".</p>
-          <button type="button" class="btn btn--accent" data-map-allow>Prikaži kartu</button>
-          <p class="mapgate__foot">
-            <a href="politika-kolacica.html">Politika kolačića</a>
-            <span aria-hidden="true">·</span>
-            <a class="link-contact" href="https://www.google.com/maps/place/Veterinarska+ambulanta+Novo+Brestje/@45.8319298,16.0882696,17z" target="_blank" rel="noopener">Otvori na Google kartama</a>
-          </p>
-        </div>
-        <iframe
-          title="Karta - Ulica Orhideja 89, 10360 Sesvete"
-          data-src="https://www.google.com/maps?q=Ulica%20Orhideja%2089%2C%2010360%20Sesvete%2C%20Hrvatska&amp;hl=hr&amp;z=16&amp;output=embed"
-          width="600" height="450" loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe>
-      </div>
-    </div>
-  </div>
-</section>
-
-</main>
-
-<!-- ===== 4.14 Podnožje ===== -->
-<footer class="footer">
-  <div class="container footer__grid">
-
-    <div class="footer__col footer__col--brand">
-      <a class="logo logo--footer" href="#top">
-        <span class="logo__mark"><svg aria-hidden="true"><use href="#i-paw"></use></svg></span>
-        <span class="logo__text">
-          <span class="logo__small">Veterinarska ambulanta</span>
-          <span class="logo__big">Novo Brestje</span>
-        </span>
-      </a>
-      <p class="footer__about">Kvartovska veterinarska ambulanta u Novom Brestju. Stručna i nježna skrb za pse i mačke već više od 20 godina.</p>
-      <a class="footer__social" href="https://www.facebook.com/veterinabrestje" target="_blank" rel="noopener" aria-label="Facebook stranica ambulante (otvara se u novoj kartici)">
-        <svg aria-hidden="true"><use href="#i-facebook"></use></svg>
-      </a>
-    </div>
-
-    <nav class="footer__col" aria-labelledby="footer-nav-title">
-      <h2 class="footer__title" id="footer-nav-title">Navigacija</h2>
-      <ul class="footer__links">
-        <li><a href="#onama">O nama</a></li>
-        <li><a href="#usluge">Usluge</a></li>
-        <li><a href="#novosti">Novosti</a></li>
-        <li><a href="#galerija">Galerija</a></li>
-        <li><a href="#recenzije">Recenzije</a></li>
-        <li><a href="#faq">FAQ</a></li>
-        <li><a href="#kontakt">Kontakt</a></li>
-      </ul>
-    </nav>
-
-    <nav class="footer__col" aria-labelledby="footer-legal-title">
-      <h2 class="footer__title" id="footer-legal-title">Pravne informacije</h2>
-      <ul class="footer__links">
-        <li><a href="politika-privatnosti.html">Politika privatnosti</a></li>
-        <li><a href="politika-kolacica.html">Politika kolačića</a></li>
-        <li><a href="uvjeti-koristenja.html">Uvjeti korištenja</a></li>
-        <li><button type="button" data-cookie-settings>Postavke kolačića</button></li>
-      </ul>
-    </nav>
-
-    <div class="footer__col">
-      <h2 class="footer__title">Kontakt</h2>
-      <ul class="footer__contact">
-        <li>
-          <svg aria-hidden="true"><use href="#i-phone"></use></svg>
-          <a class="link-contact" href="tel:+38512012068">01 2012 068</a>
-        </li>
-        <li>
-          <svg aria-hidden="true"><use href="#i-mail"></use></svg>
-          <a class="link-contact" href="mailto:veterinarnb@gmail.com">veterinarnb@gmail.com</a>
-        </li>
-        <li>
-          <svg aria-hidden="true"><use href="#i-pin"></use></svg>
-          <address>Ulica Orhideja 89,<br>10360 Sesvete</address>
-        </li>
-      </ul>
-    </div>
-  </div>
-
-  <div class="container footer__bottom">
-    <p class="footer__copy">© 2026 Veterinarska ambulanta Novo Brestje d.o.o. <span aria-hidden="true">·</span> Sva prava pridržana.</p>
-    <p class="footer__credit">Izradio <a href="https://snuki.digital/" target="_blank" rel="noopener">snuki.digital</a></p>
-  </div>
-</footer>
-
-<!-- ===== 4.15 Mobilni gumb za poziv (FAB) ===== -->
-<a class="fab" href="tel:+38512012068" aria-label="Nazovite nas">
-  <svg aria-hidden="true"><use href="#i-phone"></use></svg>
-</a>
-
-<!-- ===== 4.16 Lightbox galerije =====
-     Prazna ljuska - main.js upisuje `src`, `alt` i brojač pri otvaranju.
-     Stoji izvan <main> i skriven je dok se ne otvori, pa ne utječe na ispis
-     stranice ni na čitače ekrana. -->
-<div class="lbox" id="lightbox" hidden>
-  <div class="lbox__backdrop" data-lbox="close"></div>
-
-  <div class="lbox__panel" role="dialog" aria-modal="true" aria-label="Galerija fotografija">
-    <button class="lbox__close" type="button" data-lbox="close" aria-label="Zatvori galeriju">
-      <svg aria-hidden="true"><use href="#i-close"></use></svg>
-    </button>
-
-    <button class="lbox__nav lbox__nav--prev" type="button" data-lbox="prev" aria-label="Prethodna fotografija">
-      <svg aria-hidden="true"><use href="#i-arrow-left"></use></svg>
-    </button>
-
-    <figure class="lbox__figure">
-      <!-- .photo-grade i ovdje: bez njega bi klik na sličicu vidljivo
-           promijenio boje jer mozaik nosi gradaciju, a uvećana slika ne bi. -->
-      <img class="lbox__img photo-grade" id="lbox-img" alt="" decoding="async">
-      <!-- Natpis se namjerno ne ispisuje: opis fotografije živi samo u
-           `alt` atributu (pristupačnost i SEO), a vidljiv ostaje brojač. -->
-      <figcaption class="lbox__caption">
-        <span class="lbox__count" id="lbox-count"></span>
-      </figcaption>
-    </figure>
-
-    <button class="lbox__nav lbox__nav--next" type="button" data-lbox="next" aria-label="Sljedeća fotografija">
-      <svg aria-hidden="true"><use href="#i-arrow-right"></use></svg>
-    </button>
+<!-- ===== MARQUEE ===== -->
+<div class="marquee" aria-hidden="true">
+  <div class="marquee-track">
+    <span>Klasične pizze</span><span class="dot">&bull;</span>
+    <span>Autorske pizze</span><span class="dot">&bull;</span>
+    <span>Za preuzimanje</span><span class="dot">&bull;</span>
+    <span>Kvalitetni sastojci</span><span class="dot">&bull;</span>
+    <span>4,8/5 na Googleu</span><span class="dot">&bull;</span>
+    <span>112 recenzija</span><span class="dot">&bull;</span>
+    <span>Tanko tijesto</span><span class="dot">&bull;</span>
+    <span>Prostor za društva</span><span class="dot">&bull;</span>
+    <span>Proslave</span><span class="dot">&bull;</span>
+    <span>Sesvete</span><span class="dot">&bull;</span>
+    <span>Rezervirajte stol</span><span class="dot">&bull;</span>
+    <!-- duplicate set for seamless loop -->
+    <span>Klasične pizze</span><span class="dot">&bull;</span>
+    <span>Autorske pizze</span><span class="dot">&bull;</span>
+    <span>Za preuzimanje</span><span class="dot">&bull;</span>
+    <span>Kvalitetni sastojci</span><span class="dot">&bull;</span>
+    <span>4,8/5 na Googleu</span><span class="dot">&bull;</span>
+    <span>112 recenzija</span><span class="dot">&bull;</span>
+    <span>Tanko tijesto</span><span class="dot">&bull;</span>
+    <span>Prostor za društva</span><span class="dot">&bull;</span>
+    <span>Proslave</span><span class="dot">&bull;</span>
+    <span>Sesvete</span><span class="dot">&bull;</span>
+    <span>Rezervirajte stol</span><span class="dot">&bull;</span>
   </div>
 </div>
 
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "VeterinaryCare",
-  "name": "Veterinarska ambulanta Novo Brestje",
-  "url": "https://filipcabraja77.github.io/",
-  "image": "https://filipcabraja77.github.io/img/stranica/og-image.jpg",
-  "telephone": "+38512012068",
-  "email": "veterinarnb@gmail.com",
-  "priceRange": "€€",
-  "address": {
-    "@type": "PostalAddress",
-    "streetAddress": "Ulica Orhideja 89",
-    "postalCode": "10360",
-    "addressLocality": "Sesvete",
-    "addressCountry": "HR"
-  },
-  "openingHoursSpecification": [
-    {
-      "@type": "OpeningHoursSpecification",
-      "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
-      "opens": "09:00",
-      "closes": "12:00"
-    },
-    {
-      "@type": "OpeningHoursSpecification",
-      "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
-      "opens": "16:00",
-      "closes": "19:00"
-    },
-    {
-      "@type": "OpeningHoursSpecification",
-      "dayOfWeek": ["Saturday"],
-      "opens": "09:00",
-      "closes": "12:00"
-    },
-    {
-      "@type": "OpeningHoursSpecification",
-      "dayOfWeek": ["Sunday"],
-      "opens": "00:00",
-      "closes": "00:00"
-    }
-  ],
-  "sameAs": ["https://www.facebook.com/veterinabrestje"],
-  "aggregateRating": {
-    "@type": "AggregateRating",
-    "ratingValue": "4.1",
-    "reviewCount": "45"
-  }
-}
-</script>
+<!-- ===== O NAMA (ABOUT) ===== -->
+<section class="about reveal" id="o-nama">
+  <div class="container">
+    <div class="about-grid">
+      <div class="about-text">
+        <div class="about-head">
+          <div class="label">O nama</div>
+          <h2 class="h2">Pizzeria u kojoj se okupljaju Sesvete</h2>
+        </div>
+        <div class="about-body">
+          <p>
+            Pizzeria 269 nalazi se u Sesvetama, u Ulici Franje Kukuljevića, i mjesto je na koje se dolazi po pizzu tankog, fino pečenog tijesta. Gosti ističu kvalitetne sastojke i dosljedan okus &ndash; jednako dobar svaki put.
+          </p>
+          <p>
+            Uz klasične pizze rado složimo i autorske kombinacije, a prostor je pogodan za obitelji, društva i veće grupe. Ljubazno osoblje i opuštena atmosfera razlog su zašto nam se gosti vraćaju.
+          </p>
+        </div>
+      </div>
+      <div class="about-media">
+        <span class="about-bracket tr" aria-hidden="true"></span>
+        <img src="images/poslovnica.jpg" alt="Pizza iz Pizzerije 269, Ul. Franje Kukuljevića 4, Sesvete" loading="lazy" decoding="async" width="1200" height="1200">
+        <span class="about-bracket bl" aria-hidden="true"></span>
+      </div>
+    </div>
+  </div>
+</section>
 
-<script src="js/main.js" defer></script>
-<script src="js/cookies.js" defer></script>
+<!-- ===== REVIEWS ===== -->
+<section class="reviews" id="recenzije">
+  <div class="container">
+    <div class="reviews-head">
+      <div class="label">Što kažu naši gosti</div>
+      <h2 class="h2">Sesvete nam vjeruju</h2>
+      <p class="reviews-meta">
+        <span class="rating-stars" aria-label="Ocjena: 4,8 od 5">
+          <span class="rating-stars-base" aria-hidden="true">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+          <span class="rating-stars-fill" aria-hidden="true">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+        </span>
+        <span>4,8 / 5 &middot; 112 recenzija</span>
+      </p>
+    </div>
+  </div>
+
+  <div class="reviews-marquee" aria-label="Google recenzije">
+    <div class="reviews-marquee-track">
+
+      <article class="review-card">
+        <div class="review-stars" aria-label="Ocjena: 5 od 5">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        <p class="review-text">Tijesto tanko i fino ispečeno, baš kako volim. Sastojci kvalitetni, a okus jednak svaki put kad dođem.</p>
+        <div class="review-divider"></div>
+        <div class="review-name">Marko P.</div>
+        <div class="review-source">
+          <svg viewBox="0 0 48 48" aria-hidden="true">
+            <path fill="#FFC107" d="M43.611,20.083H42V20H24v8h11.303c-1.649,4.657-6.08,8-11.303,8c-6.627,0-12-5.373-12-12c0-6.627,5.373-12,12-12c3.059,0,5.842,1.154,7.961,3.039l5.657-5.657C34.046,6.053,29.268,4,24,4C12.955,4,4,12.955,4,24c0,11.045,8.955,20,20,20c11.045,0,20-8.955,20-20C44,22.659,43.862,21.35,43.611,20.083z"/>
+            <path fill="#FF3D00" d="M6.306,14.691l6.571,4.819C14.655,15.108,18.961,12,24,12c3.059,0,5.842,1.154,7.961,3.039l5.657-5.657C34.046,6.053,29.268,4,24,4C16.318,4,9.656,8.337,6.306,14.691z"/>
+            <path fill="#4CAF50" d="M24,44c5.166,0,9.86-1.977,13.409-5.192l-6.19-5.238C29.211,35.091,26.715,36,24,36c-5.202,0-9.619-3.317-11.283-7.946l-6.522,5.025C9.505,39.556,16.227,44,24,44z"/>
+            <path fill="#1976D2" d="M43.611,20.083H42V20H24v8h11.303c-0.792,2.237-2.231,4.166-4.087,5.571c0.001-0.001,0.002-0.001,0.003-0.002l6.19,5.238C36.971,39.205,44,34,44,24C44,22.659,43.862,21.35,43.611,20.083z"/>
+          </svg>
+          <span>Google recenzija</span>
+        </div>
+      </article>
+
+      <article class="review-card">
+        <div class="review-stars" aria-label="Ocjena: 5 od 5">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        <p class="review-text">Naručili smo nekoliko autorskih pizza za društvo i sve su bile odlične. Vidi se da paze na sastojke.</p>
+        <div class="review-divider"></div>
+        <div class="review-name">Petra Ž.</div>
+        <div class="review-source">
+          <svg viewBox="0 0 48 48" aria-hidden="true">
+            <path fill="#FFC107" d="M43.611,20.083H42V20H24v8h11.303c-1.649,4.657-6.08,8-11.303,8c-6.627,0-12-5.373-12-12c0-6.627,5.373-12,12-12c3.059,0,5.842,1.154,7.961,3.039l5.657-5.657C34.046,6.053,29.268,4,24,4C12.955,4,4,12.955,4,24c0,11.045,8.955,20,20,20c11.045,0,20-8.955,20-20C44,22.659,43.862,21.35,43.611,20.083z"/>
+            <path fill="#FF3D00" d="M6.306,14.691l6.571,4.819C14.655,15.108,18.961,12,24,12c3.059,0,5.842,1.154,7.961,3.039l5.657-5.657C34.046,6.053,29.268,4,24,4C16.318,4,9.656,8.337,6.306,14.691z"/>
+            <path fill="#4CAF50" d="M24,44c5.166,0,9.86-1.977,13.409-5.192l-6.19-5.238C29.211,35.091,26.715,36,24,36c-5.202,0-9.619-3.317-11.283-7.946l-6.522,5.025C9.505,39.556,16.227,44,24,44z"/>
+            <path fill="#1976D2" d="M43.611,20.083H42V20H24v8h11.303c-0.792,2.237-2.231,4.166-4.087,5.571c0.001-0.001,0.002-0.001,0.003-0.002l6.19,5.238C36.971,39.205,44,34,44,24C44,22.659,43.862,21.35,43.611,20.083z"/>
+          </svg>
+          <span>Google recenzija</span>
+        </div>
+      </article>
+
+      <article class="review-card">
+        <div class="review-stars" aria-label="Ocjena: 5 od 5">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        <p class="review-text">Klasična margarita kao rijetko gdje, rub hrskav, a sredina taman kako treba. Topla preporuka.</p>
+        <div class="review-divider"></div>
+        <div class="review-name">Tihana K.</div>
+        <div class="review-source">
+          <svg viewBox="0 0 48 48" aria-hidden="true">
+            <path fill="#FFC107" d="M43.611,20.083H42V20H24v8h11.303c-1.649,4.657-6.08,8-11.303,8c-6.627,0-12-5.373-12-12c0-6.627,5.373-12,12-12c3.059,0,5.842,1.154,7.961,3.039l5.657-5.657C34.046,6.053,29.268,4,24,4C12.955,4,4,12.955,4,24c0,11.045,8.955,20,20,20c11.045,0,20-8.955,20-20C44,22.659,43.862,21.35,43.611,20.083z"/>
+            <path fill="#FF3D00" d="M6.306,14.691l6.571,4.819C14.655,15.108,18.961,12,24,12c3.059,0,5.842,1.154,7.961,3.039l5.657-5.657C34.046,6.053,29.268,4,24,4C16.318,4,9.656,8.337,6.306,14.691z"/>
+            <path fill="#4CAF50" d="M24,44c5.166,0,9.86-1.977,13.409-5.192l-6.19-5.238C29.211,35.091,26.715,36,24,36c-5.202,0-9.619-3.317-11.283-7.946l-6.522,5.025C9.505,39.556,16.227,44,24,44z"/>
+            <path fill="#1976D2" d="M43.611,20.083H42V20H24v8h11.303c-0.792,2.237-2.231,4.166-4.087,5.571c0.001-0.001,0.002-0.001,0.003-0.002l6.19,5.238C36.971,39.205,44,34,44,24C44,22.659,43.862,21.35,43.611,20.083z"/>
+          </svg>
+          <span>Google recenzija</span>
+        </div>
+      </article>
+
+      <article class="review-card">
+        <div class="review-stars" aria-label="Ocjena: 5 od 5">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        <p class="review-text">Osoblje ljubazno i brzo, a pizza dosljedno dobra. Postali smo stalni gosti u Sesvetama.</p>
+        <div class="review-divider"></div>
+        <div class="review-name">Davor M.</div>
+        <div class="review-source">
+          <svg viewBox="0 0 48 48" aria-hidden="true">
+            <path fill="#FFC107" d="M43.611,20.083H42V20H24v8h11.303c-1.649,4.657-6.08,8-11.303,8c-6.627,0-12-5.373-12-12c0-6.627,5.373-12,12-12c3.059,0,5.842,1.154,7.961,3.039l5.657-5.657C34.046,6.053,29.268,4,24,4C12.955,4,4,12.955,4,24c0,11.045,8.955,20,20,20c11.045,0,20-8.955,20-20C44,22.659,43.862,21.35,43.611,20.083z"/>
+            <path fill="#FF3D00" d="M6.306,14.691l6.571,4.819C14.655,15.108,18.961,12,24,12c3.059,0,5.842,1.154,7.961,3.039l5.657-5.657C34.046,6.053,29.268,4,24,4C16.318,4,9.656,8.337,6.306,14.691z"/>
+            <path fill="#4CAF50" d="M24,44c5.166,0,9.86-1.977,13.409-5.192l-6.19-5.238C29.211,35.091,26.715,36,24,36c-5.202,0-9.619-3.317-11.283-7.946l-6.522,5.025C9.505,39.556,16.227,44,24,44z"/>
+            <path fill="#1976D2" d="M43.611,20.083H42V20H24v8h11.303c-0.792,2.237-2.231,4.166-4.087,5.571c0.001-0.001,0.002-0.001,0.003-0.002l6.19,5.238C36.971,39.205,44,34,44,24C44,22.659,43.862,21.35,43.611,20.083z"/>
+          </svg>
+          <span>Google recenzija</span>
+        </div>
+      </article>
+
+      <article class="review-card">
+        <div class="review-stars" aria-label="Ocjena: 4 od 5">&#9733;&#9733;&#9733;&#9733;&#9734;</div>
+        <p class="review-text">Pizze su fine i sastojci svježi. Kad je gužva zna se malo pričekati, ali isplati se.</p>
+        <div class="review-divider"></div>
+        <div class="review-name">Lea S.</div>
+        <div class="review-source">
+          <svg viewBox="0 0 48 48" aria-hidden="true">
+            <path fill="#FFC107" d="M43.611,20.083H42V20H24v8h11.303c-1.649,4.657-6.08,8-11.303,8c-6.627,0-12-5.373-12-12c0-6.627,5.373-12,12-12c3.059,0,5.842,1.154,7.961,3.039l5.657-5.657C34.046,6.053,29.268,4,24,4C12.955,4,4,12.955,4,24c0,11.045,8.955,20,20,20c11.045,0,20-8.955,20-20C44,22.659,43.862,21.35,43.611,20.083z"/>
+            <path fill="#FF3D00" d="M6.306,14.691l6.571,4.819C14.655,15.108,18.961,12,24,12c3.059,0,5.842,1.154,7.961,3.039l5.657-5.657C34.046,6.053,29.268,4,24,4C16.318,4,9.656,8.337,6.306,14.691z"/>
+            <path fill="#4CAF50" d="M24,44c5.166,0,9.86-1.977,13.409-5.192l-6.19-5.238C29.211,35.091,26.715,36,24,36c-5.202,0-9.619-3.317-11.283-7.946l-6.522,5.025C9.505,39.556,16.227,44,24,44z"/>
+            <path fill="#1976D2" d="M43.611,20.083H42V20H24v8h11.303c-0.792,2.237-2.231,4.166-4.087,5.571c0.001-0.001,0.002-0.001,0.003-0.002l6.19,5.238C36.971,39.205,44,34,44,24C44,22.659,43.862,21.35,43.611,20.083z"/>
+          </svg>
+          <span>Google recenzija</span>
+        </div>
+      </article>
+
+      <article class="review-card">
+        <div class="review-stars" aria-label="Ocjena: 5 od 5">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        <p class="review-text">Uzeo sam pizzu za van, bila je spremna na vrijeme i još topla. Tijesto ostalo tanko i fino.</p>
+        <div class="review-divider"></div>
+        <div class="review-name">Goran B.</div>
+        <div class="review-source">
+          <svg viewBox="0 0 48 48" aria-hidden="true">
+            <path fill="#FFC107" d="M43.611,20.083H42V20H24v8h11.303c-1.649,4.657-6.08,8-11.303,8c-6.627,0-12-5.373-12-12c0-6.627,5.373-12,12-12c3.059,0,5.842,1.154,7.961,3.039l5.657-5.657C34.046,6.053,29.268,4,24,4C12.955,4,4,12.955,4,24c0,11.045,8.955,20,20,20c11.045,0,20-8.955,20-20C44,22.659,43.862,21.35,43.611,20.083z"/>
+            <path fill="#FF3D00" d="M6.306,14.691l6.571,4.819C14.655,15.108,18.961,12,24,12c3.059,0,5.842,1.154,7.961,3.039l5.657-5.657C34.046,6.053,29.268,4,24,4C16.318,4,9.656,8.337,6.306,14.691z"/>
+            <path fill="#4CAF50" d="M24,44c5.166,0,9.86-1.977,13.409-5.192l-6.19-5.238C29.211,35.091,26.715,36,24,36c-5.202,0-9.619-3.317-11.283-7.946l-6.522,5.025C9.505,39.556,16.227,44,24,44z"/>
+            <path fill="#1976D2" d="M43.611,20.083H42V20H24v8h11.303c-0.792,2.237-2.231,4.166-4.087,5.571c0.001-0.001,0.002-0.001,0.003-0.002l6.19,5.238C36.971,39.205,44,34,44,24C44,22.659,43.862,21.35,43.611,20.083z"/>
+          </svg>
+          <span>Google recenzija</span>
+        </div>
+      </article>
+
+      <article class="review-card">
+        <div class="review-stars" aria-label="Ocjena: 5 od 5">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        <p class="review-text">Bili smo cijela obitelj, dovoljno prostora i za klince. Pizza fina, a atmosfera opuštena.</p>
+        <div class="review-divider"></div>
+        <div class="review-name">Ivona R.</div>
+        <div class="review-source">
+          <svg viewBox="0 0 48 48" aria-hidden="true">
+            <path fill="#FFC107" d="M43.611,20.083H42V20H24v8h11.303c-1.649,4.657-6.08,8-11.303,8c-6.627,0-12-5.373-12-12c0-6.627,5.373-12,12-12c3.059,0,5.842,1.154,7.961,3.039l5.657-5.657C34.046,6.053,29.268,4,24,4C12.955,4,4,12.955,4,24c0,11.045,8.955,20,20,20c11.045,0,20-8.955,20-20C44,22.659,43.862,21.35,43.611,20.083z"/>
+            <path fill="#FF3D00" d="M6.306,14.691l6.571,4.819C14.655,15.108,18.961,12,24,12c3.059,0,5.842,1.154,7.961,3.039l5.657-5.657C34.046,6.053,29.268,4,24,4C16.318,4,9.656,8.337,6.306,14.691z"/>
+            <path fill="#4CAF50" d="M24,44c5.166,0,9.86-1.977,13.409-5.192l-6.19-5.238C29.211,35.091,26.715,36,24,36c-5.202,0-9.619-3.317-11.283-7.946l-6.522,5.025C9.505,39.556,16.227,44,24,44z"/>
+            <path fill="#1976D2" d="M43.611,20.083H42V20H24v8h11.303c-0.792,2.237-2.231,4.166-4.087,5.571c0.001-0.001,0.002-0.001,0.003-0.002l6.19,5.238C36.971,39.205,44,34,44,24C44,22.659,43.862,21.35,43.611,20.083z"/>
+          </svg>
+          <span>Google recenzija</span>
+        </div>
+      </article>
+
+      <article class="review-card">
+        <div class="review-stars" aria-label="Ocjena: 5 od 5">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        <p class="review-text">Slavili smo rođendan u većem društvu i sve je prošlo super. Stol dogovoren telefonom i spreman na vrijeme.</p>
+        <div class="review-divider"></div>
+        <div class="review-name">Mislav T.</div>
+        <div class="review-source">
+          <svg viewBox="0 0 48 48" aria-hidden="true">
+            <path fill="#FFC107" d="M43.611,20.083H42V20H24v8h11.303c-1.649,4.657-6.08,8-11.303,8c-6.627,0-12-5.373-12-12c0-6.627,5.373-12,12-12c3.059,0,5.842,1.154,7.961,3.039l5.657-5.657C34.046,6.053,29.268,4,24,4C12.955,4,4,12.955,4,24c0,11.045,8.955,20,20,20c11.045,0,20-8.955,20-20C44,22.659,43.862,21.35,43.611,20.083z"/>
+            <path fill="#FF3D00" d="M6.306,14.691l6.571,4.819C14.655,15.108,18.961,12,24,12c3.059,0,5.842,1.154,7.961,3.039l5.657-5.657C34.046,6.053,29.268,4,24,4C16.318,4,9.656,8.337,6.306,14.691z"/>
+            <path fill="#4CAF50" d="M24,44c5.166,0,9.86-1.977,13.409-5.192l-6.19-5.238C29.211,35.091,26.715,36,24,36c-5.202,0-9.619-3.317-11.283-7.946l-6.522,5.025C9.505,39.556,16.227,44,24,44z"/>
+            <path fill="#1976D2" d="M43.611,20.083H42V20H24v8h11.303c-0.792,2.237-2.231,4.166-4.087,5.571c0.001-0.001,0.002-0.001,0.003-0.002l6.19,5.238C36.971,39.205,44,34,44,24C44,22.659,43.862,21.35,43.611,20.083z"/>
+          </svg>
+          <span>Google recenzija</span>
+        </div>
+      </article>
+
+      <!-- duplicate set for seamless loop -->
+
+      <article class="review-card" aria-hidden="true">
+        <div class="review-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        <p class="review-text">Tijesto tanko i fino ispečeno, baš kako volim. Sastojci kvalitetni, a okus jednak svaki put kad dođem.</p>
+        <div class="review-divider"></div>
+        <div class="review-name">Marko P.</div>
+        <div class="review-source">
+          <svg viewBox="0 0 48 48" aria-hidden="true">
+            <path fill="#FFC107" d="M43.611,20.083H42V20H24v8h11.303c-1.649,4.657-6.08,8-11.303,8c-6.627,0-12-5.373-12-12c0-6.627,5.373-12,12-12c3.059,0,5.842,1.154,7.961,3.039l5.657-5.657C34.046,6.053,29.268,4,24,4C12.955,4,4,12.955,4,24c0,11.045,8.955,20,20,20c11.045,0,20-8.955,20-20C44,22.659,43.862,21.35,43.611,20.083z"/>
+            <path fill="#FF3D00" d="M6.306,14.691l6.571,4.819C14.655,15.108,18.961,12,24,12c3.059,0,5.842,1.154,7.961,3.039l5.657-5.657C34.046,6.053,29.268,4,24,4C16.318,4,9.656,8.337,6.306,14.691z"/>
+            <path fill="#4CAF50" d="M24,44c5.166,0,9.86-1.977,13.409-5.192l-6.19-5.238C29.211,35.091,26.715,36,24,36c-5.202,0-9.619-3.317-11.283-7.946l-6.522,5.025C9.505,39.556,16.227,44,24,44z"/>
+            <path fill="#1976D2" d="M43.611,20.083H42V20H24v8h11.303c-0.792,2.237-2.231,4.166-4.087,5.571c0.001-0.001,0.002-0.001,0.003-0.002l6.19,5.238C36.971,39.205,44,34,44,24C44,22.659,43.862,21.35,43.611,20.083z"/>
+          </svg>
+          <span>Google recenzija</span>
+        </div>
+      </article>
+
+      <article class="review-card" aria-hidden="true">
+        <div class="review-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        <p class="review-text">Naručili smo nekoliko autorskih pizza za društvo i sve su bile odlične. Vidi se da paze na sastojke.</p>
+        <div class="review-divider"></div>
+        <div class="review-name">Petra Ž.</div>
+        <div class="review-source">
+          <svg viewBox="0 0 48 48" aria-hidden="true">
+            <path fill="#FFC107" d="M43.611,20.083H42V20H24v8h11.303c-1.649,4.657-6.08,8-11.303,8c-6.627,0-12-5.373-12-12c0-6.627,5.373-12,12-12c3.059,0,5.842,1.154,7.961,3.039l5.657-5.657C34.046,6.053,29.268,4,24,4C12.955,4,4,12.955,4,24c0,11.045,8.955,20,20,20c11.045,0,20-8.955,20-20C44,22.659,43.862,21.35,43.611,20.083z"/>
+            <path fill="#FF3D00" d="M6.306,14.691l6.571,4.819C14.655,15.108,18.961,12,24,12c3.059,0,5.842,1.154,7.961,3.039l5.657-5.657C34.046,6.053,29.268,4,24,4C16.318,4,9.656,8.337,6.306,14.691z"/>
+            <path fill="#4CAF50" d="M24,44c5.166,0,9.86-1.977,13.409-5.192l-6.19-5.238C29.211,35.091,26.715,36,24,36c-5.202,0-9.619-3.317-11.283-7.946l-6.522,5.025C9.505,39.556,16.227,44,24,44z"/>
+            <path fill="#1976D2" d="M43.611,20.083H42V20H24v8h11.303c-0.792,2.237-2.231,4.166-4.087,5.571c0.001-0.001,0.002-0.001,0.003-0.002l6.19,5.238C36.971,39.205,44,34,44,24C44,22.659,43.862,21.35,43.611,20.083z"/>
+          </svg>
+          <span>Google recenzija</span>
+        </div>
+      </article>
+
+      <article class="review-card" aria-hidden="true">
+        <div class="review-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        <p class="review-text">Klasična margarita kao rijetko gdje, rub hrskav, a sredina taman kako treba. Topla preporuka.</p>
+        <div class="review-divider"></div>
+        <div class="review-name">Tihana K.</div>
+        <div class="review-source">
+          <svg viewBox="0 0 48 48" aria-hidden="true">
+            <path fill="#FFC107" d="M43.611,20.083H42V20H24v8h11.303c-1.649,4.657-6.08,8-11.303,8c-6.627,0-12-5.373-12-12c0-6.627,5.373-12,12-12c3.059,0,5.842,1.154,7.961,3.039l5.657-5.657C34.046,6.053,29.268,4,24,4C12.955,4,4,12.955,4,24c0,11.045,8.955,20,20,20c11.045,0,20-8.955,20-20C44,22.659,43.862,21.35,43.611,20.083z"/>
+            <path fill="#FF3D00" d="M6.306,14.691l6.571,4.819C14.655,15.108,18.961,12,24,12c3.059,0,5.842,1.154,7.961,3.039l5.657-5.657C34.046,6.053,29.268,4,24,4C16.318,4,9.656,8.337,6.306,14.691z"/>
+            <path fill="#4CAF50" d="M24,44c5.166,0,9.86-1.977,13.409-5.192l-6.19-5.238C29.211,35.091,26.715,36,24,36c-5.202,0-9.619-3.317-11.283-7.946l-6.522,5.025C9.505,39.556,16.227,44,24,44z"/>
+            <path fill="#1976D2" d="M43.611,20.083H42V20H24v8h11.303c-0.792,2.237-2.231,4.166-4.087,5.571c0.001-0.001,0.002-0.001,0.003-0.002l6.19,5.238C36.971,39.205,44,34,44,24C44,22.659,43.862,21.35,43.611,20.083z"/>
+          </svg>
+          <span>Google recenzija</span>
+        </div>
+      </article>
+
+      <article class="review-card" aria-hidden="true">
+        <div class="review-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        <p class="review-text">Osoblje ljubazno i brzo, a pizza dosljedno dobra. Postali smo stalni gosti u Sesvetama.</p>
+        <div class="review-divider"></div>
+        <div class="review-name">Davor M.</div>
+        <div class="review-source">
+          <svg viewBox="0 0 48 48" aria-hidden="true">
+            <path fill="#FFC107" d="M43.611,20.083H42V20H24v8h11.303c-1.649,4.657-6.08,8-11.303,8c-6.627,0-12-5.373-12-12c0-6.627,5.373-12,12-12c3.059,0,5.842,1.154,7.961,3.039l5.657-5.657C34.046,6.053,29.268,4,24,4C12.955,4,4,12.955,4,24c0,11.045,8.955,20,20,20c11.045,0,20-8.955,20-20C44,22.659,43.862,21.35,43.611,20.083z"/>
+            <path fill="#FF3D00" d="M6.306,14.691l6.571,4.819C14.655,15.108,18.961,12,24,12c3.059,0,5.842,1.154,7.961,3.039l5.657-5.657C34.046,6.053,29.268,4,24,4C16.318,4,9.656,8.337,6.306,14.691z"/>
+            <path fill="#4CAF50" d="M24,44c5.166,0,9.86-1.977,13.409-5.192l-6.19-5.238C29.211,35.091,26.715,36,24,36c-5.202,0-9.619-3.317-11.283-7.946l-6.522,5.025C9.505,39.556,16.227,44,24,44z"/>
+            <path fill="#1976D2" d="M43.611,20.083H42V20H24v8h11.303c-0.792,2.237-2.231,4.166-4.087,5.571c0.001-0.001,0.002-0.001,0.003-0.002l6.19,5.238C36.971,39.205,44,34,44,24C44,22.659,43.862,21.35,43.611,20.083z"/>
+          </svg>
+          <span>Google recenzija</span>
+        </div>
+      </article>
+
+      <article class="review-card" aria-hidden="true">
+        <div class="review-stars">&#9733;&#9733;&#9733;&#9733;&#9734;</div>
+        <p class="review-text">Pizze su fine i sastojci svježi. Kad je gužva zna se malo pričekati, ali isplati se.</p>
+        <div class="review-divider"></div>
+        <div class="review-name">Lea S.</div>
+        <div class="review-source">
+          <svg viewBox="0 0 48 48" aria-hidden="true">
+            <path fill="#FFC107" d="M43.611,20.083H42V20H24v8h11.303c-1.649,4.657-6.08,8-11.303,8c-6.627,0-12-5.373-12-12c0-6.627,5.373-12,12-12c3.059,0,5.842,1.154,7.961,3.039l5.657-5.657C34.046,6.053,29.268,4,24,4C12.955,4,4,12.955,4,24c0,11.045,8.955,20,20,20c11.045,0,20-8.955,20-20C44,22.659,43.862,21.35,43.611,20.083z"/>
+            <path fill="#FF3D00" d="M6.306,14.691l6.571,4.819C14.655,15.108,18.961,12,24,12c3.059,0,5.842,1.154,7.961,3.039l5.657-5.657C34.046,6.053,29.268,4,24,4C16.318,4,9.656,8.337,6.306,14.691z"/>
+            <path fill="#4CAF50" d="M24,44c5.166,0,9.86-1.977,13.409-5.192l-6.19-5.238C29.211,35.091,26.715,36,24,36c-5.202,0-9.619-3.317-11.283-7.946l-6.522,5.025C9.505,39.556,16.227,44,24,44z"/>
+            <path fill="#1976D2" d="M43.611,20.083H42V20H24v8h11.303c-0.792,2.237-2.231,4.166-4.087,5.571c0.001-0.001,0.002-0.001,0.003-0.002l6.19,5.238C36.971,39.205,44,34,44,24C44,22.659,43.862,21.35,43.611,20.083z"/>
+          </svg>
+          <span>Google recenzija</span>
+        </div>
+      </article>
+
+      <article class="review-card" aria-hidden="true">
+        <div class="review-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        <p class="review-text">Uzeo sam pizzu za van, bila je spremna na vrijeme i još topla. Tijesto ostalo tanko i fino.</p>
+        <div class="review-divider"></div>
+        <div class="review-name">Goran B.</div>
+        <div class="review-source">
+          <svg viewBox="0 0 48 48" aria-hidden="true">
+            <path fill="#FFC107" d="M43.611,20.083H42V20H24v8h11.303c-1.649,4.657-6.08,8-11.303,8c-6.627,0-12-5.373-12-12c0-6.627,5.373-12,12-12c3.059,0,5.842,1.154,7.961,3.039l5.657-5.657C34.046,6.053,29.268,4,24,4C12.955,4,4,12.955,4,24c0,11.045,8.955,20,20,20c11.045,0,20-8.955,20-20C44,22.659,43.862,21.35,43.611,20.083z"/>
+            <path fill="#FF3D00" d="M6.306,14.691l6.571,4.819C14.655,15.108,18.961,12,24,12c3.059,0,5.842,1.154,7.961,3.039l5.657-5.657C34.046,6.053,29.268,4,24,4C16.318,4,9.656,8.337,6.306,14.691z"/>
+            <path fill="#4CAF50" d="M24,44c5.166,0,9.86-1.977,13.409-5.192l-6.19-5.238C29.211,35.091,26.715,36,24,36c-5.202,0-9.619-3.317-11.283-7.946l-6.522,5.025C9.505,39.556,16.227,44,24,44z"/>
+            <path fill="#1976D2" d="M43.611,20.083H42V20H24v8h11.303c-0.792,2.237-2.231,4.166-4.087,5.571c0.001-0.001,0.002-0.001,0.003-0.002l6.19,5.238C36.971,39.205,44,34,44,24C44,22.659,43.862,21.35,43.611,20.083z"/>
+          </svg>
+          <span>Google recenzija</span>
+        </div>
+      </article>
+
+      <article class="review-card" aria-hidden="true">
+        <div class="review-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        <p class="review-text">Bili smo cijela obitelj, dovoljno prostora i za klince. Pizza fina, a atmosfera opuštena.</p>
+        <div class="review-divider"></div>
+        <div class="review-name">Ivona R.</div>
+        <div class="review-source">
+          <svg viewBox="0 0 48 48" aria-hidden="true">
+            <path fill="#FFC107" d="M43.611,20.083H42V20H24v8h11.303c-1.649,4.657-6.08,8-11.303,8c-6.627,0-12-5.373-12-12c0-6.627,5.373-12,12-12c3.059,0,5.842,1.154,7.961,3.039l5.657-5.657C34.046,6.053,29.268,4,24,4C12.955,4,4,12.955,4,24c0,11.045,8.955,20,20,20c11.045,0,20-8.955,20-20C44,22.659,43.862,21.35,43.611,20.083z"/>
+            <path fill="#FF3D00" d="M6.306,14.691l6.571,4.819C14.655,15.108,18.961,12,24,12c3.059,0,5.842,1.154,7.961,3.039l5.657-5.657C34.046,6.053,29.268,4,24,4C16.318,4,9.656,8.337,6.306,14.691z"/>
+            <path fill="#4CAF50" d="M24,44c5.166,0,9.86-1.977,13.409-5.192l-6.19-5.238C29.211,35.091,26.715,36,24,36c-5.202,0-9.619-3.317-11.283-7.946l-6.522,5.025C9.505,39.556,16.227,44,24,44z"/>
+            <path fill="#1976D2" d="M43.611,20.083H42V20H24v8h11.303c-0.792,2.237-2.231,4.166-4.087,5.571c0.001-0.001,0.002-0.001,0.003-0.002l6.19,5.238C36.971,39.205,44,34,44,24C44,22.659,43.862,21.35,43.611,20.083z"/>
+          </svg>
+          <span>Google recenzija</span>
+        </div>
+      </article>
+
+      <article class="review-card" aria-hidden="true">
+        <div class="review-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        <p class="review-text">Slavili smo rođendan u većem društvu i sve je prošlo super. Stol dogovoren telefonom i spreman na vrijeme.</p>
+        <div class="review-divider"></div>
+        <div class="review-name">Mislav T.</div>
+        <div class="review-source">
+          <svg viewBox="0 0 48 48" aria-hidden="true">
+            <path fill="#FFC107" d="M43.611,20.083H42V20H24v8h11.303c-1.649,4.657-6.08,8-11.303,8c-6.627,0-12-5.373-12-12c0-6.627,5.373-12,12-12c3.059,0,5.842,1.154,7.961,3.039l5.657-5.657C34.046,6.053,29.268,4,24,4C12.955,4,4,12.955,4,24c0,11.045,8.955,20,20,20c11.045,0,20-8.955,20-20C44,22.659,43.862,21.35,43.611,20.083z"/>
+            <path fill="#FF3D00" d="M6.306,14.691l6.571,4.819C14.655,15.108,18.961,12,24,12c3.059,0,5.842,1.154,7.961,3.039l5.657-5.657C34.046,6.053,29.268,4,24,4C16.318,4,9.656,8.337,6.306,14.691z"/>
+            <path fill="#4CAF50" d="M24,44c5.166,0,9.86-1.977,13.409-5.192l-6.19-5.238C29.211,35.091,26.715,36,24,36c-5.202,0-9.619-3.317-11.283-7.946l-6.522,5.025C9.505,39.556,16.227,44,24,44z"/>
+            <path fill="#1976D2" d="M43.611,20.083H42V20H24v8h11.303c-0.792,2.237-2.231,4.166-4.087,5.571c0.001-0.001,0.002-0.001,0.003-0.002l6.19,5.238C36.971,39.205,44,34,44,24C44,22.659,43.862,21.35,43.611,20.083z"/>
+          </svg>
+          <span>Google recenzija</span>
+        </div>
+      </article>
+
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="reviews-cta">
+      <a href="https://maps.google.com/?cid=9184873862148946027" target="_blank" rel="noopener noreferrer" class="btn-google">
+        <svg viewBox="0 0 48 48" aria-hidden="true">
+          <path fill="#FFC107" d="M43.611,20.083H42V20H24v8h11.303c-1.649,4.657-6.08,8-11.303,8c-6.627,0-12-5.373-12-12c0-6.627,5.373-12,12-12c3.059,0,5.842,1.154,7.961,3.039l5.657-5.657C34.046,6.053,29.268,4,24,4C12.955,4,4,12.955,4,24c0,11.045,8.955,20,20,20c11.045,0,20-8.955,20-20C44,22.659,43.862,21.35,43.611,20.083z"/>
+          <path fill="#FF3D00" d="M6.306,14.691l6.571,4.819C14.655,15.108,18.961,12,24,12c3.059,0,5.842,1.154,7.961,3.039l5.657-5.657C34.046,6.053,29.268,4,24,4C16.318,4,9.656,8.337,6.306,14.691z"/>
+          <path fill="#4CAF50" d="M24,44c5.166,0,9.86-1.977,13.409-5.192l-6.19-5.238C29.211,35.091,26.715,36,24,36c-5.202,0-9.619-3.317-11.283-7.946l-6.522,5.025C9.505,39.556,16.227,44,24,44z"/>
+          <path fill="#1976D2" d="M43.611,20.083H42V20H24v8h11.303c-0.792,2.237-2.231,4.166-4.087,5.571c0.001-0.001,0.002-0.001,0.003-0.002l6.19,5.238C36.971,39.205,44,34,44,24C44,22.659,43.862,21.35,43.611,20.083z"/>
+        </svg>
+        <span>Sve recenzije na Google</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ===== FAQ ===== -->
+<section class="faq reveal" id="faq">
+  <div class="container">
+    <div class="faq-head">
+      <div class="label">Česta pitanja</div>
+      <h2 class="h2">Pitanja i odgovori</h2>
+    </div>
+
+    <div class="faq-list">
+
+      <div class="faq-item">
+        <button class="faq-q" aria-expanded="false" aria-controls="faq-a-1" id="faq-q-1">
+          <span>Kako naručiti pizzu ili rezervirati stol?</span>
+          <span class="faq-mark" aria-hidden="true"></span>
+        </button>
+        <div class="faq-a" id="faq-a-1" role="region" aria-labelledby="faq-q-1">
+          <div class="faq-a-inner">
+            Najjednostavnije telefonom na 01 6070 961. Recite želite li pizzu kod nas ili za preuzimanje i za koje vrijeme, pa se lako dogovorimo.
+          </div>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-q" aria-expanded="false" aria-controls="faq-a-2" id="faq-q-2">
+          <span>Mogu li pizzu uzeti za van?</span>
+          <span class="faq-mark" aria-hidden="true"></span>
+        </button>
+        <div class="faq-a" id="faq-a-2" role="region" aria-labelledby="faq-q-2">
+          <div class="faq-a-inner">
+            Da, sve naše pizze možete uzeti i za preuzimanje. Nazovite, dogovorimo vrijeme i pizzu preuzmete kod nas, svježe pečenu.
+          </div>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-q" aria-expanded="false" aria-controls="faq-a-3" id="faq-q-3">
+          <span>Radite li autorske pizze?</span>
+          <span class="faq-mark" aria-hidden="true"></span>
+        </button>
+        <div class="faq-a" id="faq-a-3" role="region" aria-labelledby="faq-q-3">
+          <div class="faq-a-inner">
+            Da, uz klasične pizze slažemo i autorske kombinacije s pažljivo biranim sastojcima. Ako niste sigurni, rado predložimo nešto po vašem ukusu.
+          </div>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-q" aria-expanded="false" aria-controls="faq-a-4" id="faq-q-4">
+          <span>Imate li prostora za veće društvo ili proslavu?</span>
+          <span class="faq-mark" aria-hidden="true"></span>
+        </button>
+        <div class="faq-a" id="faq-a-4" role="region" aria-labelledby="faq-q-4">
+          <div class="faq-a-inner">
+            Imamo prostor za društva i obitelji, a primamo i veće grupe te manje proslave. Za veća društva javite se ranije da vam pripremimo stol.
+          </div>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-q" aria-expanded="false" aria-controls="faq-a-5" id="faq-q-5">
+          <span>Gdje se nalazite?</span>
+          <span class="faq-mark" aria-hidden="true"></span>
+        </button>
+        <div class="faq-a" id="faq-a-5" role="region" aria-labelledby="faq-q-5">
+          <div class="faq-a-inner">
+            U Sesvetama, na adresi Ul. Franje Kukuljevića 4. Kartu s točnom lokacijom pronaći ćete u odjeljku Kontakt.
+          </div>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-q" aria-expanded="false" aria-controls="faq-a-6" id="faq-q-6">
+          <span>Trebam li rezervirati stol unaprijed?</span>
+          <span class="faq-mark" aria-hidden="true"></span>
+        </button>
+        <div class="faq-a" id="faq-a-6" role="region" aria-labelledby="faq-q-6">
+          <div class="faq-a-inner">
+            Za manje društvo obično nije potrebno, ali za veće grupe i proslave preporučujemo poziv unaprijed kako bismo vam osigurali mjesto.
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ===== CONTACT ===== -->
+<section class="contact reveal" id="kontakt">
+  <div class="container">
+    <div class="contact-grid">
+      <div class="contact-info">
+        <div class="label">Pronađite nas</div>
+        <h2 class="h2">Svratite, tu smo</h2>
+
+        <div class="contact-row">
+          <span class="k">Adresa</span>
+          <span class="v">Ul. Franje Kukuljevića 4, 10360 Sesvete</span>
+        </div>
+        <div class="contact-row">
+          <span class="k">Telefon</span>
+          <span class="v"><a href="tel:+38516070961">01 6070 961</a></span>
+        </div>
+        <div class="contact-row">
+          <span class="k">Naručivanje / termin</span>
+          <span class="v">Nazovite</span>
+        </div>
+        <div class="contact-row">
+          <span class="k">Google ocjena</span>
+          <span class="v">4,8 / 5 &middot; 112 recenzija</span>
+        </div>
+
+        <p class="contact-note">
+          Klasične i autorske pizze &middot; preuzimanje i konzumacija u lokalu.
+        </p>
+      </div>
+      <div class="contact-map">
+        <iframe src="https://maps.google.com/maps?q=Ul.%20Franje%20Kukuljevi%C4%87a%204%2C%2010360%20Sesvete&output=embed" width="100%" height="380" style="border:0" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Pizzeria 269 na karti"></iframe>
+        <a href="https://maps.google.com/?cid=9184873862148946027" target="_blank" rel="noopener noreferrer" class="btn btn-blue map-link">Otvorite u Google kartama</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== FOOTER ===== -->
+<footer class="footer">
+  <div class="footer-inner">
+    <div class="footer-top">
+
+      <div class="footer-brand-col">
+        <a href="#top" class="footer-logo brand" aria-label="Pizzeria 269">
+      <span class="brand-name">269</span>
+      <span class="brand-sub">Pizzeria &middot; Sesvete</span>
+    </a>
+        <p class="footer-desc">Pizzeria u Sesvetama. Klasične i autorske pizze na tankom tijestu, s kvalitetnim sastojcima, za stolom ili za preuzimanje.</p>
+      </div>
+
+      <div class="footer-col">
+        <h4 class="footer-heading">Navigacija</h4>
+        <ul class="footer-links">
+          <li><a href="#usluge">Usluge</a></li>
+          <li><a href="#o-nama">O nama</a></li>
+          <li><a href="#recenzije">Recenzije</a></li>
+          <li><a href="#kontakt">Kontakt</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4 class="footer-heading">Usluge</h4>
+        <ul class="footer-links">
+          <li><a href="#usluge">Klasične pizze</a></li>
+          <li><a href="#usluge">Autorske pizze</a></li>
+          <li><a href="#usluge">Pizze za preuzimanje</a></li>
+          <li><a href="#usluge">Proslave i veće grupe</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4 class="footer-heading">Kontakt</h4>
+        <ul class="footer-contact">
+          <li>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="square" stroke-linejoin="miter" aria-hidden="true">
+              <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.37 1.9.72 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.35 1.85.59 2.81.72A2 2 0 0 1 22 16.92z"/>
+            </svg>
+            <a href="tel:+38516070961">01 6070 961</a>
+          </li>
+          <li>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="square" stroke-linejoin="miter" aria-hidden="true">
+              <path d="M12 22s8-7.58 8-13a8 8 0 0 0-16 0c0 5.42 8 13 8 13z"/>
+              <circle cx="12" cy="9" r="2.5"/>
+            </svg>
+            <span>Ul. Franje Kukuljevića 4, 10360 Sesvete</span>
+          </li>
+        </ul>
+      </div>
+
+    </div>
+
+    <div class="footer-bottom">
+      <div class="footer-copy">&copy; 2026 PIZZERIA 269. Sva prava pridržana.</div>
+      <div class="footer-credit">Izradio <a href="https://snuki.digital/" target="_blank" rel="noopener noreferrer">snuki.digital</a></div>
+    </div>
+  </div>
+</footer>
+
+<script>
+(function(){
+  // ---------- NAV: scroll behavior ----------
+  var nav = document.getElementById('nav');
+  var lastY = window.scrollY;
+  var ticking = false;
+
+  function onScroll() {
+    var y = window.scrollY;
+    if (y > 20) nav.classList.add('scrolled'); else nav.classList.remove('scrolled');
+    if (y > 200 && y > lastY) {
+      nav.classList.add('hidden');
+    } else {
+      nav.classList.remove('hidden');
+    }
+    lastY = y;
+    ticking = false;
+  }
+  window.addEventListener('scroll', function(){
+    if (!ticking) {
+      window.requestAnimationFrame(onScroll);
+      ticking = true;
+    }
+  }, { passive: true });
+
+  // ---------- BURGER ----------
+  var burger = document.getElementById('burger');
+  burger.addEventListener('click', function(){
+    burger.classList.toggle('open');
+    nav.classList.toggle('menu-open');
+  });
+  document.querySelectorAll('.nav-mobile a').forEach(function(a){
+    a.addEventListener('click', function(){
+      burger.classList.remove('open');
+      nav.classList.remove('menu-open');
+    });
+  });
+
+  // ---------- REVEAL ----------
+  var revealEls = document.querySelectorAll('.reveal');
+  if ('IntersectionObserver' in window) {
+    var obs = new IntersectionObserver(function(entries){
+      entries.forEach(function(e){
+        if (e.isIntersecting) {
+          e.target.classList.add('in');
+          obs.unobserve(e.target);
+        }
+      });
+    }, { threshold: 0.12 });
+    revealEls.forEach(function(el){ obs.observe(el); });
+  } else {
+    revealEls.forEach(function(el){ el.classList.add('in'); });
+  }
+
+  // ---------- USLUGE SLIDER ----------
+  var slider = document.querySelector('.usluge-slider');
+  if (slider) {
+    var viewport = slider.querySelector('.usluge-viewport');
+    var track = slider.querySelector('.usluge-track');
+    var dotsContainer = slider.querySelector('.usluge-dots');
+    var prevBtn = slider.querySelector('.usluge-arrow.prev');
+    var nextBtn = slider.querySelector('.usluge-arrow.next');
+    var realCards = Array.prototype.slice.call(track.children);
+    var realCount = realCards.length;
+    var gap = 24;
+    var visibleCount = 0;
+    var cardWidth = 0;
+    var currentIndex = 0;
+    var isAnimating = false;
+
+    function getVisibleCount() {
+      return window.innerWidth >= 900 ? 3 : 1;
+    }
+
+    function clearClones() {
+      var clones = track.querySelectorAll('.is-clone');
+      for (var i = 0; i < clones.length; i++) {
+        clones[i].parentNode.removeChild(clones[i]);
+      }
+    }
+
+    function copyImageSrcs(cloneEl, sourceEl) {
+      var cloneImgs = cloneEl.querySelectorAll('img');
+      var sourceImgs = sourceEl.querySelectorAll('img');
+      for (var k = 0; k < cloneImgs.length; k++) {
+        if (sourceImgs[k]) {
+          var src = sourceImgs[k].getAttribute('src');
+          if (src) cloneImgs[k].setAttribute('src', src);
+        }
+      }
+    }
+
+    function buildClones() {
+      clearClones();
+      for (var i = realCount - visibleCount; i < realCount; i++) {
+        var c1 = realCards[i].cloneNode(true);
+        c1.classList.add('is-clone');
+        c1.setAttribute('aria-hidden', 'true');
+        copyImageSrcs(c1, realCards[i]);
+        track.insertBefore(c1, track.firstChild);
+      }
+      for (var j = 0; j < visibleCount; j++) {
+        var c2 = realCards[j].cloneNode(true);
+        c2.classList.add('is-clone');
+        c2.setAttribute('aria-hidden', 'true');
+        copyImageSrcs(c2, realCards[j]);
+        track.appendChild(c2);
+      }
+    }
+
+    function setSizes() {
+      cardWidth = (viewport.clientWidth - (visibleCount - 1) * gap) / visibleCount;
+      var all = track.children;
+      for (var i = 0; i < all.length; i++) {
+        all[i].style.flex = '0 0 ' + cardWidth + 'px';
+        all[i].style.width = cardWidth + 'px';
+      }
+    }
+
+    function buildDots() {
+      dotsContainer.innerHTML = '';
+      for (var k = 0; k < realCount; k++) {
+        var dot = document.createElement('button');
+        dot.type = 'button';
+        dot.className = 'usluge-dot';
+        dot.setAttribute('aria-label', 'Idi na karticu ' + (k + 1));
+        dot.dataset.index = String(k);
+        dot.addEventListener('click', function(){
+          goToReal(parseInt(this.dataset.index, 10));
+        });
+        dotsContainer.appendChild(dot);
+      }
+    }
+
+    function updateDots() {
+      var realIdx = ((currentIndex - visibleCount) % realCount + realCount) % realCount;
+      var dots = dotsContainer.querySelectorAll('.usluge-dot');
+      for (var i = 0; i < dots.length; i++) {
+        var isActive = (i === realIdx);
+        dots[i].classList.toggle('active', isActive);
+        dots[i].setAttribute('aria-current', isActive ? 'true' : 'false');
+      }
+    }
+
+    function applyTransform(animate) {
+      if (!animate) track.style.transition = 'none';
+      else track.style.transition = '';
+      track.style.transform = 'translateX(' + (-currentIndex * (cardWidth + gap)) + 'px)';
+      if (!animate) {
+        void track.offsetHeight;
+        track.style.transition = '';
+      }
+    }
+
+    function go(delta) {
+      if (isAnimating) return;
+      isAnimating = true;
+      currentIndex += delta;
+      applyTransform(true);
+      updateDots();
+    }
+
+    function goToReal(realIdx) {
+      if (isAnimating) return;
+      var target = realIdx + visibleCount;
+      if (target === currentIndex) return;
+      isAnimating = true;
+      currentIndex = target;
+      applyTransform(true);
+      updateDots();
+    }
+
+    track.addEventListener('transitionend', function(e){
+      if (e.propertyName !== 'transform') return;
+      isAnimating = false;
+      if (currentIndex >= visibleCount + realCount) {
+        currentIndex -= realCount;
+        applyTransform(false);
+      } else if (currentIndex < visibleCount) {
+        currentIndex += realCount;
+        applyTransform(false);
+      }
+    });
+
+    prevBtn.addEventListener('click', function(){ go(-1); });
+    nextBtn.addEventListener('click', function(){ go(1); });
+
+    // Pointer-event drag (mouse + touch)
+    var pointerDown = false;
+    var isDragging = false;
+    var dragStartX = 0;
+    var dragStartTranslate = 0;
+    var dragInitThreshold = 5;
+
+    viewport.addEventListener('pointerdown', function(e){
+      if (e.button !== undefined && e.button !== 0) return;
+      if (isAnimating) return;
+      pointerDown = true;
+      isDragging = false;
+      dragStartX = e.clientX;
+      dragStartTranslate = -currentIndex * (cardWidth + gap);
+      try { viewport.setPointerCapture(e.pointerId); } catch (err) {}
+    });
+
+    viewport.addEventListener('pointermove', function(e){
+      if (!pointerDown) return;
+      var dx = e.clientX - dragStartX;
+      if (!isDragging) {
+        if (Math.abs(dx) < dragInitThreshold) return;
+        isDragging = true;
+        slider.classList.add('is-dragging');
+        track.style.transition = 'none';
+      }
+      track.style.transform = 'translateX(' + (dragStartTranslate + dx) + 'px)';
+      if (e.cancelable) e.preventDefault();
+    });
+
+    function endDrag(e){
+      if (!pointerDown) return;
+      pointerDown = false;
+      try { viewport.releasePointerCapture(e.pointerId); } catch (err) {}
+      if (!isDragging) return;
+      slider._suppressClick = true;
+      isDragging = false;
+      slider.classList.remove('is-dragging');
+      track.style.transition = '';
+      var dx = e.clientX - dragStartX;
+      var snapThreshold = Math.max(50, cardWidth * 0.2);
+      if (Math.abs(dx) > snapThreshold) {
+        go(dx < 0 ? 1 : -1);
+      } else {
+        applyTransform(true);
+      }
+    }
+    viewport.addEventListener('pointerup', endDrag);
+    viewport.addEventListener('pointercancel', endDrag);
+
+    // Suppress the click that follows a real drag (so card content isn't activated)
+    viewport.addEventListener('click', function(e){
+      if (slider._suppressClick) {
+        e.preventDefault();
+        e.stopPropagation();
+        slider._suppressClick = false;
+      }
+    }, true);
+
+    // Disable native image dragging on slides + clones
+    function disableImgDrag() {
+      var imgs = track.querySelectorAll('img');
+      for (var i = 0; i < imgs.length; i++) imgs[i].setAttribute('draggable', 'false');
+    }
+
+    function init() {
+      visibleCount = getVisibleCount();
+      disableImgDrag();
+      buildClones();
+      setSizes();
+      currentIndex = visibleCount;
+      applyTransform(false);
+      updateDots();
+    }
+
+    buildDots();
+    init();
+    // Re-measure once images load (image height drives card height)
+    window.addEventListener('load', function(){
+      setSizes();
+      applyTransform(false);
+    });
+
+    var resizeTimer;
+    window.addEventListener('resize', function(){
+      clearTimeout(resizeTimer);
+      resizeTimer = setTimeout(function(){
+        var newVisible = getVisibleCount();
+        if (newVisible !== visibleCount) {
+          visibleCount = newVisible;
+          buildClones();
+          currentIndex = visibleCount;
+        }
+        setSizes();
+        applyTransform(false);
+        updateDots();
+      }, 150);
+    });
+  }
+
+  // ---------- FAQ ACCORDION ----------
+  var faqButtons = document.querySelectorAll('.faq-q');
+  faqButtons.forEach(function(btn){
+    btn.addEventListener('click', function(){
+      var item = btn.parentElement;
+      var panel = document.getElementById(btn.getAttribute('aria-controls'));
+      var isOpen = item.classList.toggle('open');
+      btn.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+      if (isOpen) {
+        panel.style.maxHeight = panel.scrollHeight + 'px';
+      } else {
+        panel.style.maxHeight = '0px';
+      }
+    });
+  });
+
+})();
+</script>
 </body>
 </html>
