@@ -2,7 +2,7 @@ Licences for third-party files served by this website (pcfenix.hr).
 
 
 ========================================================================
-flag-icons 7.6.0 (assets: flag images hr.svg, gb.svg, de.svg)
+flag-icons 7.6.0 (assets: flag images hr.svg, gb.svg, de.svg, bg.svg)
 https://github.com/lipis/flag-icons
 
 The MIT License (MIT)
