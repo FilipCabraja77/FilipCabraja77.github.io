@@ -1,0 +1,1 @@
+function e(e){let t=new Date,n=[t.getFullYear(),t.getMonth()+1,t.getDate()].map(e=>String(e).padStart(2,`0`)).join(`-`),r=0;for(let t of e.querySelectorAll(`[data-date]`))t.hidden=!(t.dataset.date>n&&r++<4)}export{e as t};
