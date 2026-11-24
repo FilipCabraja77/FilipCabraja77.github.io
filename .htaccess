@@ -1,0 +1,82 @@
+# Poslovni centar Fenix: Apache / LiteSpeed. CSP hashevi upisuju se pri buildu (scripts/postbuild.mjs).
+Options -Indexes
+DirectoryIndex index.html
+ErrorDocument 404 /404.html
+# 403 namjerno prikazuje stranicu 404 (ne otkriva se što postoji), status ostaje 403
+ErrorDocument 403 /404.html
+ErrorDocument 500 /500.html
+ErrorDocument 503 /503.html
+<If "%{REQUEST_URI} =~ m#^/en/#">
+  ErrorDocument 404 /en/404.html
+  ErrorDocument 403 /en/404.html
+  ErrorDocument 500 /en/500.html
+  ErrorDocument 503 /en/503.html
+</If>
+<If "%{REQUEST_URI} =~ m#^/de/#">
+  ErrorDocument 404 /de/404.html
+  ErrorDocument 403 /de/404.html
+  ErrorDocument 500 /de/500.html
+  ErrorDocument 503 /de/503.html
+</If>
+<If "%{REQUEST_URI} =~ m#^/bg/#">
+  ErrorDocument 404 /bg/404.html
+  ErrorDocument 403 /bg/404.html
+  ErrorDocument 500 /bg/500.html
+  ErrorDocument 503 /bg/503.html
+</If>
+AddDefaultCharset utf-8
+AddType application/manifest+json .webmanifest
+
+RewriteEngine On
+RewriteCond %{HTTPS} !=on
+RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [R=301,L]
+RewriteCond %{HTTP_HOST} ^www\.(.+)$ [NC]
+RewriteRule ^ https://%1%{REQUEST_URI} [R=301,L]
+# trajna preusmjeravanja sa stare stranice (src/data/redirects.json)
+RewriteRule ^knjigovodstvo/?$ /usluge/knjigovodstvo/ [R=301,L]
+RewriteRule ^prevodenje/?$ /usluge/prevodenje/ [R=301,L]
+RewriteRule ^poslovno-savjetovanje/?$ /usluge/racunovodstveno-savjetovanje/ [R=301,L]
+RewriteRule ^zastupanje-inozemnih-tvrtki/?$ /usluge/strane-tvrtke/ [R=301,L]
+RewriteRule ^digitalni-marketing/?$ /usluge/ [R=301,L]
+RewriteRule ^book/tajna-novca/?$ /tajna-novca/ [R=301,L]
+RewriteRule ^blog/?$ /savjeti/ [R=301,L]
+RewriteRule ^category/ /savjeti/ [R=301,L]
+RewriteRule ^naslov-1/?$ /fiskalizacija-2-0-prvo-eizvjestavanje/ [R=301,L]
+RewriteRule ^izjava-o-povjerljivosti/?$ /zastita-privatnosti/ [R=301,L]
+RewriteRule ^politika-kolacica-cookies/?$ /politika-kolacica/ [R=301,L]
+RewriteRule ^knjige/?$ /tajna-novca/ [R=301,L]
+RewriteRule ^newsletter/?$ /porezni-kalendar/ [R=301,L]
+RewriteRule ^488-2/?$ / [R=301,L]
+RewriteRule ^tag/ /savjeti/ [R=301,L]
+RewriteRule ^en/blog/?$ /en/ [R=301,L]
+RewriteRule ^de/blog/?$ /de/ [R=301,L]
+RewriteRule ^en/moj-prvi-clanak/?$ /en/ [R=301,L]
+RewriteRule ^de/moj-prvi-clanak/?$ /de/ [R=301,L]
+RewriteRule ^en/tag/ /en/ [R=301,L]
+RewriteRule ^de/tag/ /de/ [R=301,L]
+RewriteRule ^en/category/ /en/ [R=301,L]
+RewriteRule ^de/category/ /de/ [R=301,L]
+RewriteRule ^bg/363-2/?$ /bg/ [R=301,L]
+
+<IfModule mod_headers.c>
+  Header always set Strict-Transport-Security "max-age=63072000"
+  Header always set Content-Security-Policy "default-src 'none'; script-src 'self' 'sha256-j8MJbxOQMdPLwI5p1rYZlJHOKt6IubQzE9GXekX+DUI=' 'sha256-nyU0jH7VnIm53R/BYaVs8DCeucgVXXz0Jg0TQi+sSTw=' 'sha256-z9L6iCZrs3NRqzcV3F30r83ZRSrkQnRz3GEoEPrFq+E=' 'sha256-KcgC3DhO2gpeAz0H6Sr1WOOPfms5c8xO0MuRbMLYCBg=' 'sha256-nQFpzWFzTtuSAtyKvEFJnGxSgZIqmKEacvFfF1k66BY=' 'sha256-QAUTdfx/rDVk8sBHL2C/+iPEH8E3FxfDx+XLUmcpPoY=' 'sha256-Rh7B//i49lGCqlJQeDOsHjW80Rq7wP+kWtXuDDvSEPs=' 'sha256-ETYK0uwbYRHRuE69qqipMTy3DQw8X78mRvXfqBU5zUw=' 'sha256-29yjMgWRJzAqsALvH4Jq4qzRqbiX0VHft/Isb2mYDFY=' 'sha256-vRSU7ClzDwzQ8KfByvkOBlOgyz28LPzA4sdnP00aKOk=' 'sha256-yEcxkRq5ehIcMzDBbLNNS5lBFqH0/WAnMBqEbf8IjtU=' 'sha256-9NM/rvEaHUG2K/lrY1dOS/zUfIGzflJzT6zCo4b3+ik='; style-src 'self' 'sha256-ZqLo3jUCGlNmNuRy+XetpYLpZOLMu8XDiIg9DtIyMWs=' 'sha256-+WKZIfVzIhcpdtoOwj5h7oGF4krrdu6odYXcysy070w=' 'sha256-FMbQNPxMXcdCWbw8rt7FaJyw6s7WU2E2jGK38PGV+qg=' 'sha256-gp0pG7ZxRGkmXQZH8WgYQvT542RoVr0MJUjiO6k1fQ8=' 'sha256-VeDE4qtCx6tV0esO+zElfrgklMK4BK3N9hAqApTliIE=' 'sha256-t/0/++KgLjU7PHbh6qAVtAN6zJXElKp0yK5lzOLTHLU=' 'sha256-HzbMzXSRUZrhbeRsVk2GKXGxTnaAVPcJV1hnw3dgZ94=' 'sha256-BY85WnEtR1gaopRsYWNi29knYAwBbP3dJm/mbS0e3Bc=' 'sha256-+1EQ2CP/yulOeA0uUmPQz6p+m595guN+iyFyz7znRu4=' 'sha256-fSB1SM42kQOsGHCQ0QIxqF2GLIMLGDmGhK+lGJ7h3P8=' 'sha256-vFEWTLb8/weAdKQu6hn/E8Q4pM3OmjGynF+RsfZmJyU=' 'sha256-Q75pJ8Kf0P2IjAsM+hLW8RNtSKDeEgHmi6yT4VsHA8E=' 'sha256-S4vOid/FVTIkxrwol6t5fFk4HrOXRLrnBw48O3+ySFU=' 'sha256-jcru+pWiXNnOzDrsqB+nzjpQ5tLLav39jM8YX93AwWw=' 'sha256-v1RlMUrLQNNocYaYH7MKm2ULyVSOVRTVc6xtmcpcpOo=' 'sha256-MbZtzK/av1oU85qUB1e7jcSeutDSecy6LDhs7CPtwDE=' 'sha256-sZ0NYg8OER+5ivhQAvuJMC7G4UL9HrrTS/05bSZH/X4=' 'sha256-d/+5PDhX7j7SXOClktV1CBR1Mp4+2hthugLq42JTjPE=' 'sha256-z8jrYokC6PlZm2BM0kLSQvU9nZLjHQ8M5BIlHT/NTxc=' 'sha256-wRx1C1sqOoP9PT/oQhjPyV9WndtGDJF4IqZW1UdmQCY=' 'sha256-JyBcuDGEjqxsTHCMvFwTgojtUV5wbkDCg3wPatMP5zU=' 'sha256-MUjb/Znjvkf4sOeOUBrcn3cdTxU7IoUvkYPIpouX7Ow=' 'sha256-u7Up/irExj22sc055Xm4j6xgL+Ug4NegLJ+gzlMHhbQ=' 'sha256-lvPBr2DU+aS0gabpTxjhabUhP6sut4gXC3u+wMlsqz8=' 'sha256-tb/7X26USPjyBPvKe8SHxsPUFbKLxY7D417UMFfbpKI=' 'sha256-vZsmvAKorkfaYv+poROAXJrcpClbD7LbYwORW/jc0ko=' 'sha256-xLOQlElmZqboC10zGmRDz1Et4PcHmD66C1Mur1O8J2k=' 'sha256-Ipf6tK3R+shhyxBGT3/DAwcv0NPDuZqBT65ufpuHOIY=' 'sha256-iX7gmq2qpi7NmI1GGfMWH3DAW3ePvX4k83hh+LJPn6U=' 'sha256-KVmf9acSc8UU5Wrr8jYKaSxIY51NsYSujMkaZK98oKo=' 'sha256-yKPBS50VILZ5pPu5iJ8ix5sdL6eOjDyocrruecWXMlE=' 'sha256-RoEFiLZUiwTbsS13glIVctCL0FenCGPAeNHKaR69zY0=' 'sha256-LPO49W4mxAwOG/4SaC0N+dkya4g65TurVEuNXwt+1V0=' 'sha256-Y+9ymk/iCzhUVEKje353sPL3Rk6bLZWSYJaVDjmZDBk=' 'sha256-KlC+uCFuexwrVKm+ARbpNR51oG4NCQ9bPFxVb13wgXs=' 'sha256-nDh65S0Srqw8m1St5EF6etaES8XPaRGoS0OAezO6hm4=' 'sha256-vdAslsIpIVrefDjFuSl8W9LVJ9iHNr+DdwAdvwL1+qM=' 'sha256-1oD9wv4cD270bixjwDJmDEYPFTW2sTkd1jpSwuoQAHE=' 'sha256-mdXaOt4uNBx8DHEagTcaRzlmfH6M0nyH5xFEj5/wNq4=' 'sha256-POIB6xcGZwczvmeQeQvMC9H3T/8W0eM7fpHKXruVT8Y=' 'sha256-uknUc+2dJQd34kba9WYRt/lGFhyn1l2HNOrQT8mkkug=' 'sha256-NaaKgmLCx6lDmkzcQ6ahmLRUreMuUTyvepvcNfeHi/s=' 'sha256-PQiXOF1bmJorCDMxQwJdK+3GBl+qDt+1p7Mgv/QNNO0=' 'sha256-nmL+7jpMlw1Z0kpzuCCZI3X/DhOkbPK8vnURdwSpEoQ=' 'sha256-25Nu8vkAnaxEHYIQnX3oDVmkH3iEQ0QWAAKGQ7Za8jY=' 'sha256-9TES+oV7nPMXlptc30dMFjnYOXCJ3S6lnO07A0BB9t8=' 'sha256-9Kaq5HgjZgtOpfu8rYZlKi1DaefjjARNf6s0BOdTOnw=' 'sha256-QR3hQIfaTTlCxbPXOvGp3kP5EyF1BN2dU2dHri8UvIo=' 'sha256-3YeJfCXmamFcJubL/US+dxGoEKhotaJ3O16NLTkgrdQ=' 'sha256-Bmlg5v7PRZnUtaWpDJI8WE+EKNnV58CJsFwe4eZmR0k=' 'sha256-HKP+c1V3hwQa9+XE/SAABcuE/tQjSO6wREkiB+d/xTs=' 'sha256-rUfeXzjjUjdB56IPe9xVyJyAxvA4Ts4sa1TFS069UMI=' 'sha256-YyOYICYuP9CZaUXJXpHQOhSUeXtmemxq+l3vrwKd4nI=' 'sha256-yIAz5mWRx3gRrWVAKqvXpWtJ2oqyJ5ksn3BKu3uS0XE=' 'sha256-DawGBIaxE44f2jwC4yz2cGYCiVk49GSYsbr6wJPbGbo=' 'sha256-5m0b99fCX2jdQMN+y9vU3GJtsoC+gLU66Il+NwsyMeI=' 'sha256-ewd5ZYu5ZgE/ghuuQWxUAMKxwOZ4wrGL0HapefqspQ8=' 'sha256-Y5HhIYL8z7LG9UJIyk7GhmEvnh8wvcJoM10WoWv5Iw0=' 'sha256-tTBmvvG61ckfeUBIA5ghZpy2ZW6kXKUhC3BLFXyPAaA=' 'sha256-+IT04YjmKkKA1IBsMsomQOTa+gjZdrYU4ePDRDiMoxw=' 'sha256-p9+JWGXXCuu46MAV1QT+wAK1XscJjtXpO/4P8yyfmgQ=' 'sha256-4lf4Kepm4Y1clvsmitXZ72l6qF5pyClNks9BTcVWZGA=' 'sha256-qRvMgi8YC0Xvh4tL1PpbgbZwC8JrxkVbdiro9NEOD5g=' 'sha256-+TclUKLkyl6Q054ryZ2CDbQU/KTlcC1FU2/dHYG938Q=' 'sha256-30Qvl0oUcXb2Ebpot+hf6r0NblAuVEq9lPI06iQTOLw=' 'sha256-q2lBJKCcigQzOtkwqfhH7faFYzptaZNiEUj/b6IWvFE=' 'sha256-aXEUNENA9cn6sw5j+Hs4MnWYHH/EkQX/5ZXSvG4k/NE=' 'sha256-dKHhsrRU6k6+BCZpEksziVMI7M/BR9FEK82ret6DSHs=' 'sha256-78YHkWGBU3hxhALzmQMA4IykpfM8wM4SzbgNM5E+zs4=' 'sha256-bGtSCehhp8mD+DYON1ok41WYxodo93Wp9oT8uVqdXPk=' 'sha256-O/8mGdoDfWNKwX9/sey10JA/Nyxxe9vAXoWI657cNVg=' 'sha256-lIVraQQR5bS3fripZy7EAA33Nh89QRv721coZIpKW8s=' 'sha256-VWGdX2H+Tu1X2gc59+5vBUgGIKI6gP12uSCXJBbF7DU=' 'sha256-MAiQLV7uL/6GNgsMTlVaiMYhol/Cr7jPMnWRBZUU1aw=' 'sha256-SIOhaDZru5cPi7yR5ygFEpHhIBEmDWrDMyt+6eo7/yE=' 'sha256-R47ZuhZTE2HozLmfScEMPLpZElXEXbDbcCHaWX2UK0E=' 'sha256-wJckNU9bhPiG6MWxUbyIyovrZpgEZH6V8h5hFNC9Tjk=' 'sha256-KI2sHQC1Y1Wxi3zgAwiF+l1as2YYWqdKCxo+tJT+D5A='; img-src 'self' data:; font-src 'self' data:; connect-src 'self'; manifest-src 'self'; form-action 'self'; base-uri 'none'; frame-ancestors 'none'"
+  Header always set X-Content-Type-Options "nosniff"
+  Header always set X-Frame-Options "DENY"
+  Header always set Referrer-Policy "strict-origin-when-cross-origin"
+  Header always set Permissions-Policy "accelerometer=(), camera=(), geolocation=(), gyroscope=(), magnetometer=(), microphone=(), payment=(), usb=(), browsing-topics=()"
+  Header always set Cross-Origin-Opener-Policy "same-origin"
+  Header always set Cross-Origin-Resource-Policy "same-origin"
+  Header unset X-Powered-By
+  <FilesMatch "\.(html|xml|txt|webmanifest)$">
+    Header set Cache-Control "no-cache"
+  </FilesMatch>
+  # samo ikone i OG slika u korijenu; datoteke u _astro/ imaju trajno predmemoriranje (_astro/.htaccess)
+  <FilesMatch "^(favicon\.ico|apple-touch-icon\.png|icon-\d+\.png|og(-[a-z-]+)?\.png)$">
+    Header set Cache-Control "public, max-age=604800"
+  </FilesMatch>
+</IfModule>
+
+<IfModule mod_deflate.c>
+  AddOutputFilterByType DEFLATE text/html text/css text/plain text/xml application/xml application/javascript application/json application/manifest+json image/svg+xml
+</IfModule>

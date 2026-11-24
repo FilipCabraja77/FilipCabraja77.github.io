@@ -1,0 +1,4 @@
+# Datoteke s hashom u imenu nikad se ne mijenjaju.
+<IfModule mod_headers.c>
+  Header set Cache-Control "public, max-age=31536000, immutable"
+</IfModule>
